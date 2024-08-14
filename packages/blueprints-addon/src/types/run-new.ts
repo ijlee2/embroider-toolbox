@@ -6,10 +6,16 @@ type CodemodOptions = {
 
 type Options = {
   addon: {
+    dasherizedName: string;
+    location: string;
+    name: string;
+    pascalCaseName: string;
+  };
+  projectRoot: string;
+  testApp: {
     location: string;
     name: string;
   };
-  projectRoot: string;
 };
 
 export type { CodemodOptions, Options };
