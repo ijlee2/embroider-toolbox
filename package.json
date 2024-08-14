@@ -1,0 +1,34 @@
+{
+  "name": "workspace-root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Workspace root for embroider-toolbox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/embroider-toolbox.git"
+  },
+  "license": "MIT",
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "scripts": {
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "release:changelog": "changeset version",
+    "release:publish": "changeset publish",
+    "test": "pnpm --filter '*' test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.7",
+    "@changesets/get-github-info": "^0.6.0",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "18.* || >= 20",
+    "pnpm": ">= 9"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint-plugin-import@2.29.1>tsconfig-paths": "^4.2.0"
+    }
+  }
+}
