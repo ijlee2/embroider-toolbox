@@ -5,6 +5,7 @@ import {
   createAddon,
   createOptions,
   updateTestAppPackageJson,
+  updateTestAppTypes,
 } from './steps/run-new/index.js';
 import type { CodemodOptions, Options } from './types/run-new.js';
 
@@ -23,4 +24,5 @@ export function runNew(codemodOptions: CodemodOptions): void {
 
   createAddon(options);
   updateTestAppPackageJson(options);
+  updateTestAppTypes(options);
 }

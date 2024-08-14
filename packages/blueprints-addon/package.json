@@ -33,6 +33,7 @@
     "test": "./build.sh --test && mt dist-for-testing --quiet"
   },
   "dependencies": {
+    "@codemod-utils/ast-javascript": "^1.2.8",
     "@codemod-utils/blueprints": "^1.1.5",
     "@codemod-utils/json": "^1.1.9",
     "@codemod-utils/files": "^2.0.4",
