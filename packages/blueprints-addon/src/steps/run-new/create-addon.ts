@@ -18,7 +18,7 @@ function resolveBlueprintFilePath(
     .replace('__gitignore__', '.gitignore');
 }
 
-export function createFilesFromBlueprints(options: Options): void {
+export function createAddon(options: Options): void {
   const cwd = join(blueprintsRoot, 'run-new');
 
   const blueprintFilePaths = findFiles('**/*', {
