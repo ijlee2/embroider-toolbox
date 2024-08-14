@@ -221,6 +221,52 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
 
+  packages/blueprints-addon:
+    dependencies:
+      '@codemod-utils/blueprints':
+        specifier: ^1.1.5
+        version: 1.1.5
+      '@codemod-utils/files':
+        specifier: ^2.0.4
+        version: 2.0.4
+      yargs:
+        specifier: ^17.7.2
+        version: 17.7.2
+    devDependencies:
+      '@codemod-utils/tests':
+        specifier: ^1.1.7
+        version: 1.1.7(@sondr3/minitest@0.1.2)
+      '@shared-configs/eslint-config-node':
+        specifier: workspace:*
+        version: link:../../configs/eslint/node
+      '@shared-configs/prettier':
+        specifier: workspace:*
+        version: link:../../configs/prettier
+      '@shared-configs/typescript':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      '@sondr3/minitest':
+        specifier: ^0.1.2
+        version: 0.1.2
+      '@types/node':
+        specifier: ^18.19.44
+        version: 18.19.44
+      '@types/yargs':
+        specifier: ^17.0.33
+        version: 17.0.33
+      concurrently:
+        specifier: ^8.2.2
+        version: 8.2.2
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
   packages/create-v2-addon-repo:
     dependencies:
       '@codemod-utils/blueprints':
