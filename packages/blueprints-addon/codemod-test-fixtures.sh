@@ -16,5 +16,5 @@
 pnpm build
 
 ./codemod-test-fixture.sh \
-  -N "--name my-repo" \
+  -N "new --location ui/button --name @my-org-ui/button" \
   typescript

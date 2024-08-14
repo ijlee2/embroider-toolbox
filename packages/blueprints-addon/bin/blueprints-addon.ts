@@ -11,15 +11,36 @@ import type { CodemodOptions } from '../src/types/index.js';
 process.title = 'blueprints-addon';
 
 // Set codemod options
-const argv = yargs(hideBin(process.argv))
-  .option('root', {
-    describe: 'Where to run the codemod',
-    type: 'string',
+yargs(hideBin(process.argv))
+  .command({
+    builder: (yargs) => {
+      return yargs
+        .option('location', {
+          demandOption: true,
+          describe: "Location of the addon (e.g. 'ui/button')",
+          type: 'string',
+        })
+        .option('name', {
+          demandOption: true,
+          describe: "Name of the addon (e.g. '@my-org-ui/button')",
+          type: 'string',
+        })
+        .option('root', {
+          describe: 'Where to run the codemod',
+          type: 'string',
+        });
+    },
+    command: 'new',
+    describe: 'Create a v2 addon',
+    handler: (argv) => {
+      const codemodOptions: CodemodOptions = {
+        location: argv['location'],
+        name: argv['name'],
+        projectRoot: argv['root'] ?? process.cwd(),
+      };
+
+      runCodemod(codemodOptions);
+    },
   })
+  .demandCommand()
   .parseSync();
-
-const codemodOptions: CodemodOptions = {
-  projectRoot: argv['root'] ?? process.cwd(),
-};
-
-runCodemod(codemodOptions);
