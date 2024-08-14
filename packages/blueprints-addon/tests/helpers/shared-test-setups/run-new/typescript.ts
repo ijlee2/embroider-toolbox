@@ -8,10 +8,16 @@ const codemodOptions: CodemodOptions = {
 
 const options: Options = {
   addon: {
+    dasherizedName: 'my-org-ui-button',
     location: 'packages/ui/button',
     name: '@my-org-ui/button',
+    pascalCaseName: 'MyOrgUiButton',
   },
   projectRoot: 'tmp/run-new/typescript',
+  testApp: {
+    location: 'test-app',
+    name: 'test-app',
+  },
 };
 
 export { codemodOptions, options };

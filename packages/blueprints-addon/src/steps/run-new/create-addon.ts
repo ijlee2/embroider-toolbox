@@ -7,11 +7,18 @@ import { createFiles, findFiles } from '@codemod-utils/files';
 import type { Options } from '../../types/run-new.js';
 import { blueprintsRoot } from '../../utils/blueprints.js';
 
-function resolveBlueprintFilePath(blueprintFilePath: string): string {
-  return blueprintFilePath;
+function resolveBlueprintFilePath(
+  blueprintFilePath: string,
+  options: Options,
+): string {
+  const { addon } = options;
+
+  return blueprintFilePath
+    .replace('__addonLocation__', addon.location)
+    .replace('__gitignore__', '.gitignore');
 }
 
-export function createFilesFromBlueprints(options: Options): void {
+export function createAddon(options: Options): void {
   const cwd = join(blueprintsRoot, 'run-new');
 
   const blueprintFilePaths = findFiles('**/*', {
@@ -20,7 +27,7 @@ export function createFilesFromBlueprints(options: Options): void {
 
   const fileMap = new Map(
     blueprintFilePaths.map((blueprintFilePath) => {
-      const filePath = resolveBlueprintFilePath(blueprintFilePath);
+      const filePath = resolveBlueprintFilePath(blueprintFilePath, options);
 
       const blueprintFile = readFileSync(join(cwd, blueprintFilePath), 'utf8');
 
