@@ -12,6 +12,11 @@ process.title = 'create-v2-addon-repo';
 
 // Set codemod options
 const argv = yargs(hideBin(process.argv))
+  .option('name', {
+    demandOption: true,
+    describe: 'Name of your project',
+    type: 'string',
+  })
   .option('root', {
     describe: 'Where to run the codemod',
     type: 'string',
@@ -19,6 +24,7 @@ const argv = yargs(hideBin(process.argv))
   .parseSync();
 
 const codemodOptions: CodemodOptions = {
+  name: argv['name'],
   projectRoot: argv['root'] ?? process.cwd(),
 };
 
