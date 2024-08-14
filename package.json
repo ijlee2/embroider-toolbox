@@ -11,16 +11,17 @@
   "author": "Isaac J. Lee",
   "type": "module",
   "scripts": {
+    "build": "pnpm --filter './packages/**' build",
     "lint": "pnpm --filter '*' lint",
     "lint:fix": "pnpm --filter '*' lint:fix",
+    "prepare": "pnpm build",
     "release:changelog": "changeset version",
-    "release:publish": "changeset publish",
+    "release:publish": "pnpm build && changeset publish",
     "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
-    "@changesets/get-github-info": "^0.6.0",
-    "concurrently": "^8.2.2"
+    "@changesets/get-github-info": "^0.6.0"
   },
   "engines": {
     "node": "18.* || >= 20",
