@@ -223,12 +223,18 @@ importers:
 
   packages/blueprints-addon:
     dependencies:
+      '@codemod-utils/ast-javascript':
+        specifier: ^1.2.8
+        version: 1.2.8
       '@codemod-utils/blueprints':
         specifier: ^1.1.5
         version: 1.1.5
       '@codemod-utils/files':
         specifier: ^2.0.4
         version: 2.0.4
+      '@codemod-utils/json':
+        specifier: ^1.1.9
+        version: 1.1.9
       yargs:
         specifier: ^17.7.2
         version: 17.7.2
@@ -466,12 +472,20 @@ packages:
   '@changesets/write@0.3.1':
     resolution: {integrity: sha512-SyGtMXzH3qFqlHKcvFY2eX+6b0NGiFcNav8AFsYwy5l8hejOeoeTDemu5Yjmke2V5jpzY+pBvM0vCCQ3gdZpfw==}
 
+  '@codemod-utils/ast-javascript@1.2.8':
+    resolution: {integrity: sha512-bp9q1rtRv4NhD1xLEz5S/tdva5aJ5dizMrnQVfOdPI2JSLpC4rAAnw7Zc9eD6ssDPXKHEhh2mRFK7QP4ldZQmQ==}
+    engines: {node: 18.* || >= 20}
+
   '@codemod-utils/blueprints@1.1.5':
     resolution: {integrity: sha512-xNEGw1xp4VjyhwcLiHAnuUhIp3430m0BHl+nfCRXCkWlbCLjIKWsnkywPavK5pUYyp4TnAwVSrNrzHtELQOp7A==}
     engines: {node: 18.* || >= 20}
 
   '@codemod-utils/files@2.0.4':
     resolution: {integrity: sha512-j8T1ktraMjDsEUkqLrBrDDjrSHrrxvgfc7qSE+0vFa3lZiszQ2gxjGdVljbwACQO8otle45RTouy/w72gEbXYQ==}
+    engines: {node: 18.* || >= 20}
+
+  '@codemod-utils/json@1.1.9':
+    resolution: {integrity: sha512-WdKsWn7zhvFcrXrx4MaD6WboovfST4tJcYxwfNPrZHsLzY34HKgyT6eRGkOEc7TsyBRytZhFLZ/glNHnFCu40Q==}
     engines: {node: 18.* || >= 20}
 
   '@codemod-utils/tests@1.1.7':
@@ -877,6 +891,10 @@ packages:
   arraybuffer.prototype.slice@1.0.3:
     resolution: {integrity: sha512-bMxMKAjg13EBSVscxTaYA4mRc5t1UAXa2kXiGTNfZ079HIWXEkKmkgFrh/nJqamaLSrXO5H4WFFkPEaLJWbs3A==}
     engines: {node: '>= 0.4'}
+
+  ast-types@0.16.1:
+    resolution: {integrity: sha512-6t10qk83GOG8p0vKmaCr8eiilZwO171AvbROMtvvNiwrTly62t+7XkA8RdIIVbpMhCASAsxgAzdRSwh6nw/5Dg==}
+    engines: {node: '>=4'}
 
   astral-regex@2.0.0:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
@@ -2334,6 +2352,10 @@ packages:
     resolution: {integrity: sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==}
     engines: {node: '>= 6'}
 
+  recast@0.23.9:
+    resolution: {integrity: sha512-Hx/BGIbwj+Des3+xy5uAtAbdCyqK9y9wbBcDFDYanLS9JnMqf7OeF87HQwUimE87OEc72mr6tkKUKMBBL+hF9Q==}
+    engines: {node: '>= 4'}
+
   regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
 
@@ -2500,6 +2522,10 @@ packages:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
     engines: {node: '>=0.10.0'}
 
+  source-map@0.6.1:
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
+    engines: {node: '>=0.10.0'}
+
   sourcemap-codec@1.4.8:
     resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
     deprecated: Please use @jridgewell/sourcemap-codec instead
@@ -2639,6 +2665,9 @@ packages:
     resolution: {integrity: sha512-49WtAWS+tcsy93dRt6P0P3AMD2m5PvXRhuEA0kaXos5ZLlujtYmpmFsB+QvWUSxE1ZsstmYXfQ7L40+EcQgpAQ==}
     engines: {node: '>=0.8'}
 
+  tiny-invariant@1.3.3:
+    resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
+
   tmp@0.0.28:
     resolution: {integrity: sha512-c2mmfiBmND6SOVxzogm1oda0OJ1HZVIk/5n26N59dDTh80MUeavpiCls4PGAdkX1PFkKokLpcf7prSjCeXLsJg==}
     engines: {node: '>=0.4.0'}
@@ -2698,6 +2727,10 @@ packages:
   type-fest@0.20.2:
     resolution: {integrity: sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==}
     engines: {node: '>=10'}
+
+  type-fest@4.24.0:
+    resolution: {integrity: sha512-spAaHzc6qre0TlZQQ2aA/nGMe+2Z/wyGk5Z+Ru2VUfdNwT6kWO6TjevOlpebsATEG1EIQ2sOiDszud3lO5mt/Q==}
+    engines: {node: '>=16'}
 
   typed-array-buffer@1.0.2:
     resolution: {integrity: sha512-gEymJYKZtKXzzBzM4jqa9w6Q1Jjm7x2d+sh19AdsD4wqnMPDYyvwpsIc2Q/835kHuo3BEQ7CjelGhfTsoBb2MQ==}
@@ -3155,6 +3188,11 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
+  '@codemod-utils/ast-javascript@1.2.8':
+    dependencies:
+      '@babel/parser': 7.25.3
+      recast: 0.23.9
+
   '@codemod-utils/blueprints@1.1.5':
     dependencies:
       lodash: 4.17.21
@@ -3162,6 +3200,10 @@ snapshots:
   '@codemod-utils/files@2.0.4':
     dependencies:
       glob: 10.4.5
+
+  '@codemod-utils/json@1.1.9':
+    dependencies:
+      type-fest: 4.24.0
 
   '@codemod-utils/tests@1.1.7(@sondr3/minitest@0.1.2)':
     dependencies:
@@ -3652,6 +3694,10 @@ snapshots:
       get-intrinsic: 1.2.4
       is-array-buffer: 3.0.4
       is-shared-array-buffer: 1.0.3
+
+  ast-types@0.16.1:
+    dependencies:
+      tslib: 2.6.3
 
   astral-regex@2.0.0: {}
 
@@ -5322,6 +5368,14 @@ snapshots:
       string_decoder: 1.3.0
       util-deprecate: 1.0.2
 
+  recast@0.23.9:
+    dependencies:
+      ast-types: 0.16.1
+      esprima: 4.0.1
+      source-map: 0.6.1
+      tiny-invariant: 1.3.3
+      tslib: 2.6.3
+
   regenerator-runtime@0.14.1: {}
 
   regexp.prototype.flags@1.5.2:
@@ -5476,6 +5530,8 @@ snapshots:
       tslib: 2.6.3
 
   source-map-js@1.2.0: {}
+
+  source-map@0.6.1: {}
 
   sourcemap-codec@1.4.8: {}
 
@@ -5672,6 +5728,8 @@ snapshots:
 
   textextensions@2.6.0: {}
 
+  tiny-invariant@1.3.3: {}
+
   tmp@0.0.28:
     dependencies:
       os-tmpdir: 1.0.2
@@ -5726,6 +5784,8 @@ snapshots:
       prelude-ls: 1.2.1
 
   type-fest@0.20.2: {}
+
+  type-fest@4.24.0: {}
 
   typed-array-buffer@1.0.2:
     dependencies:
