@@ -4,8 +4,7 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-import { runCodemod } from '../src/index.js';
-import type { CodemodOptions } from '../src/types/index.js';
+import { runNew } from '../src/index.js';
 
 // Provide a title to the process in `ps`
 process.title = 'blueprints-addon';
@@ -33,13 +32,13 @@ yargs(hideBin(process.argv))
     command: 'new',
     describe: 'Create a v2 addon',
     handler: (argv) => {
-      const codemodOptions: CodemodOptions = {
+      const codemodOptions = {
         location: argv['location'],
         name: argv['name'],
         projectRoot: argv['root'] ?? process.cwd(),
       };
 
-      runCodemod(codemodOptions);
+      runNew(codemodOptions);
     },
   })
   .demandCommand()
