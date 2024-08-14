@@ -1,7 +1,11 @@
 import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-import { createAddon, createOptions } from './steps/run-new/index.js';
+import {
+  createAddon,
+  createOptions,
+  updateTestAppPackageJson,
+} from './steps/run-new/index.js';
 import type { CodemodOptions, Options } from './types/run-new.js';
 
 function addonExists(options: Options): boolean {
@@ -18,4 +22,5 @@ export function runNew(codemodOptions: CodemodOptions): void {
   }
 
   createAddon(options);
+  updateTestAppPackageJson(options);
 }

@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@codemod-utils/blueprints": "^1.1.5",
+    "@codemod-utils/json": "^1.1.9",
     "@codemod-utils/files": "^2.0.4",
     "yargs": "^17.7.2"
   },
