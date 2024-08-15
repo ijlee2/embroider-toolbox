@@ -1,1 +1,1 @@
-export default interface <%= options.addon.pascalCaseName %>Registry {}
+export default interface \\<%= options.addon.pascalCaseName %\\>Registry {}

@@ -1,1 +1,1 @@
-# <%= options.addon.name %>
+# \\<%= options.addon.name %\\>

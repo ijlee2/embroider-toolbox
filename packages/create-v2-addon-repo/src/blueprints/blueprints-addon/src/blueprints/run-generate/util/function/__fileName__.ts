@@ -1,3 +1,3 @@
-export default function <%= options.entity.camelizedName %>() {
+export default function \\<%= options.entity.camelizedName %\\>() {
   return true;
 }

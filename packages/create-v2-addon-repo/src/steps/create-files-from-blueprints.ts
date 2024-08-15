@@ -32,7 +32,9 @@ export function createFilesFromBlueprints(options: Options): void {
 
       const file = processTemplate(blueprintFile, {
         options,
-      });
+      })
+        .replaceAll('\\\\<%=', '<%=')
+        .replaceAll('%\\\\>', '%>');
 
       return [filePath, file];
     }),

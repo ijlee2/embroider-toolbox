@@ -1,5 +1,5 @@
 {
-  "name": "<%= options.addon.name %>",
+  "name": "\\<%= options.addon.name %\\>",
   "version": "0.0.0",
   "private": true,
   "description": "",
@@ -53,7 +53,7 @@
     "start": "concurrently 'pnpm:start:*' --names 'start:'",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
     "start:types": "glint --declaration --watch",
-    "test": "echo 'A v2 addon does not have tests, run tests in <%= options.testApp.location %>'"
+    "test": "echo 'A v2 addon does not have tests, run tests in \\<%= options.testApp.location %\\>'"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.9",

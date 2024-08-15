@@ -47,7 +47,7 @@ export default {
     postcss({
       autoModules: false,
       modules: {
-        generateScopedName: '<%= options.addon.dasherizedName %>__[sha512:hash:base64:5]',
+        generateScopedName: '\\<%= options.addon.dasherizedName %\\>__[sha512:hash:base64:5]',
       },
     }),
 
@@ -75,7 +75,7 @@ export default {
     // Update public-assets field in package.json
     addon.publicAssets('public/assets', {
       exclude: ['**/.gitkeep'],
-      namespace: '<%= options.addon.name %>',
+      namespace: '\\<%= options.addon.name %\\>',
     }),
 
     // Remove leftover build artifacts when starting a new build.

@@ -1,4 +1,4 @@
-# <%= options.addon.name %>
+# \\<%= options.addon.name %\\>
 
 ## Local development
 
