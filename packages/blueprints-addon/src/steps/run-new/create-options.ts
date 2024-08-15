@@ -18,12 +18,15 @@ function pascalCase(packageName: string): string {
 export function createOptions(codemodOptions: CodemodOptions): Options {
   const { location, name, projectRoot } = codemodOptions;
 
+  const dasherizedName = dasherize(name);
+  const pascalCaseName = pascalCase(name);
+
   return {
     addon: {
-      dasherizedName: dasherize(name),
-      location: join('packages', location),
+      dasherizedName,
+      location: join('packages', location ?? dasherizedName),
       name,
-      pascalCaseName: pascalCase(name),
+      pascalCaseName,
     },
     projectRoot,
     testApp: {

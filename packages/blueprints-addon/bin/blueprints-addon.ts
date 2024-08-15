@@ -237,7 +237,6 @@ yargs(hideBin(process.argv))
           type: 'string',
         })
         .option('location', {
-          demandOption: true,
           describe: "Location of the addon (e.g. 'ui/button')",
           type: 'string',
         })
