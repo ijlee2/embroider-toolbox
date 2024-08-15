@@ -1,8 +1,8 @@
 import Helper from '@ember/component/helper';
 
 type Named = {};
-type Positional = [];
-type Return = Positional;
+type Positional = [string];
+type Return = string;
 
 interface <%= options.entity.classifiedName %>Signature {
   Args: {
@@ -14,6 +14,6 @@ interface <%= options.entity.classifiedName %>Signature {
 
 export default class <%= options.entity.classifiedName %>Helper extends Helper<<%= options.entity.classifiedName %>Signature> {
   compute(positional: Positional /*, named: Named*/): Return {
-    return positional;
+    return positional[0];
   }
 }

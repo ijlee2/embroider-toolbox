@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { chmodSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { processTemplate } from '@codemod-utils/blueprints';
@@ -9,6 +9,21 @@ import { blueprintsRoot } from '../utils/blueprints.js';
 
 function resolveBlueprintFilePath(blueprintFilePath: string): string {
   return blueprintFilePath.replace('__gitignore__', '.gitignore');
+}
+
+function setExecutePermissions(options: Options) {
+  const { project, projectRoot } = options;
+
+  const files = new Set([
+    'blueprints-addon/build.sh',
+    'blueprints-addon/codemod-test-fixtures.sh',
+  ]);
+
+  Array.from(files).forEach((file) => {
+    const filePath = join(projectRoot, project.name, file);
+
+    chmodSync(filePath, 0o755);
+  });
 }
 
 export function createFilesFromBlueprints(options: Options): void {
@@ -41,4 +56,5 @@ export function createFilesFromBlueprints(options: Options): void {
   );
 
   createFiles(fileMap, options);
+  setExecutePermissions(options);
 }

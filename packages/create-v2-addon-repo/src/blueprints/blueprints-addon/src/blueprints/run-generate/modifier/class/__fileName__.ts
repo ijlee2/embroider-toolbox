@@ -2,7 +2,6 @@ import Modifier from 'ember-modifier';
 
 type Named = {};
 type Positional = [];
-type Element = Element;
 
 interface \\<%= options.entity.classifiedName %\\>Signature {
   Args: {
@@ -13,5 +12,7 @@ interface \\<%= options.entity.classifiedName %\\>Signature {
 }
 
 export default class \\<%= options.entity.classifiedName %\\>Modifier extends Modifier<\\<%= options.entity.classifiedName %\\>Signature> {
-  modify(element: Element /*, positional: Positional, named: Named */) {}
+  modify(element: Element /*, positional: Positional, named: Named */) {
+    console.log(element);
+  }
 }

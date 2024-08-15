@@ -5,7 +5,7 @@
   "description": "Workspace root for <%= options.project.name %>",
   "scripts": {
     "addon": "blueprints-addon",
-    "build": "pnpm --filter './packages/**' build",
+    "build": "pnpm --filter blueprints-addon --filter './packages/**' build",
     "lint": "pnpm --filter '*' lint",
     "lint:fix": "pnpm --filter '*' lint:fix",
     "start": "concurrently 'pnpm:start:*' --prefix-colors cyan,white,yellow",

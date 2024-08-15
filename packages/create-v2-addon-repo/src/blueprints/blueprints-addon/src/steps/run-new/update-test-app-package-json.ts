@@ -1,4 +1,4 @@
-import { writeFileSync } from 'node:fs';
+import { existsSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import {
@@ -26,13 +26,19 @@ function updateDevDependencies(
 export function updateTestAppPackageJson(options: Options): void {
   const { projectRoot, testApp } = options;
 
+  const testAppRoot = join(projectRoot, testApp.location);
+
+  if (!existsSync(join(testAppRoot, 'package.json'))) {
+    return;
+  }
+
   const packageJson = readPackageJson({
-    projectRoot: join(projectRoot, testApp.location),
+    projectRoot: testAppRoot,
   });
 
   updateDevDependencies(packageJson, options);
 
-  const destination = join(projectRoot, testApp.location, 'package.json');
+  const destination = join(testAppRoot, 'package.json');
   const file = JSON.stringify(packageJson, null, 2) + '\n';
 
   writeFileSync(destination, file, 'utf8');

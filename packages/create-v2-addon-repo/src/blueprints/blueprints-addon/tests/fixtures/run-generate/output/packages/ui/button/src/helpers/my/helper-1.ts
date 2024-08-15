@@ -1,8 +1,8 @@
 import Helper from '@ember/component/helper';
 
 type Named = {};
-type Positional = [];
-type Return = Positional;
+type Positional = [string];
+type Return = string;
 
 interface MyHelper1Signature {
   Args: {
@@ -14,6 +14,6 @@ interface MyHelper1Signature {
 
 export default class MyHelper1Helper extends Helper<MyHelper1Signature> {
   compute(positional: Positional /*, named: Named*/): Return {
-    return positional;
+    return positional[0];
   }
 }

@@ -1,15 +1,12 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
-
 # compiled output
-/dist/
-/tmp/
+dist/
+tmp/
 
 # dependencies
-/node_modules/
+node_modules/
 
 # misc
-/.DS_Store
-/.env*
-/npm-debug.log*
-/pnpm-debug.log*
-/pnpm-error.log*
+.DS_Store
+.env*
+pnpm-debug.log
+pnpm-error.log
