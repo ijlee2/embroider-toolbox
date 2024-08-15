@@ -229,6 +229,9 @@ importers:
       '@codemod-utils/blueprints':
         specifier: ^1.1.5
         version: 1.1.5
+      '@codemod-utils/ember-cli-string':
+        specifier: ^1.1.4
+        version: 1.1.4
       '@codemod-utils/files':
         specifier: ^2.0.4
         version: 2.0.4
@@ -478,6 +481,10 @@ packages:
 
   '@codemod-utils/blueprints@1.1.5':
     resolution: {integrity: sha512-xNEGw1xp4VjyhwcLiHAnuUhIp3430m0BHl+nfCRXCkWlbCLjIKWsnkywPavK5pUYyp4TnAwVSrNrzHtELQOp7A==}
+    engines: {node: 18.* || >= 20}
+
+  '@codemod-utils/ember-cli-string@1.1.4':
+    resolution: {integrity: sha512-o9xeJJbwn2Sdl/be5E05cFfk6szNL+EWMZvL9JeskSrdaTHgWJxE4/chQ6HvrWudryHXHxAKfXQLRh3Bva5ajA==}
     engines: {node: 18.* || >= 20}
 
   '@codemod-utils/files@2.0.4':
@@ -3196,6 +3203,8 @@ snapshots:
   '@codemod-utils/blueprints@1.1.5':
     dependencies:
       lodash: 4.17.21
+
+  '@codemod-utils/ember-cli-string@1.1.4': {}
 
   '@codemod-utils/files@2.0.4':
     dependencies:

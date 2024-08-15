@@ -25,13 +25,20 @@ type CodemodOptions = {
     name: string;
   };
   projectRoot: string;
+  testAppLocation: string;
 };
 
 type Options = {
+  addon: {
+    name: string;
+  };
   entity: EntityType & {
     name: string;
   };
   projectRoot: string;
+  testApp: {
+    location: string;
+  };
 };
 
 export type { CodemodOptions, Options };

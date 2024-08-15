@@ -34,6 +34,11 @@ yargs(hideBin(process.argv))
           describe: 'Where to run the codemod',
           type: 'string',
         })
+        .option('test-app-location', {
+          demandOption: true,
+          describe: 'Location of the test-app',
+          type: 'string',
+        })
         .demandOption(['entity-type', 'name']);
     },
     command: 'destroy [entity-type] [name]',
@@ -45,6 +50,7 @@ yargs(hideBin(process.argv))
           type: argv['entity-type'],
         },
         projectRoot: argv['root'] ?? process.cwd(),
+        testAppLocation: argv['test-app-location'],
       });
     },
   })
@@ -65,6 +71,11 @@ yargs(hideBin(process.argv))
         })
         .option('root', {
           describe: 'Where to run the codemod',
+          type: 'string',
+        })
+        .option('test-app-location', {
+          demandOption: true,
+          describe: 'Location of the test-app',
           type: 'string',
         })
         .command({
@@ -92,6 +103,7 @@ yargs(hideBin(process.argv))
                 type: 'component',
               },
               projectRoot: argv['root'] ?? process.cwd(),
+              testAppLocation: argv['test-app-location'],
             });
           },
         })
@@ -120,6 +132,7 @@ yargs(hideBin(process.argv))
                 type: 'helper',
               },
               projectRoot: argv['root'] ?? process.cwd(),
+              testAppLocation: argv['test-app-location'],
             });
           },
         })
@@ -148,6 +161,7 @@ yargs(hideBin(process.argv))
                 type: 'modifier',
               },
               projectRoot: argv['root'] ?? process.cwd(),
+              testAppLocation: argv['test-app-location'],
             });
           },
         })
@@ -176,6 +190,7 @@ yargs(hideBin(process.argv))
                 type: 'service',
               },
               projectRoot: argv['root'] ?? process.cwd(),
+              testAppLocation: argv['test-app-location'],
             });
           },
         })
@@ -204,6 +219,7 @@ yargs(hideBin(process.argv))
                 type: 'util',
               },
               projectRoot: argv['root'] ?? process.cwd(),
+              testAppLocation: argv['test-app-location'],
             });
           },
         })
