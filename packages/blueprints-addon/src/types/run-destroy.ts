@@ -6,6 +6,7 @@ type CodemodOptions = {
     type: EntityType;
   };
   projectRoot: string;
+  testAppLocation: string;
 };
 
 type Options = {
@@ -14,6 +15,9 @@ type Options = {
     type: EntityType;
   };
   projectRoot: string;
+  testApp: {
+    location: string;
+  };
 };
 
 export type { CodemodOptions, Options };
