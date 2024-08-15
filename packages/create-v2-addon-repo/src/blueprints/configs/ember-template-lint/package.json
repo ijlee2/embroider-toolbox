@@ -1,0 +1,32 @@
+{
+  "name": "@shared-configs/ember-template-lint",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Shared configuration for ember-template-lint",
+  "main": ".template-lintrc.js",
+  "scripts": {
+    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
+    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
+    "lint:js": "prettier --check '**/*.js'",
+    "lint:js:fix": "prettier --write '**/*.js'"
+  },
+  "dependencies": {
+    "ember-template-lint-plugin-prettier": "^5.0.0"
+  },
+  "devDependencies": {
+    "@shared-configs/prettier": "workspace:*",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.3.3"
+  },
+  "peerDependencies": {
+    "ember-template-lint": "^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "ember-template-lint": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": "18.* || >= 20"
+  }
+}
