@@ -1,5 +1,5 @@
 type CodemodOptions = {
-  location: string;
+  location: string | undefined;
   name: string;
   projectRoot: string;
 };

@@ -15,87 +15,105 @@
 # Compile TypeScript
 pnpm build
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy component my/example-1" \
-  run-destroy-component/glimmer
+# Update fixtures for run-destroy
+rm -r "tests/fixtures/run-destroy/output"
+cp -r "tests/fixtures/run-destroy/input" "tests/fixtures/run-destroy/output"
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy component my/example-1" \
-  run-destroy-component/template-tag
+./dist/bin/blueprints-addon.js \
+  destroy component my/component-1 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy helper my/example-1" \
-  run-destroy-helper/class
+./dist/bin/blueprints-addon.js \
+  destroy component my/component-2 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy helper my/example-1" \
-  run-destroy-helper/function
+./dist/bin/blueprints-addon.js \
+  destroy helper my/helper-1 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy modifier my/example-1" \
-  run-destroy-modifier/class
+./dist/bin/blueprints-addon.js \
+  destroy helper my/helper-2 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy modifier my/example-1" \
-  run-destroy-modifier/function
+./dist/bin/blueprints-addon.js \
+  destroy modifier my/modifier-1 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy service my/example-1" \
-  run-destroy-service/class
+./dist/bin/blueprints-addon.js \
+  destroy modifier my/modifier-2 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "destroy" \
-  -N "destroy util my/example-1" \
-  run-destroy-util/function
+./dist/bin/blueprints-addon.js \
+  destroy service my/service-1 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate component my/example-1" \
-  run-generate-component/glimmer
+./dist/bin/blueprints-addon.js \
+  destroy util my/util-1 \
+  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate component my/example-1 --blueprint-type template-tag" \
-  run-generate-component/template-tag
+# Update fixtures for run-generate
+rm -r "tests/fixtures/run-generate/output"
+cp -r "tests/fixtures/run-generate/input" "tests/fixtures/run-generate/output"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate helper my/example-1" \
-  run-generate-helper/class
+./dist/bin/blueprints-addon.js \
+  generate component my/component-1 \
+  --blueprint-type "glimmer" \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate helper my/example-1 --blueprint-type function" \
-  run-generate-helper/function
+./dist/bin/blueprints-addon.js \
+  generate component my/component-2 \
+  --blueprint-type "template-tag" \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate modifier my/example-1" \
-  run-generate-modifier/class
+./dist/bin/blueprints-addon.js \
+  generate helper my/helper-1 \
+  --blueprint-type "class" \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate modifier my/example-1 --blueprint-type function" \
-  run-generate-modifier/function
+./dist/bin/blueprints-addon.js \
+  generate helper my/helper-2 \
+  --blueprint-type "function" \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate service my/example-1" \
-  run-generate-service/class
+./dist/bin/blueprints-addon.js \
+  generate modifier my/modifier-1 \
+  --blueprint-type "class" \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "generate" \
-  -N "generate util my/example-1" \
-  run-generate-util/function
+./dist/bin/blueprints-addon.js \
+  generate modifier my/modifier-2 \
+  --blueprint-type "function" \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
 
-./codemod-test-fixture.sh \
-  -C "new" \
-  -N "new --location ui/button --name @my-org-ui/button" \
-  run-new/typescript
+./dist/bin/blueprints-addon.js \
+  generate service my/service-1 \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
+
+./dist/bin/blueprints-addon.js \
+  generate util my/util-1 \
+  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --test-app-location "../../../test-app"
+
+# Update fixtures for run-new
+rm -r "tests/fixtures/run-new/output"
+cp -r "tests/fixtures/run-new/input" "tests/fixtures/run-new/output"
+
+./dist/bin/blueprints-addon.js \
+  new @my-org-ui/button \
+  --location "ui/button" \
+  --root "tests/fixtures/run-new/output"

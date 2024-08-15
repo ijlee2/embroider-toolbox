@@ -232,22 +232,21 @@ yargs(hideBin(process.argv))
   .command({
     builder: (yargs) => {
       return yargs
-        .option('location', {
-          demandOption: true,
-          describe: "Location of the addon (e.g. 'ui/button')",
+        .positional('name', {
+          describe: "Name of the addon (e.g. '@my-org-ui/button')",
           type: 'string',
         })
-        .option('name', {
-          demandOption: true,
-          describe: "Name of the addon (e.g. '@my-org-ui/button')",
+        .option('location', {
+          describe: "Location of the addon (e.g. 'ui/button')",
           type: 'string',
         })
         .option('root', {
           describe: 'Where to run the codemod',
           type: 'string',
-        });
+        })
+        .demandOption(['name']);
     },
-    command: 'new',
+    command: 'new [name]',
     describe: 'Creates a v2 addon',
     handler: (argv) => {
       runNew({
