@@ -2,25 +2,15 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { processTemplate } from '@codemod-utils/blueprints';
-import { classify } from '@codemod-utils/ember-cli-string';
 import { createFiles, findFiles, parseFilePath } from '@codemod-utils/files';
 
 import type { Options } from '../../types/run-generate.js';
 import { blueprintsRoot } from '../../utils/blueprints.js';
 
 function getData(options: Options) {
-  const entityName = options.entity.name;
-
-  const classifiedName = classify(entityName);
-  const camelizedName = `${classifiedName.charAt(0).toLowerCase()}${classifiedName.substring(1)}`;
-  const { name: localFileName } = parseFilePath(entityName);
+  const { name: localFileName } = parseFilePath(options.entity.name);
 
   return {
-    entity: {
-      camelizedName,
-      classifiedName,
-      name: entityName,
-    },
     localFileName,
   };
 }

@@ -3,12 +3,12 @@ import { hbs } from 'ember-cli-htmlbars';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'test-app/tests/helpers';
 
-module('Integration | Modifier | <%= data.entity.name %>', function (hooks) {
+module('Integration | Modifier | <%= options.entity.name %>', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
     await render(hbs`
-      <div {{<%= data.entity.name %>}}></div>
+      <div {{<%= options.entity.name %>}}></div>
     `);
 
     assert.ok(true);

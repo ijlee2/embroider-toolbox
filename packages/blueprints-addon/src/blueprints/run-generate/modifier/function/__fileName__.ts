@@ -4,7 +4,7 @@ type Named = {};
 type Positional = [];
 type Element = Element;
 
-interface <%= data.entity.classifiedName %>Signature {
+interface <%= options.entity.classifiedName %>Signature {
   Args: {
     Named: Named;
     Positional: Positional;
@@ -12,6 +12,6 @@ interface <%= data.entity.classifiedName %>Signature {
   Element: Element;
 }
 
-export default modifier<<%= data.entity.classifiedName %>Signature>(
-  function <%= data.entity.camelizedName %>(element /*, positional, named*/) {},
+export default modifier<<%= options.entity.classifiedName %>Signature>(
+  function <%= options.entity.camelizedName %>(element /*, positional, named*/) {},
 );
