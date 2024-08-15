@@ -1,5 +1,0 @@
----
-"blueprints-addon": minor
----
-
-Implemented generate commands (Part 1)
