@@ -5,27 +5,34 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
 import { runCodemod } from '../src/index.js';
-import type { CodemodOptions } from '../src/types/index.js';
 
 // Provide a title to the process in `ps`
 process.title = 'create-v2-addon-repo';
 
 // Set codemod options
-const argv = yargs(hideBin(process.argv))
-  .option('name', {
-    demandOption: true,
-    describe: 'Name of your project',
-    type: 'string',
+yargs(hideBin(process.argv))
+  .command({
+    builder: (yargs) => {
+      return yargs
+        .positional('name', {
+          describe: 'Name of your project',
+          type: 'string',
+        })
+        .option('root', {
+          describe: 'Where to run the codemod',
+          type: 'string',
+        })
+        .demandOption(['name']);
+    },
+    command: '* [name]',
+    describe: 'Creates a v2 addon repo',
+    handler: (argv) => {
+      runCodemod({
+        name: argv['name'],
+        projectRoot: argv['root'] ?? process.cwd(),
+      });
+    },
   })
-  .option('root', {
-    describe: 'Where to run the codemod',
-    type: 'string',
-  })
+  .demandCommand()
+  .strict()
   .parseSync();
-
-const codemodOptions: CodemodOptions = {
-  name: argv['name'],
-  projectRoot: argv['root'] ?? process.cwd(),
-};
-
-runCodemod(codemodOptions);
