@@ -8,6 +8,7 @@ type Options = {
   addon: {
     dasherizedName: string;
     location: string;
+    locationInverse: string;
     name: string;
     pascalCaseName: string;
   };
