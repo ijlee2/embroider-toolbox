@@ -4,14 +4,20 @@ import type {
 } from '../../../../../src/types/run-generate.js';
 
 const codemodOptions: CodemodOptions = {
-  blueprint: 'helper',
-  name: 'my/example-1',
+  entity: {
+    blueprintType: 'class',
+    name: 'my/example-1',
+    type: 'helper',
+  },
   projectRoot: 'tmp/run-generate-helper/typescript',
 };
 
 const options: Options = {
-  blueprint: 'helper',
-  name: 'my/example-1',
+  entity: {
+    blueprintType: 'class',
+    name: 'my/example-1',
+    type: 'helper',
+  },
   projectRoot: 'tmp/run-generate-helper/typescript',
 };
 

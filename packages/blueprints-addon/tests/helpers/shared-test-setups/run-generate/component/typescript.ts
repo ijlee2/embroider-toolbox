@@ -4,14 +4,20 @@ import type {
 } from '../../../../../src/types/run-generate.js';
 
 const codemodOptions: CodemodOptions = {
-  blueprint: 'component',
-  name: 'my/example-1',
+  entity: {
+    blueprintType: 'glimmer',
+    name: 'my/example-1',
+    type: 'component',
+  },
   projectRoot: 'tmp/run-generate-component/typescript',
 };
 
 const options: Options = {
-  blueprint: 'component',
-  name: 'my/example-1',
+  entity: {
+    blueprintType: 'glimmer',
+    name: 'my/example-1',
+    type: 'component',
+  },
   projectRoot: 'tmp/run-generate-component/typescript',
 };
 

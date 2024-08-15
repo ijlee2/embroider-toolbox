@@ -4,14 +4,18 @@ import type {
 } from '../../../../../src/types/run-destroy.js';
 
 const codemodOptions: CodemodOptions = {
-  blueprint: 'modifier',
-  name: 'my/example-1',
+  entity: {
+    name: 'my/example-1',
+    type: 'modifier',
+  },
   projectRoot: 'tmp/run-destroy-modifier/typescript',
 };
 
 const options: Options = {
-  blueprint: 'modifier',
-  name: 'my/example-1',
+  entity: {
+    name: 'my/example-1',
+    type: 'modifier',
+  },
   projectRoot: 'tmp/run-destroy-modifier/typescript',
 };
 
