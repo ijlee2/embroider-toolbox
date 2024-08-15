@@ -16,15 +16,16 @@
 #---------
 
 # Get named arguments for the binary
-while getopts ":N:" flag
+while getopts ":C:N:" flag
 do
   case $flag in
+    C) COMMAND=$OPTARG;;
     N) NAMED_ARGUMENTS=$OPTARG;;
   esac
 done
 
 # Get fixture name
-FIXTURE=${@:$OPTIND:1}
+FIXTURE=${@:$OPTIND:2}
 
 if [ ! $FIXTURE ]
 then
@@ -39,6 +40,12 @@ fi
 rm -r "tests/fixtures/$FIXTURE/output"
 cp -r "tests/fixtures/$FIXTURE/input" "tests/fixtures/$FIXTURE/output"
 
-./dist/bin/blueprints-addon.js $NAMED_ARGUMENTS --root="tests/fixtures/$FIXTURE/output"
+if [[ $COMMAND == "destroy" || $COMMAND == "generate" ]]
+then
+  ./dist/bin/blueprints-addon.js $NAMED_ARGUMENTS --root "tests/fixtures/$FIXTURE/output/packages/ui/button" --test-app-location "../../../test-app"
+elif [[ $COMMAND == "new" ]]
+then
+  ./dist/bin/blueprints-addon.js $NAMED_ARGUMENTS --root "tests/fixtures/$FIXTURE/output"
+fi
 
 echo "SUCCESS: Updated the output of $FIXTURE.\n"
