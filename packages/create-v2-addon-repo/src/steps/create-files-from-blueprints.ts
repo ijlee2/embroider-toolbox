@@ -8,7 +8,7 @@ import type { Options } from '../types/index.js';
 import { blueprintsRoot } from '../utils/blueprints.js';
 
 function resolveBlueprintFilePath(blueprintFilePath: string): string {
-  return blueprintFilePath;
+  return blueprintFilePath.replace('__gitignore__', '.gitignore');
 }
 
 export function createFilesFromBlueprints(options: Options): void {
