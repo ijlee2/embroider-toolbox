@@ -5,6 +5,7 @@ import { findFiles } from '@codemod-utils/files';
 import {
   createEntity,
   createOptions,
+  createTestFile,
   updateBarrelFile,
   updateTemplateRegistry,
 } from './steps/run-generate/index.js';
@@ -30,4 +31,5 @@ export function runGenerate(codemodOptions: CodemodOptions): void {
   createEntity(options);
   updateBarrelFile(options);
   updateTemplateRegistry(options);
+  createTestFile(options);
 }
