@@ -14,11 +14,12 @@ import type { CodemodOptions, Options } from './types/run-generate.js';
 function entityExists(options: Options): boolean {
   const { entity, projectRoot } = options;
 
-  const files = findFiles(join('src', `${entity.type}s`, `${entity.name}.*`), {
-    projectRoot,
-  });
+  const filePaths = findFiles(
+    join('src', `${entity.type}s`, `${entity.name}.*`),
+    { projectRoot },
+  );
 
-  return files.length > 0;
+  return filePaths.length > 0;
 }
 
 export function runGenerate(codemodOptions: CodemodOptions): void {
