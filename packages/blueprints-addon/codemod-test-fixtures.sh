@@ -97,5 +97,5 @@ pnpm build
 
 ./codemod-test-fixture.sh \
   -C "new" \
-  -N "new --location ui/button --name @my-org-ui/button" \
+  -N "new @my-org-ui/button --location ui/button" \
   run-new/typescript
