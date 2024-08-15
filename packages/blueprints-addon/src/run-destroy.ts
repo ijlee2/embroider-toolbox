@@ -1,6 +1,7 @@
 import {
   createOptions,
   removeEntity,
+  removeTestFile,
   updateBarrelFile,
   updateTemplateRegistry,
 } from './steps/run-destroy/index.js';
@@ -12,4 +13,5 @@ export function runDestroy(codemodOptions: CodemodOptions): void {
   removeEntity(options);
   updateBarrelFile(options);
   updateTemplateRegistry(options);
+  removeTestFile(options);
 }
