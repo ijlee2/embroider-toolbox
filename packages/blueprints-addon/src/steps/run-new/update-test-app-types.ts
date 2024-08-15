@@ -7,27 +7,9 @@ import type { Options } from '../../types/run-new.js';
 
 function addImportStatement(file: string, options: Options): string {
   const { addon } = options;
+  const line = `import type ${addon.pascalCaseName}Registry from '${addon.name}/template-registry';\n`;
 
-  const traverse = AST.traverse(true);
-
-  const ast = traverse(file);
-
-  // @ts-expect-error: Assume that types from external packages are correct
-  const nodes = ast.program.body;
-
-  const importStatementNode = AST.builders.importDeclaration(
-    [
-      AST.builders.importDefaultSpecifier(
-        AST.builders.identifier(`${addon.pascalCaseName}Registry`),
-      ),
-    ],
-    AST.builders.literal(`${addon.name}/template-registry`),
-    'type',
-  );
-
-  nodes.splice(0, 0, importStatementNode);
-
-  return AST.print(ast);
+  return [line, file].join('');
 }
 
 function updateRegistry(file: string, options: Options): string {

@@ -1,5 +1,17 @@
+import {
+  createOptions,
+  removeEntity,
+  removeTestFile,
+  updateBarrelFile,
+  updateTemplateRegistry,
+} from './steps/run-destroy/index.js';
 import type { CodemodOptions } from './types/run-destroy.js';
 
 export function runDestroy(codemodOptions: CodemodOptions): void {
-  console.log(codemodOptions);
+  const options = createOptions(codemodOptions);
+
+  removeEntity(options);
+  updateBarrelFile(options);
+  updateTemplateRegistry(options);
+  removeTestFile(options);
 }
