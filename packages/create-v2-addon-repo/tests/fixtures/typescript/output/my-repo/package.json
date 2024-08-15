@@ -1,0 +1,24 @@
+{
+  "name": "workspace-root",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Workspace root for my-repo",
+  "scripts": {
+    "addon": "blueprints-addon",
+    "build": "pnpm --filter './packages/**' build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
+    "start": "concurrently 'pnpm:start:*' --prefix-colors cyan,white,yellow",
+    "start:docs-app": "pnpm --filter docs-app start",
+    "start:test-app": "pnpm --filter test-app start",
+    "test": "pnpm --filter blueprints-addon --filter docs-app --filter test-app test"
+  },
+  "devDependencies": {
+    "blueprints-addon": "workspace:*",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "18.* || >= 20",
+    "pnpm": ">= 9"
+  }
+}
