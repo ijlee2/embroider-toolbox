@@ -1,5 +1,6 @@
 packages:
   - blueprints-addon
+  - configs/**
   - docs-app
   - packages/**
   - test-app

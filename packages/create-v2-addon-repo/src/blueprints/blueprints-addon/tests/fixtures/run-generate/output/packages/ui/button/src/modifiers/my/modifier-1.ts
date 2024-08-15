@@ -2,7 +2,6 @@ import Modifier from 'ember-modifier';
 
 type Named = {};
 type Positional = [];
-type Element = Element;
 
 interface MyModifier1Signature {
   Args: {
@@ -13,5 +12,7 @@ interface MyModifier1Signature {
 }
 
 export default class MyModifier1Modifier extends Modifier<MyModifier1Signature> {
-  modify(element: Element /*, positional: Positional, named: Named */) {}
+  modify(element: Element /*, positional: Positional, named: Named */) {
+    console.log(element);
+  }
 }

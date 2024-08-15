@@ -7,10 +7,8 @@ module('Integration | Helper | my/helper-1', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    this.inputValue = '1234';
-
     await render(hbs`
-      {{my/helper-1 this.inputValue}}
+      {{my/helper-1 "1234"}}
     `);
 
     assert.dom().hasText('1234');
