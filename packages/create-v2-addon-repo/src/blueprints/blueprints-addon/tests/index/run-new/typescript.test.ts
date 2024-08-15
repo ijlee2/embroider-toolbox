@@ -1,0 +1,27 @@
+import { assertFixture, loadFixture, test } from '@codemod-utils/tests';
+
+import { runNew } from '../../../src/index.js';
+import { inputProject, outputProject } from '../../fixtures/run-new/index.js';
+
+const fixtureRoot = 'tmp/run-new';
+
+function runCommands() {
+  runNew({
+    location: 'ui/button',
+    name: '@my-org-ui/button',
+    projectRoot: fixtureRoot,
+  });
+}
+
+test('index | run-new > typescript', function () {
+  loadFixture(inputProject, { projectRoot: fixtureRoot });
+
+  runCommands();
+
+  assertFixture(outputProject, { projectRoot: fixtureRoot });
+
+  // Check idempotence
+  runCommands();
+
+  assertFixture(outputProject, { projectRoot: fixtureRoot });
+});
