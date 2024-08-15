@@ -1,12 +1,18 @@
+type EntityType = 'component' | 'helper' | 'modifier' | 'service' | 'util';
+
 type CodemodOptions = {
-  blueprint: 'component' | 'helper' | 'modifier' | 'service' | 'util';
-  name: string;
+  entity: {
+    name: string;
+    type: EntityType;
+  };
   projectRoot: string;
 };
 
 type Options = {
-  blueprint: 'component' | 'helper' | 'modifier' | 'service' | 'util';
-  name: string;
+  entity: {
+    name: string;
+    type: EntityType;
+  };
   projectRoot: string;
 };
 
