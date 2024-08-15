@@ -2,7 +2,11 @@ import { join } from 'node:path';
 
 import { findFiles } from '@codemod-utils/files';
 
-import { createEntity, createOptions } from './steps/run-generate/index.js';
+import {
+  createEntity,
+  createOptions,
+  updateBarrelFile,
+} from './steps/run-generate/index.js';
 import type { CodemodOptions, Options } from './types/run-generate.js';
 
 function entityExists(options: Options): boolean {
@@ -23,4 +27,5 @@ export function runGenerate(codemodOptions: CodemodOptions): void {
   }
 
   createEntity(options);
+  updateBarrelFile(options);
 }
