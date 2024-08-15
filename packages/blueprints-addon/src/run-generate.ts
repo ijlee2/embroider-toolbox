@@ -6,6 +6,7 @@ import {
   createEntity,
   createOptions,
   updateBarrelFile,
+  updateTemplateRegistry,
 } from './steps/run-generate/index.js';
 import type { CodemodOptions, Options } from './types/run-generate.js';
 
@@ -28,4 +29,5 @@ export function runGenerate(codemodOptions: CodemodOptions): void {
 
   createEntity(options);
   updateBarrelFile(options);
+  updateTemplateRegistry(options);
 }
