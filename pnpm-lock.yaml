@@ -184,18 +184,6 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
 
-  configs/testem:
-    devDependencies:
-      '@shared-configs/prettier':
-        specifier: workspace:*
-        version: link:../prettier
-      concurrently:
-        specifier: ^8.2.2
-        version: 8.2.2
-      prettier:
-        specifier: ^3.3.3
-        version: 3.3.3
-
   configs/typescript:
     dependencies:
       '@tsconfig/ember':
