@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { AST } from '@codemod-utils/ast-javascript';
 
-import type { Options } from '../../types/run-new.js';
+import type { Options } from '../../../types/run-new.js';
 
 function addImportStatement(file: string, options: Options): string {
   const { addon } = options;
@@ -49,10 +49,8 @@ function updateRegistry(file: string, options: Options): string {
   return AST.print(ast);
 }
 
-export function updateTestAppTypes(options: Options): void {
-  const { projectRoot, testApp } = options;
-
-  const oldPath = join(projectRoot, testApp.location, 'types/global.d.ts');
+export function updateTypes(appRoot: string, options: Options): void {
+  const oldPath = join(appRoot, 'types/global.d.ts');
   const oldFile = readFileSync(oldPath, 'utf8');
 
   let newFile = addImportStatement(oldFile, options);
