@@ -65,37 +65,37 @@ cp -r "tests/fixtures/run-generate/input" "tests/fixtures/run-generate/output"
 
 ./dist/bin/blueprints-addon.js \
   generate component my-example/glimmer \
-  --blueprint-type "glimmer" \
+  --blueprint "glimmer" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
   generate component my-example/template-tag \
-  --blueprint-type "template-tag" \
+  --blueprint "template-tag" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
   generate helper my-example/class \
-  --blueprint-type "class" \
+  --blueprint "class" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
   generate helper my-example/function \
-  --blueprint-type "function" \
+  --blueprint "function" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
   generate modifier my-example/class \
-  --blueprint-type "class" \
+  --blueprint "class" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
   generate modifier my-example/function \
-  --blueprint-type "function" \
+  --blueprint "function" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 

@@ -11,7 +11,7 @@ const fixtureRoot = 'tmp/run-generate';
 function runCommands() {
   runGenerate({
     entity: {
-      blueprintType: 'glimmer',
+      blueprint: 'glimmer',
       name: 'my-example/glimmer',
       type: 'component',
     },
@@ -21,7 +21,7 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'template-tag',
+      blueprint: 'template-tag',
       name: 'my-example/template-tag',
       type: 'component',
     },
@@ -31,7 +31,7 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'class',
+      blueprint: 'class',
       name: 'my-example/class',
       type: 'helper',
     },
@@ -41,7 +41,7 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'function',
+      blueprint: 'function',
       name: 'my-example/function',
       type: 'helper',
     },
@@ -51,7 +51,7 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'class',
+      blueprint: 'class',
       name: 'my-example/class',
       type: 'modifier',
     },
@@ -61,7 +61,7 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'function',
+      blueprint: 'function',
       name: 'my-example/function',
       type: 'modifier',
     },
@@ -71,7 +71,7 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'class',
+      blueprint: 'class',
       name: 'my-example/class',
       type: 'service',
     },
@@ -81,7 +81,7 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'function',
+      blueprint: 'function',
       name: 'my-example/function',
       type: 'util',
     },

@@ -1,22 +1,22 @@
 type EntityType =
   | {
-      blueprintType: 'glimmer' | 'template-tag';
+      blueprint: 'glimmer' | 'template-tag';
       type: 'component';
     }
   | {
-      blueprintType: 'class' | 'function';
+      blueprint: 'class' | 'function';
       type: 'helper';
     }
   | {
-      blueprintType: 'class' | 'function';
+      blueprint: 'class' | 'function';
       type: 'modifier';
     }
   | {
-      blueprintType: 'class';
+      blueprint: 'class';
       type: 'service';
     }
   | {
-      blueprintType: 'function';
+      blueprint: 'function';
       type: 'util';
     };
 
