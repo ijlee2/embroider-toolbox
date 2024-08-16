@@ -1,16 +1,16 @@
-import type MyModifier2 from './modifiers/my/modifier-2.ts';
-import type MyModifier1 from './modifiers/my/modifier-1.ts';
-import type MyHelper2 from './helpers/my/helper-2.ts';
-import type MyHelper1 from './helpers/my/helper-1.ts';
-import type MyComponent2 from './components/my/component-2.gts';
-import type MyComponent1 from './components/my/component-1.ts';
+import type MyExampleFunctionModifier from './modifiers/my-example/function.ts';
+import type MyExampleClassModifier from './modifiers/my-example/class.ts';
+import type MyExampleFunctionHelper from './helpers/my-example/function.ts';
+import type MyExampleClassHelper from './helpers/my-example/class.ts';
+import type MyExampleTemplateTagComponent from './components/my-example/template-tag.gts';
+import type MyExampleGlimmerComponent from './components/my-example/glimmer.ts';
 export default interface MyOrgUiButtonRegistry {
-  'my/modifier-2': typeof MyModifier2;
-  'my/modifier-1': typeof MyModifier1;
-  'my/helper-2': typeof MyHelper2;
-  'my/helper-1': typeof MyHelper1;
-  'My::Component2': typeof MyComponent2;
-  'my/component-2': typeof MyComponent2;
-  'My::Component1': typeof MyComponent1;
-  'my/component-1': typeof MyComponent1;
+  'my-example/function': typeof MyExampleFunctionModifier;
+  'my-example/class': typeof MyExampleClassModifier;
+  'my-example/function': typeof MyExampleFunctionHelper;
+  'my-example/class': typeof MyExampleClassHelper;
+  'MyExample::TemplateTag': typeof MyExampleTemplateTagComponent;
+  'my-example/template-tag': typeof MyExampleTemplateTagComponent;
+  'MyExample::Glimmer': typeof MyExampleGlimmerComponent;
+  'my-example/glimmer': typeof MyExampleGlimmerComponent;
 }
