@@ -11,8 +11,8 @@ const fixtureRoot = 'tmp/run-generate';
 function runCommands() {
   runGenerate({
     entity: {
-      blueprintType: 'glimmer',
-      name: 'my/component-1',
+      blueprint: 'glimmer',
+      name: 'my-example/glimmer',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -21,8 +21,8 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'template-tag',
-      name: 'my/component-2',
+      blueprint: 'template-tag',
+      name: 'my-example/template-tag',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -31,8 +31,8 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'class',
-      name: 'my/helper-1',
+      blueprint: 'class',
+      name: 'my-example/class',
       type: 'helper',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -41,8 +41,8 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'function',
-      name: 'my/helper-2',
+      blueprint: 'function',
+      name: 'my-example/function',
       type: 'helper',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -51,8 +51,8 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'class',
-      name: 'my/modifier-1',
+      blueprint: 'class',
+      name: 'my-example/class',
       type: 'modifier',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -61,8 +61,8 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'function',
-      name: 'my/modifier-2',
+      blueprint: 'function',
+      name: 'my-example/function',
       type: 'modifier',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -71,8 +71,8 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'class',
-      name: 'my/service-1',
+      blueprint: 'class',
+      name: 'my-example/class',
       type: 'service',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -81,8 +81,8 @@ function runCommands() {
 
   runGenerate({
     entity: {
-      blueprintType: 'function',
-      name: 'my/util-1',
+      blueprint: 'function',
+      name: 'my-example/function',
       type: 'util',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,

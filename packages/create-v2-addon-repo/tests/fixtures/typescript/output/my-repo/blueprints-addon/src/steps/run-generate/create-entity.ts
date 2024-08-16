@@ -32,7 +32,7 @@ export function createEntity(options: Options): void {
     blueprintsRoot,
     'run-generate',
     options.entity.type,
-    options.entity.blueprintType,
+    options.entity.blueprint,
   );
 
   const blueprintFilePaths = findFiles('**/*', {

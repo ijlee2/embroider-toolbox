@@ -11,7 +11,7 @@ const fixtureRoot = 'tmp/run-destroy';
 function runCommands() {
   runDestroy({
     entity: {
-      name: 'my/component-1',
+      name: 'my-example/glimmer',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -20,7 +20,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my/component-2',
+      name: 'my-example/template-tag',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -29,7 +29,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my/helper-1',
+      name: 'my-example/class',
       type: 'helper',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -38,7 +38,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my/helper-2',
+      name: 'my-example/function',
       type: 'helper',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -47,7 +47,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my/modifier-1',
+      name: 'my-example/class',
       type: 'modifier',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -56,7 +56,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my/modifier-2',
+      name: 'my-example/function',
       type: 'modifier',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -65,7 +65,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my/service-1',
+      name: 'my-example/class',
       type: 'service',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
@@ -74,7 +74,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my/util-1',
+      name: 'my-example/function',
       type: 'util',
     },
     projectRoot: `${fixtureRoot}/packages/ui/button`,
