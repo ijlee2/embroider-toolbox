@@ -1,28 +1,20 @@
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
-
 import {
+  canSkip,
   createAddon,
   createOptions,
-  updateTestAppPackageJson,
-  updateTestAppTypes,
+  updateDocsApp,
+  updateTestApp,
 } from './steps/run-new/index.js';
-import type { CodemodOptions, Options } from './types/run-new.js';
-
-function addonExists(options: Options): boolean {
-  const { addon, projectRoot } = options;
-
-  return existsSync(join(projectRoot, addon.location, 'package.json'));
-}
+import type { CodemodOptions } from './types/run-new.js';
 
 export function runNew(codemodOptions: CodemodOptions): void {
   const options = createOptions(codemodOptions);
 
-  if (addonExists(options)) {
+  if (canSkip(options)) {
     return;
   }
 
   createAddon(options);
-  updateTestAppPackageJson(options);
-  updateTestAppTypes(options);
+  updateDocsApp(options);
+  updateTestApp(options);
 }

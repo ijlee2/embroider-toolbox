@@ -1,0 +1,7 @@
+{
+  "name": "docs-app",
+  "version": "0.0.0",
+  "devDependencies": {
+    "@my-org-ui/button": "workspace:*"
+  }
+}
