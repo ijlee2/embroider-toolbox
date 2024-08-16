@@ -1,5 +1,3 @@
 export * from './create-options.js';
-export * from './remove-entity.js';
-export * from './remove-test-file.js';
-export * from './update-barrel-file.js';
-export * from './update-template-registry.js';
+export * from './update-addon.js';
+export * from './update-test-app.js';

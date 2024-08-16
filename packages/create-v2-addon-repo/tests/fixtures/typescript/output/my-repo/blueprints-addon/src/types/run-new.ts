@@ -12,6 +12,10 @@ type Options = {
     name: string;
     pascalCaseName: string;
   };
+  docsApp: {
+    location: string;
+    name: string;
+  };
   projectRoot: string;
   testApp: {
     location: string;

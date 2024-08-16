@@ -32,6 +32,10 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
       name,
       pascalCaseName,
     },
+    docsApp: {
+      location: 'docs-app',
+      name: 'docs-app',
+    },
     projectRoot,
     testApp: {
       location: 'test-app',
