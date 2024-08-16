@@ -10,6 +10,7 @@ interface \\<%= options.entity.classifiedName %\\>Signature {
   Element: null;
 }
 
+// eslint-disable-next-line ember/no-empty-glimmer-component-classes
 export default class \\<%= options.entity.classifiedName %\\>Component extends Component<\\<%= options.entity.classifiedName %\\>Signature> {
   <template>
     <div class={{styles.container}}>

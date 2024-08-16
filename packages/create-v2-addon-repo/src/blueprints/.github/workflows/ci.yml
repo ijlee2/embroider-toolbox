@@ -11,8 +11,8 @@ env:
   PNPM_VERSION: 9
 
 jobs:
-  lint:
-    name: Lint
+  setup:
+    name: Setup
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -32,6 +32,47 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
+
+      - name: Build packages
+        run: pnpm build
+
+      - name: Upload built packages
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-packages
+          path: |
+            packages/**/declarations/**/*
+            packages/**/dist/**/*
+            packages/.gitkeep
+
+  lint:
+    name: Lint
+    needs: [setup]
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download built packages
+        uses: actions/download-artifact@v4
+        with:
+          name: built-packages
+          path: packages
 
       - name: Lint
         run: pnpm lint
@@ -39,7 +80,13 @@ jobs:
 
   test:
     name: Test
+    needs: [setup]
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package-location:
+          # - 'docs-app'
+          - 'test-app'
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
@@ -59,5 +106,57 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Download built-packages
+        uses: actions/download-artifact@v4
+        with:
+          name: built-packages
+          path: packages
+
       - name: Test
         run: pnpm test
+        working-directory: ${{ matrix.package-location }}
+
+  test-compatibility:
+    needs: [setup]
+    name: Test compatibility
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        scenario:
+          - 'ember-lts-3.28'
+          - 'ember-lts-4.12'
+          - 'ember-lts-5.8'
+          - 'ember-release'
+          - 'ember-beta'
+          - 'ember-canary'
+          # - 'embroider-safe'
+          - 'embroider-optimized'
+    timeout-minutes: 5
+    steps:
+      - name: Check out a copy of the repo
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{ env.PNPM_VERSION }}
+
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          cache: 'pnpm'
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download built-packages
+        uses: actions/download-artifact@v4
+        with:
+          name: built-packages
+          path: packages
+
+      - name: Test
+        run: pnpm test:ember-compatibility ${{ matrix.scenario }} --- pnpm test
+        working-directory: 'test-app'

@@ -86,9 +86,9 @@ yargs(hideBin(process.argv))
                 describe: 'Entity name',
                 type: 'string',
               })
-              .option('blueprint-type', {
+              .option('blueprint', {
                 choices: ['glimmer', 'template-tag'] as const,
-                describe: 'Blueprint type',
+                describe: 'Which blueprint to run',
                 type: 'string',
               })
               .demandOption(['name']);
@@ -98,7 +98,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprintType: argv['blueprint-type'] ?? 'glimmer',
+                blueprint: argv['blueprint'] ?? 'glimmer',
                 name: argv['name'],
                 type: 'component',
               },
@@ -115,9 +115,9 @@ yargs(hideBin(process.argv))
                 describe: 'Entity name',
                 type: 'string',
               })
-              .option('blueprint-type', {
+              .option('blueprint', {
                 choices: ['class', 'function'] as const,
-                describe: 'Blueprint type',
+                describe: 'Which blueprint to run',
                 type: 'string',
               })
               .demandOption(['name']);
@@ -127,7 +127,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprintType: argv['blueprint-type'] ?? 'class',
+                blueprint: argv['blueprint'] ?? 'class',
                 name: argv['name'],
                 type: 'helper',
               },
@@ -144,9 +144,9 @@ yargs(hideBin(process.argv))
                 describe: 'Entity name',
                 type: 'string',
               })
-              .option('blueprint-type', {
+              .option('blueprint', {
                 choices: ['class', 'function'] as const,
-                describe: 'Blueprint type',
+                describe: 'Which blueprint to run',
                 type: 'string',
               })
               .demandOption(['name']);
@@ -156,7 +156,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprintType: argv['blueprint-type'] ?? 'class',
+                blueprint: argv['blueprint'] ?? 'class',
                 name: argv['name'],
                 type: 'modifier',
               },
@@ -173,9 +173,9 @@ yargs(hideBin(process.argv))
                 describe: 'Entity name',
                 type: 'string',
               })
-              .option('blueprint-type', {
+              .option('blueprint', {
                 choices: ['class'] as const,
-                describe: 'Blueprint type',
+                describe: 'Which blueprint to run',
                 type: 'string',
               })
               .demandOption(['name']);
@@ -185,7 +185,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprintType: argv['blueprint-type'] ?? 'class',
+                blueprint: argv['blueprint'] ?? 'class',
                 name: argv['name'],
                 type: 'service',
               },
@@ -202,9 +202,9 @@ yargs(hideBin(process.argv))
                 describe: 'Entity name',
                 type: 'string',
               })
-              .option('blueprint-type', {
+              .option('blueprint', {
                 choices: ['function'] as const,
-                describe: 'Blueprint type',
+                describe: 'Which blueprint to run',
                 type: 'string',
               })
               .demandOption(['name']);
@@ -214,7 +214,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprintType: argv['blueprint-type'] ?? 'function',
+                blueprint: argv['blueprint'] ?? 'function',
                 name: argv['name'],
                 type: 'util',
               },
