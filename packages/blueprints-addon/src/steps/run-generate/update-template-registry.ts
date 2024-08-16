@@ -7,14 +7,16 @@ import type { Options } from '../../types/run-generate.js';
 
 function addImportStatement(file: string, options: Options): string {
   const { entity } = options;
+  const localName = getLocalName(options);
+
   let line = '';
 
   switch (entity.type) {
     case 'component': {
       if (entity.blueprintType === 'template-tag') {
-        line = `import type ${entity.classifiedName} from './${entity.type}s/${entity.name}.gts';\n`;
+        line = `import type ${localName} from './${entity.type}s/${entity.name}.gts';\n`;
       } else {
-        line = `import type ${entity.classifiedName} from './${entity.type}s/${entity.name}.ts';\n`;
+        line = `import type ${localName} from './${entity.type}s/${entity.name}.ts';\n`;
       }
 
       break;
@@ -22,7 +24,7 @@ function addImportStatement(file: string, options: Options): string {
 
     case 'helper':
     case 'modifier': {
-      line = `import type ${entity.classifiedName} from './${entity.type}s/${entity.name}.ts';\n`;
+      line = `import type ${localName} from './${entity.type}s/${entity.name}.ts';\n`;
 
       break;
     }
@@ -31,8 +33,31 @@ function addImportStatement(file: string, options: Options): string {
   return [line, file].join('');
 }
 
+function getLocalName(options: Options): string {
+  const { entity } = options;
+
+  switch (entity.type) {
+    case 'component': {
+      return `${entity.classifiedName}Component`;
+    }
+
+    case 'helper': {
+      return `${entity.classifiedName}Helper`;
+    }
+
+    case 'modifier': {
+      return `${entity.classifiedName}Modifier`;
+    }
+
+    default: {
+      return entity.classifiedName;
+    }
+  }
+}
+
 function updateRegistry(file: string, options: Options): string {
   const { entity } = options;
+  const localName = getLocalName(options);
 
   const traverse = AST.traverse(true);
 
@@ -47,9 +72,7 @@ function updateRegistry(file: string, options: Options): string {
         AST.builders.tsPropertySignature(
           AST.builders.stringLiteral(entity.name),
           AST.builders.tsTypeAnnotation(
-            AST.builders.tsTypeQuery(
-              AST.builders.identifier(entity.classifiedName),
-            ),
+            AST.builders.tsTypeQuery(AST.builders.identifier(localName)),
           ),
         ),
       );
@@ -61,9 +84,7 @@ function updateRegistry(file: string, options: Options): string {
           AST.builders.tsPropertySignature(
             AST.builders.stringLiteral(entity.doubleColonizedName),
             AST.builders.tsTypeAnnotation(
-              AST.builders.tsTypeQuery(
-                AST.builders.identifier(entity.classifiedName),
-              ),
+              AST.builders.tsTypeQuery(AST.builders.identifier(localName)),
             ),
           ),
         );
