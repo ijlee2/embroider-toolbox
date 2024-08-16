@@ -2,7 +2,7 @@ import { join } from 'node:path';
 
 import { findFiles, removeFiles } from '@codemod-utils/files';
 
-import type { Options } from '../../types/run-destroy.js';
+import type { Options } from '../../../types/run-destroy.js';
 
 function getPattern(options: Options): string {
   const { entity } = options;

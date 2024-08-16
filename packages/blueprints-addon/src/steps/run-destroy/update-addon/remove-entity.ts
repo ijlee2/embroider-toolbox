@@ -2,7 +2,7 @@ import { join } from 'node:path';
 
 import { findFiles, removeFiles } from '@codemod-utils/files';
 
-import type { Options } from '../../types/run-destroy.js';
+import type { Options } from '../../../types/run-destroy.js';
 
 export function removeEntity(options: Options): void {
   const { entity, projectRoot } = options;
