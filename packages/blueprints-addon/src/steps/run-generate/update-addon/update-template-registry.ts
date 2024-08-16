@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { AST } from '@codemod-utils/ast-javascript';
 
-import type { Options } from '../../types/run-generate.js';
+import type { Options } from '../../../types/run-generate.js';
 
 function addImportStatement(file: string, options: Options): string {
   const { entity } = options;

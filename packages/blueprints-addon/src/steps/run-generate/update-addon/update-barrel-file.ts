@@ -1,7 +1,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-import type { Options } from '../../types/run-generate.js';
+import type { Options } from '../../../types/run-generate.js';
 
 function addExportStatement(file: string, options: Options): string {
   const { entity } = options;

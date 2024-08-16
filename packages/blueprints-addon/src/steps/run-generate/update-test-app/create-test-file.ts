@@ -4,8 +4,8 @@ import { join } from 'node:path';
 import { processTemplate } from '@codemod-utils/blueprints';
 import { createFiles, findFiles } from '@codemod-utils/files';
 
-import type { Options } from '../../types/run-generate.js';
-import { blueprintsRoot } from '../../utils/blueprints.js';
+import type { Options } from '../../../types/run-generate.js';
+import { blueprintsRoot } from '../../../utils/blueprints.js';
 
 const ENABLE_TEMPLATE_TAG = false;
 
