@@ -16,7 +16,7 @@ function setExecutePermissions(options: Options) {
 
   const files = new Set([
     'blueprints-addon/build.sh',
-    'blueprints-addon/codemod-test-fixtures.sh',
+    'blueprints-addon/update-test-fixtures.sh',
   ]);
 
   Array.from(files).forEach((file) => {
