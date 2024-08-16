@@ -85,7 +85,7 @@ jobs:
     strategy:
       matrix:
         package-location:
-          # - 'docs-app'
+          - 'docs-app'
           - 'test-app'
     timeout-minutes: 5
     steps:

@@ -16,7 +16,7 @@
     "lint:packages:fix": "pnpm --filter './packages/**' lint:fix",
     "lint:test-app": "pnpm --filter test-app lint",
     "lint:test-app:fix": "pnpm --filter test-app lint:fix",
-    "start": "concurrently 'pnpm:start:*' --group --names 'start:' --prefix-colors cyan,yellow,white",
+    "start": "concurrently 'pnpm:start:*' --names 'start:' --prefix-colors cyan,yellow,white",
     "start:docs-app": "pnpm --filter docs-app start",
     "start:test-app": "pnpm --filter test-app start",
     "test": "concurrently 'pnpm:test:*' --group --names 'test:' --prefix-colors cyan,yellow,white",
