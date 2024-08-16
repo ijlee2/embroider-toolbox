@@ -20,42 +20,42 @@ rm -r "tests/fixtures/run-destroy/output"
 cp -r "tests/fixtures/run-destroy/input" "tests/fixtures/run-destroy/output"
 
 ./dist/bin/blueprints-addon.js \
-  destroy component my/component-1 \
+  destroy component my-example/glimmer \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy component my/component-2 \
+  destroy component my-example/template-tag \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy helper my/helper-1 \
+  destroy helper my-example/class \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy helper my/helper-2 \
+  destroy helper my-example/function \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy modifier my/modifier-1 \
+  destroy modifier my-example/class \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy modifier my/modifier-2 \
+  destroy modifier my-example/function \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy service my/service-1 \
+  destroy service my-example/class \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy util my/util-1 \
+  destroy util my-example/function \
   --root "tests/fixtures/run-destroy/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
@@ -64,48 +64,48 @@ rm -r "tests/fixtures/run-generate/output"
 cp -r "tests/fixtures/run-generate/input" "tests/fixtures/run-generate/output"
 
 ./dist/bin/blueprints-addon.js \
-  generate component my/component-1 \
+  generate component my-example/glimmer \
   --blueprint-type "glimmer" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate component my/component-2 \
+  generate component my-example/template-tag \
   --blueprint-type "template-tag" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate helper my/helper-1 \
+  generate helper my-example/class \
   --blueprint-type "class" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate helper my/helper-2 \
+  generate helper my-example/function \
   --blueprint-type "function" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate modifier my/modifier-1 \
+  generate modifier my-example/class \
   --blueprint-type "class" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate modifier my/modifier-2 \
+  generate modifier my-example/function \
   --blueprint-type "function" \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate service my/service-1 \
+  generate service my-example/class \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate util my/util-1 \
+  generate util my-example/function \
   --root "tests/fixtures/run-generate/output/packages/ui/button" \
   --test-app-location "../../../test-app"
 
