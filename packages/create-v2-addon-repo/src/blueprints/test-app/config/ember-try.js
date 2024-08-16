@@ -18,6 +18,7 @@ module.exports = async function () {
             'ember-a11y-testing': '5.2.1',
             'ember-cli': '~4.12.3',
             'ember-qunit': '6.0.0',
+            'ember-resolver': '11.0.1',
             'ember-source': '~3.28.12',
           },
         },
