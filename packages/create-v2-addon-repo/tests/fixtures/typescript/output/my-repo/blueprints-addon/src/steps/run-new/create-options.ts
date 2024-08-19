@@ -11,7 +11,7 @@ function pascalCase(packageName: string): string {
 
   return dasherizedName
     .split('-')
-    .map((token) => token.charAt(0).toUpperCase() + token.substring(1))
+    .map((token) => `${token.charAt(0).toUpperCase()}${token.substring(1)}`)
     .join('');
 }
 

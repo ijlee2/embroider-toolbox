@@ -56,12 +56,14 @@ function resolveBlueprintFilePath(
 }
 
 export function createTestFile(options: Options): void {
+  const { entity, projectRoot, testApp } = options;
+
   const filesToSkip = getFilesToSkip(options);
 
   const cwd = join(
     blueprintsRoot,
     'run-generate',
-    options.entity.type,
+    entity.type,
     '__testAppLocation__',
   );
 
@@ -85,6 +87,6 @@ export function createTestFile(options: Options): void {
   );
 
   createFiles(fileMap, {
-    projectRoot: join(options.projectRoot, options.testApp.location),
+    projectRoot: join(projectRoot, testApp.location),
   });
 }
