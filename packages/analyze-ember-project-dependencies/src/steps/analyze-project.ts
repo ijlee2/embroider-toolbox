@@ -2,6 +2,7 @@ import { readPackageJson } from '@codemod-utils/json';
 
 import type { Options, ProjectData } from '../types/index.js';
 import {
+  analyzeEntities,
   analyzePackageJson,
   getPackageRoots,
 } from './analyze-project/index.js';
@@ -21,9 +22,15 @@ export function analyzeProject(options: Options) {
     const { dependencies, devDependencies, packageType } =
       analyzePackageJson(packageJson);
 
+    const entities = analyzeEntities({
+      packageRoot,
+      packageType,
+    });
+
     projectData.set(packageJson['name'], {
       dependencies,
       devDependencies,
+      entities,
       packageRoot,
       packageType,
     });
