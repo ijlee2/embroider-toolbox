@@ -8,7 +8,3 @@
 /coverage/
 !.*
 .*/
-
-# <template> tag
-/**/*.gjs
-/**/*.gts
