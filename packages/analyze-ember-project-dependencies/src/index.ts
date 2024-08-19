@@ -1,4 +1,4 @@
-import { createOptions } from './steps/index.js';
+import { analyzeProject, createOptions } from './steps/index.js';
 import type { CodemodOptions } from './types/index.js';
 
 export function analyzeEmberProjectDependencies(
@@ -6,5 +6,7 @@ export function analyzeEmberProjectDependencies(
 ): void {
   const options = createOptions(codemodOptions);
 
-  console.log(options);
+  const projectData = analyzeProject(options);
+
+  // console.log(`✅ ${projectData.size} packages found\n`);
 }
