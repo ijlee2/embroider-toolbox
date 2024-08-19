@@ -1,0 +1,59 @@
+{
+  "name": "analyze-ember-project-dependencies",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Analyze dependencies of an Ember project",
+  "keywords": [
+    "codemod",
+    "ember-codemod",
+    "emberjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/embroider-toolbox.git"
+  },
+  "license": "MIT",
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": "dist/bin/analyze-ember-project-dependencies.js",
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "./build.sh --production",
+    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
+    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "tsc --noEmit",
+    "test": "./build.sh --test && mt dist-for-testing --quiet"
+  },
+  "dependencies": {
+    "@codemod-utils/ast-javascript": "^1.2.8",
+    "@codemod-utils/ast-template": "^1.1.4",
+    "@codemod-utils/ember-cli-string": "^1.1.4",
+    "@codemod-utils/files": "^2.0.4",
+    "@codemod-utils/json": "^1.1.9",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@codemod-utils/tests": "^1.1.7",
+    "@shared-configs/eslint-config-node": "workspace:*",
+    "@shared-configs/prettier": "workspace:*",
+    "@shared-configs/typescript": "workspace:*",
+    "@sondr3/minitest": "^0.1.2",
+    "@types/node": "^18.19.39",
+    "@types/yargs": "^17.0.32",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": "18.* || >= 20"
+  }
+}
