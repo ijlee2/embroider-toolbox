@@ -7,15 +7,23 @@ import { createFiles, findFiles } from '@codemod-utils/files';
 import type { Options } from '../../../types/run-generate.js';
 import { blueprintsRoot } from '../../../utils/blueprints.js';
 
-const ENABLE_TEMPLATE_TAG = false;
+function getFilesToSkip(options: Options): string[] {
+  const { entity, testApp } = options;
 
-function getFilesToSkip(): string[] {
   const files = new Set<string>();
 
-  if (ENABLE_TEMPLATE_TAG) {
-    files.add('__fileName__.ts');
-  } else {
-    files.add('__fileName__.gts');
+  switch (entity.type) {
+    case 'component':
+    case 'helper':
+    case 'modifier': {
+      if (testApp.useTemplateTag) {
+        files.add('__fileName__.ts');
+      } else {
+        files.add('__fileName__.gts');
+      }
+
+      break;
+    }
   }
 
   return Array.from(files);
@@ -48,7 +56,7 @@ function resolveBlueprintFilePath(
 }
 
 export function createTestFile(options: Options): void {
-  const filesToSkip = getFilesToSkip();
+  const filesToSkip = getFilesToSkip(options);
 
   const cwd = join(
     blueprintsRoot,

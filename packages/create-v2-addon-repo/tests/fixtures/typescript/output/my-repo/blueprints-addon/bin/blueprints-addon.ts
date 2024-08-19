@@ -10,6 +10,14 @@ import { runDestroy, runGenerate, runNew } from '../src/index.js';
 process.title = 'blueprints-addon';
 
 // Set codemod options
+const DEFAULT_BLUEPRINT_VALUE = {
+  component: 'glimmer',
+  helper: 'class',
+  modifier: 'class',
+  service: 'class',
+  util: 'function',
+} as const;
+
 yargs(hideBin(process.argv))
   .command({
     aliases: ['d'],
@@ -98,7 +106,8 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprint: argv['blueprint'] ?? 'glimmer',
+                blueprint:
+                  argv['blueprint'] ?? DEFAULT_BLUEPRINT_VALUE.component,
                 name: argv['name'],
                 type: 'component',
               },
@@ -127,7 +136,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprint: argv['blueprint'] ?? 'class',
+                blueprint: argv['blueprint'] ?? DEFAULT_BLUEPRINT_VALUE.helper,
                 name: argv['name'],
                 type: 'helper',
               },
@@ -156,7 +165,8 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprint: argv['blueprint'] ?? 'class',
+                blueprint:
+                  argv['blueprint'] ?? DEFAULT_BLUEPRINT_VALUE.modifier,
                 name: argv['name'],
                 type: 'modifier',
               },
@@ -185,7 +195,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprint: argv['blueprint'] ?? 'class',
+                blueprint: argv['blueprint'] ?? DEFAULT_BLUEPRINT_VALUE.service,
                 name: argv['name'],
                 type: 'service',
               },
@@ -214,7 +224,7 @@ yargs(hideBin(process.argv))
           handler: (argv) => {
             runGenerate({
               entity: {
-                blueprint: argv['blueprint'] ?? 'function',
+                blueprint: argv['blueprint'] ?? DEFAULT_BLUEPRINT_VALUE.util,
                 name: argv['name'],
                 type: 'util',
               },

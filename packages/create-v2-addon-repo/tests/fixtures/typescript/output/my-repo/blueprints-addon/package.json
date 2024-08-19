@@ -2,7 +2,7 @@
   "name": "blueprints-addon",
   "version": "0.0.0",
   "private": true,
-  "description": "Blueprints for v2 addons",
+  "description": "CLI for v2 addons",
   "keywords": [
     "codemod",
     "ember-codemod",

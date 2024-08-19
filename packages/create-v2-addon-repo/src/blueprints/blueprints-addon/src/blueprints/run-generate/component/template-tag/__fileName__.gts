@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import type { TOC } from '@ember/component/template-only';
 
 import styles from './\\<%= data.localFileName %\\>.css';
 
@@ -10,11 +10,11 @@ interface \\<%= options.entity.classifiedName %\\>Signature {
   Element: null;
 }
 
-// eslint-disable-next-line ember/no-empty-glimmer-component-classes
-export default class \\<%= options.entity.classifiedName %\\>Component extends Component<\\<%= options.entity.classifiedName %\\>Signature> {
+const \\<%= options.entity.classifiedName %\\>Component: TOC<\\<%= options.entity.classifiedName %\\>Signature> =
   <template>
     <div class={{styles.container}}>
       {{yield}}
     </div>
-  </template>
-}
+  </template>;
+
+export default \\<%= options.entity.classifiedName %\\>Component;

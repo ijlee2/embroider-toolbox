@@ -1,7 +1,7 @@
 import { \\<%= options.entity.camelizedName %\\> } from '\\<%= options.addon.name %\\>';
 import { render } from '@ember/test-helpers';
 import { module, test } from 'qunit';
-import { setupRenderingTest } from 'test-app/tests/helpers';
+import { setupRenderingTest } from '\\<%= options.testApp.name %\\>/tests/helpers';
 
 module('Integration | Modifier | \\<%= options.entity.name %\\>', function (hooks) {
   setupRenderingTest(hooks);

@@ -41,6 +41,8 @@ type Options = {
   projectRoot: string;
   testApp: {
     location: string;
+    name: string;
+    useTemplateTag: boolean;
   };
 };
 

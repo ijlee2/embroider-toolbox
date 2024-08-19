@@ -24,7 +24,7 @@ pnpm start
 
 <summary>Generate and destroy</summary>
 
-From the package root, you can create (or remove) the source code and its corresponding test file in `test-app`.
+From the package root, you can create (or remove) the source code and its corresponding test file in `<%= options.testApp.name %>`.
 
 ```sh
 pnpm addon <generate|destroy> <component|helper|modifier|service|util> <name> [options]
@@ -43,4 +43,4 @@ For more information, pass `--help`.
 
 ## Compatibility
 
-* Node.js v18 or above
+- Node.js v18 or above

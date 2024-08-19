@@ -10,9 +10,15 @@ export function runGenerate(codemodOptions: CodemodOptions): void {
   const options = createOptions(codemodOptions);
 
   if (canSkip(options)) {
+    console.log(
+      `🚫 Skipped creating ${options.entity.name}, because it already exists.\n`,
+    );
+
     return;
   }
 
   updateAddon(options);
   updateTestApp(options);
+
+  console.log(`✅ Created ${options.entity.name} and its test file.\n`);
 }
