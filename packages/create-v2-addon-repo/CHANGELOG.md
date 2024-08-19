@@ -1,5 +1,15 @@
 # create-v2-addon-repo
 
+## 0.4.0
+
+### Minor Changes
+
+- [#17](https://github.com/ijlee2/embroider-toolbox/pull/17) Updated blueprints ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#18](https://github.com/ijlee2/embroider-toolbox/pull/18) Configured ember-template-lint and prettier ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.0
 
 ### Minor Changes
