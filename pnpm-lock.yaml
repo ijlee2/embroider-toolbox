@@ -209,6 +209,61 @@ importers:
         specifier: ^3.3.3
         version: 3.3.3
 
+  packages/analyze-ember-project-dependencies:
+    dependencies:
+      '@codemod-utils/ast-javascript':
+        specifier: ^1.2.8
+        version: 1.2.8
+      '@codemod-utils/ast-template':
+        specifier: ^1.1.4
+        version: 1.1.4
+      '@codemod-utils/ember-cli-string':
+        specifier: ^1.1.4
+        version: 1.1.4
+      '@codemod-utils/files':
+        specifier: ^2.0.4
+        version: 2.0.4
+      '@codemod-utils/json':
+        specifier: ^1.1.9
+        version: 1.1.9
+      yargs:
+        specifier: ^17.7.2
+        version: 17.7.2
+    devDependencies:
+      '@codemod-utils/tests':
+        specifier: ^1.1.7
+        version: 1.1.7(@sondr3/minitest@0.1.2)
+      '@shared-configs/eslint-config-node':
+        specifier: workspace:*
+        version: link:../../configs/eslint/node
+      '@shared-configs/prettier':
+        specifier: workspace:*
+        version: link:../../configs/prettier
+      '@shared-configs/typescript':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      '@sondr3/minitest':
+        specifier: ^0.1.2
+        version: 0.1.2
+      '@types/node':
+        specifier: ^18.19.39
+        version: 18.19.44
+      '@types/yargs':
+        specifier: ^17.0.32
+        version: 17.0.33
+      concurrently:
+        specifier: ^8.2.2
+        version: 8.2.2
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
+      prettier:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^5.5.4
+        version: 5.5.4
+
   packages/blueprints-addon:
     dependencies:
       '@codemod-utils/ast-javascript':
@@ -465,6 +520,10 @@ packages:
 
   '@codemod-utils/ast-javascript@1.2.8':
     resolution: {integrity: sha512-bp9q1rtRv4NhD1xLEz5S/tdva5aJ5dizMrnQVfOdPI2JSLpC4rAAnw7Zc9eD6ssDPXKHEhh2mRFK7QP4ldZQmQ==}
+    engines: {node: 18.* || >= 20}
+
+  '@codemod-utils/ast-template@1.1.4':
+    resolution: {integrity: sha512-4p7jNmkUTg9RaCVb7V8+XyYtE4HT3o4HIsQRmiPfFHLqzUsYJF8OZzB/Ijh0LN+V641wyfB5FM54gB7+28pFgw==}
     engines: {node: 18.* || >= 20}
 
   '@codemod-utils/blueprints@1.1.5':
@@ -3187,6 +3246,12 @@ snapshots:
     dependencies:
       '@babel/parser': 7.25.3
       recast: 0.23.9
+
+  '@codemod-utils/ast-template@1.1.4':
+    dependencies:
+      ember-template-recast: 6.1.5
+    transitivePeerDependencies:
+      - supports-color
 
   '@codemod-utils/blueprints@1.1.5':
     dependencies:
