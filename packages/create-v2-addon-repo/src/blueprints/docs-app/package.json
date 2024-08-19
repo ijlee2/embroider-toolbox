@@ -23,7 +23,7 @@
     "prelint:types": "type-css-modules --src app",
     "lint:types": "glint",
     "start": "ember serve",
-    "test": "ember test --test-port=0"
+    "test": "ember test --test-port 0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
