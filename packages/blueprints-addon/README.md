@@ -66,3 +66,8 @@ Install `blueprints-addon` as a development dependency in these locations:
 ## Compatibility
 
 - Node.js v18 or above
+
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
