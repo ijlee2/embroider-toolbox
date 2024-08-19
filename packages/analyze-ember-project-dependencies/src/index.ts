@@ -8,5 +8,7 @@ export function analyzeEmberProjectDependencies(
 
   const projectData = analyzeProject(options);
 
-  // console.log(`✅ ${projectData.size} packages found\n`);
+  console.log(`✅ ${projectData.size} packages found\n`);
+
+  console.log(projectData);
 }
