@@ -1,4 +1,4 @@
-import Component from '@glimmer/component';
+import type { TOC } from '@ember/component/template-only';
 
 import styles from './template-tag.css';
 
@@ -10,11 +10,11 @@ interface MyExampleTemplateTagSignature {
   Element: null;
 }
 
-// eslint-disable-next-line ember/no-empty-glimmer-component-classes
-export default class MyExampleTemplateTagComponent extends Component<MyExampleTemplateTagSignature> {
+const MyExampleTemplateTagComponent: TOC<MyExampleTemplateTagSignature> =
   <template>
     <div class={{styles.container}}>
       {{yield}}
     </div>
-  </template>
-}
+  </template>;
+
+export default MyExampleTemplateTagComponent;

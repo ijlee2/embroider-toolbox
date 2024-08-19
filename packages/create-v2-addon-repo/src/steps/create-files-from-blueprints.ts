@@ -8,7 +8,9 @@ import type { Options } from '../types/index.js';
 import { blueprintsRoot } from '../utils/blueprints.js';
 
 function resolveBlueprintFilePath(blueprintFilePath: string): string {
-  return blueprintFilePath.replace('__gitignore__', '.gitignore');
+  return blueprintFilePath
+    .replace('__gitignore__', '.gitignore')
+    .replace('__npmignore__', '.npmignore');
 }
 
 function setExecutePermissions(options: Options) {

@@ -32,4 +32,4 @@ pnpm test
 
 ## Compatibility
 
-* Node.js v18 or above
+- Node.js v18 or above

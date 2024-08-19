@@ -33,6 +33,8 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
     projectRoot,
     testApp: {
       location: testAppLocation,
+      name: 'test-app',
+      useTemplateTag: true,
     },
   };
 }

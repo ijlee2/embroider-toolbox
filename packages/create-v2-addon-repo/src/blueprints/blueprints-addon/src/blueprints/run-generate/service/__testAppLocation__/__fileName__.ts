@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { setupTest } from 'test-app/tests/helpers';
+import { setupTest } from '\\<%= options.testApp.name %\\>/tests/helpers';
 
 module('Unit | Service | \\<%= options.entity.name %\\>', function (hooks) {
   setupTest(hooks);

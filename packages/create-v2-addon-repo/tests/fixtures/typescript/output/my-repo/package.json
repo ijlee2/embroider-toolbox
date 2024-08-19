@@ -5,23 +5,13 @@
   "description": "Workspace root for my-repo",
   "scripts": {
     "addon": "blueprints-addon",
-    "build": "concurrently 'pnpm:build:*' --group --names 'build:' --prefix-colors cyan,yellow,white",
-    "build:blueprints-addon": "pnpm --filter blueprints-addon build",
-    "build:packages": "pnpm --filter './packages/**' build",
-    "lint": "concurrently 'pnpm:lint:*(!fix)' --group --names 'lint:' --prefix-colors cyan,yellow,white",
-    "lint:docs-app": "pnpm --filter docs-app lint",
-    "lint:docs-app:fix": "pnpm --filter docs-app lint:fix",
-    "lint:fix": "concurrently 'pnpm:lint:*:fix' --group --names 'fix:' --prefix-colors cyan,yellow,white",
-    "lint:packages": "pnpm --filter './packages/**' lint",
-    "lint:packages:fix": "pnpm --filter './packages/**' lint:fix",
-    "lint:test-app": "pnpm --filter test-app lint",
-    "lint:test-app:fix": "pnpm --filter test-app lint:fix",
+    "build": "pnpm  --filter blueprints-addon --filter './packages/**' build",
+    "lint": "pnpm --filter '*' lint",
+    "lint:fix": "pnpm --filter '*' lint:fix",
     "start": "concurrently 'pnpm:start:*' --names 'start:' --prefix-colors cyan,yellow,white",
     "start:docs-app": "pnpm --filter docs-app start",
     "start:test-app": "pnpm --filter test-app start",
-    "test": "concurrently 'pnpm:test:*' --group --names 'test:' --prefix-colors cyan,yellow,white",
-    "test:docs-app": "pnpm --filter docs-app test",
-    "test:test-app": "pnpm --filter test-app test"
+    "test": "pnpm --filter docs-app --filter test-app test"
   },
   "devDependencies": {
     "blueprints-addon": "workspace:*",
