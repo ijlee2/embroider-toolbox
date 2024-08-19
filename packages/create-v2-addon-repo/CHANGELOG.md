@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.4.1
+
+### Patch Changes
+
+- [#19](https://github.com/ijlee2/embroider-toolbox/pull/19) Refactored blueprints-addon ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.4.0
 
 ### Minor Changes
