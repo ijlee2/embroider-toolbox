@@ -26,7 +26,9 @@ function getPattern(options: Options): string {
 }
 
 export function removeTestFile(options: Options): void {
-  const testAppRoot = join(options.projectRoot, options.testApp.location);
+  const { projectRoot, testApp } = options;
+
+  const testAppRoot = join(projectRoot, testApp.location);
 
   const filePaths = findFiles(getPattern(options), {
     projectRoot: testAppRoot,

@@ -7,12 +7,10 @@ import { createFiles, findFiles, parseFilePath } from '@codemod-utils/files';
 import type { Options } from '../../../types/run-generate.js';
 import { blueprintsRoot } from '../../../utils/blueprints.js';
 
-function getData(options: Options) {
-  const { name: localFileName } = parseFilePath(options.entity.name);
+function getLocalFileName(entityName: string): string {
+  const { name } = parseFilePath(entityName);
 
-  return {
-    localFileName,
-  };
+  return name;
 }
 
 function resolveBlueprintFilePath(
@@ -28,16 +26,22 @@ function resolveBlueprintFilePath(
 }
 
 export function createEntity(options: Options): void {
+  const { entity } = options;
+
   const cwd = join(
     blueprintsRoot,
     'run-generate',
-    options.entity.type,
-    options.entity.blueprint,
+    entity.type,
+    entity.blueprint,
   );
 
   const blueprintFilePaths = findFiles('**/*', {
     projectRoot: cwd,
   });
+
+  const data = {
+    localFileName: getLocalFileName(entity.name),
+  };
 
   const fileMap = new Map(
     blueprintFilePaths.map((blueprintFilePath) => {
@@ -46,7 +50,7 @@ export function createEntity(options: Options): void {
       const blueprintFile = readFileSync(join(cwd, blueprintFilePath), 'utf8');
 
       const file = processTemplate(blueprintFile, {
-        data: getData(options),
+        data,
         options,
       });
 

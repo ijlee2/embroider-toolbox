@@ -1,14 +1,12 @@
+import { join } from 'node:path';
+
 import { classify, doubleColonize } from '@codemod-utils/ember-cli-string';
 import { readPackageJson } from '@codemod-utils/json';
 
 import type { CodemodOptions, Options } from '../../types/run-generate.js';
 
-function getAddonName(codemodOptions: CodemodOptions): string {
-  const { projectRoot } = codemodOptions;
-
-  const packageJson = readPackageJson({
-    projectRoot,
-  });
+function getPackageName(projectRoot: string): string {
+  const packageJson = readPackageJson({ projectRoot });
 
   return packageJson['name']!;
 }
@@ -22,7 +20,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
 
   return {
     addon: {
-      name: getAddonName(codemodOptions),
+      name: getPackageName(projectRoot),
     },
     entity: {
       ...entity,
@@ -33,7 +31,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
     projectRoot,
     testApp: {
       location: testAppLocation,
-      name: 'test-app',
+      name: getPackageName(join(projectRoot, testAppLocation)),
       useTemplateTag: true,
     },
   };
