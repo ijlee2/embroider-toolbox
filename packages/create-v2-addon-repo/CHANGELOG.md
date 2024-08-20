@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.6.2
+
+### Patch Changes
+
+- [#24](https://github.com/ijlee2/embroider-toolbox/pull/24) Reverted the default addon location ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.6.1
 
 ### Patch Changes
