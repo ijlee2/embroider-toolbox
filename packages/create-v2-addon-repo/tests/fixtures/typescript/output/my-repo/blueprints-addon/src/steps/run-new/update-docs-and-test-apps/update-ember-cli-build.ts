@@ -29,9 +29,16 @@ function updateSideWatch(file: string, options: Options): string {
         return false;
       }
 
-      watching.value.elements.push(
-        AST.builders.stringLiteral(join('..', addon.location, 'src')),
-      );
+      const paths = [
+        ...watching.value.elements.map((element: { value: string }) => {
+          return element.value;
+        }),
+        join('..', addon.location, 'src'),
+      ].sort();
+
+      watching.value.elements = paths.map((path) => {
+        return AST.builders.stringLiteral(path);
+      });
 
       return false;
     },
