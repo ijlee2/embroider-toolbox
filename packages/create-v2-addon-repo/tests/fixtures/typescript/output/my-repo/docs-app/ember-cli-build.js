@@ -21,7 +21,7 @@ module.exports = function (defaults) {
     trees: {
       app: sideWatch('app', {
         watching: [
-          // '../packages/ui/button/src',
+          // '../packages/ui/form/src',
         ],
       }),
     },

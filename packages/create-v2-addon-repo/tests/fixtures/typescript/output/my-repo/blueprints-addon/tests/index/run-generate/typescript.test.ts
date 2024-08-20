@@ -11,81 +11,101 @@ const fixtureRoot = 'tmp/run-generate';
 function runCommands() {
   runGenerate({
     entity: {
-      blueprint: 'glimmer',
-      name: 'my-example/glimmer',
+      blueprint: 'glimmer-loose',
+      name: 'my-component/glimmer-loose',
       type: 'component',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runGenerate({
     entity: {
-      blueprint: 'template-tag',
-      name: 'my-example/template-tag',
+      blueprint: 'glimmer-strict',
+      name: 'my-component/glimmer-strict',
       type: 'component',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
+    testAppLocation: '../../../test-app',
+  });
+
+  runGenerate({
+    entity: {
+      blueprint: 'template-only-loose',
+      name: 'my-component/template-only-loose',
+      type: 'component',
+    },
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
+    testAppLocation: '../../../test-app',
+  });
+
+  runGenerate({
+    entity: {
+      blueprint: 'template-only-strict',
+      name: 'my-component/template-only-strict',
+      type: 'component',
+    },
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runGenerate({
     entity: {
       blueprint: 'class',
-      name: 'my-example/class',
+      name: 'my-helper/class',
       type: 'helper',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runGenerate({
     entity: {
       blueprint: 'function',
-      name: 'my-example/function',
+      name: 'my-helper/function',
       type: 'helper',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runGenerate({
     entity: {
       blueprint: 'class',
-      name: 'my-example/class',
+      name: 'my-modifier/class',
       type: 'modifier',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runGenerate({
     entity: {
       blueprint: 'function',
-      name: 'my-example/function',
+      name: 'my-modifier/function',
       type: 'modifier',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runGenerate({
     entity: {
       blueprint: 'class',
-      name: 'my-example/class',
+      name: 'my-service/class',
       type: 'service',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runGenerate({
     entity: {
       blueprint: 'function',
-      name: 'my-example/function',
+      name: 'my-util/function',
       type: 'util',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 }

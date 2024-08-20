@@ -11,7 +11,7 @@ process.title = 'blueprints-addon';
 
 // Set codemod options
 const DEFAULT_BLUEPRINT_VALUE = {
-  component: 'glimmer',
+  component: 'glimmer-loose',
   helper: 'class',
   modifier: 'class',
   service: 'class',
@@ -95,7 +95,12 @@ yargs(hideBin(process.argv))
                 type: 'string',
               })
               .option('blueprint', {
-                choices: ['glimmer', 'template-tag'] as const,
+                choices: [
+                  'glimmer-loose',
+                  'glimmer-strict',
+                  'template-only-loose',
+                  'template-only-strict',
+                ] as const,
                 describe: 'Which blueprint to run',
                 type: 'string',
               })
@@ -243,11 +248,11 @@ yargs(hideBin(process.argv))
     builder: (yargs) => {
       return yargs
         .positional('name', {
-          describe: "Name of the addon (e.g. '@my-org-ui/button')",
+          describe: "Name of the addon (e.g. '@my-org-ui/form')",
           type: 'string',
         })
         .option('location', {
-          describe: "Location of the addon (e.g. 'ui/button')",
+          describe: "Location of the addon (e.g. 'ui/form')",
           type: 'string',
         })
         .option('root', {

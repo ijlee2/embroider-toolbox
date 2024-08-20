@@ -1,6 +1,10 @@
 type EntityType =
   | {
-      blueprint: 'glimmer' | 'template-tag';
+      blueprint:
+        | 'glimmer-loose'
+        | 'glimmer-strict'
+        | 'template-only-loose'
+        | 'template-only-strict';
       type: 'component';
     }
   | {
