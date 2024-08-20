@@ -57,7 +57,7 @@ git push -u origin main
 Step 3. Use the `new` command to start creating addons.
 
 ```sh
-pnpm addon new ui/form
+pnpm addon new @my-org-ui/form --location ui/form
 ```
 
 

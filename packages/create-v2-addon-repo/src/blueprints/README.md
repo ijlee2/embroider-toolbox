@@ -38,10 +38,10 @@ From the workspace root, run the `new` command to create a package in `packages`
 ```sh
 pnpm addon new <name> [options]
 
-# Example: Create the addon `ui/form`
-pnpm addon new ui/form
+# Example: Create the addon `ui-form`
+pnpm addon new ui-form
 
-# Example: Specify the location
+# Example: Specify the location for a scoped package
 pnpm addon new @my-org-ui/form --location ui/form
 ```
 
