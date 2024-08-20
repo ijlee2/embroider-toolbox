@@ -20,7 +20,7 @@ module.exports = function (defaults) {
 
     trees: {
       app: sideWatch('app', {
-        watching: [],
+        watching: ['../packages/ui/form/src'],
       }),
     },
 
