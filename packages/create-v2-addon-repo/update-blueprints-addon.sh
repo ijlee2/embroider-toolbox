@@ -35,6 +35,8 @@ cp "../blueprints-addon/tsconfig.build.json" "src/blueprints/blueprints-addon/ts
 cp "../blueprints-addon/tsconfig.json" "src/blueprints/blueprints-addon/tsconfig.json"
 cp "../blueprints-addon/update-test-fixtures.sh" "src/blueprints/blueprints-addon/update-test-fixtures.sh"
 
+mv "src/blueprints/blueprints-addon/src/blueprints/run-new/__addonLocation__/__gitignore__" "src/blueprints/blueprints-addon/src/blueprints/run-new/__addonLocation__/__.gitignore__"
+
 # Escape delimiters
 find "src/blueprints/blueprints-addon" -type f \
   -exec sed -i '' 's/<%=/\\\\<%=/g' {} \; \
