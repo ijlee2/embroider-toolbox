@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.6.1
+
+### Patch Changes
+
+- [#23](https://github.com/ijlee2/embroider-toolbox/pull/23) Added a11yAudit() to tests for components ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.6.0
 
 ### Minor Changes
