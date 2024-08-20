@@ -31,21 +31,21 @@ To save time, change the current directory to a particular package and run the c
 
 <details>
 
-<summary>Create an addon</summary>
+<summary>Create addon</summary>
 
-Suppose you want to create the addon `@my-org-ui/button`, which lives in the folder `packages/ui/button`.
-
-```sh
-# From the workspace root
-pnpm addon @my-org-ui/button --location ui/button
-```
-
-Afterwards, update the project dependencies.
+From the workspace root, run the `new` command to create a package in `packages`. The package will be added to `docs-app` and `test-app`.
 
 ```sh
-# From the workspace root
-pnpm install
+pnpm addon new <name> [options]
+
+# Example: Create the addon `ui/form`
+pnpm addon new ui/form
+
+# Example: Specify the location
+pnpm addon new @my-org-ui/form --location ui/form
 ```
+
+Afterwards, run `pnpm install` to update the project dependencies.
 
 </details>
 
@@ -57,8 +57,7 @@ pnpm install
 Change the current directory to the addon that you want to work on. Run `pnpm start` so that the addon is rebuilt automatically.
 
 ```sh
-# Example: Run `@my-org-ui/button`
-cd packages/ui/button
+cd packages/ui/form
 pnpm start
 ```
 
