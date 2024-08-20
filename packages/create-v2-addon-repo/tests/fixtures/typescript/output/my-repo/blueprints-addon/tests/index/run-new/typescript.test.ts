@@ -7,8 +7,8 @@ const fixtureRoot = 'tmp/run-new';
 
 function runCommands() {
   runNew({
-    location: 'ui/button',
-    name: '@my-org-ui/button',
+    location: 'ui/form',
+    name: '@my-org-ui/form',
     projectRoot: fixtureRoot,
   });
 }

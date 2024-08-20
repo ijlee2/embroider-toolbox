@@ -20,43 +20,53 @@ rm -r "tests/fixtures/run-destroy/output"
 cp -r "tests/fixtures/run-destroy/input" "tests/fixtures/run-destroy/output"
 
 ./dist/bin/blueprints-addon.js \
-  destroy component my-example/glimmer \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy component my-component/glimmer-loose \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy component my-example/template-tag \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy component my-component/glimmer-strict \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy helper my-example/class \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy component my-component/template-only-loose \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy helper my-example/function \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy component my-component/template-only-strict \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy modifier my-example/class \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy helper my-helper/class \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy modifier my-example/function \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy helper my-helper/function \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy service my-example/class \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy modifier my-modifier/class \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  destroy util my-example/function \
-  --root "tests/fixtures/run-destroy/output/packages/ui/button" \
+  destroy modifier my-modifier/function \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
+  --test-app-location "../../../test-app"
+
+./dist/bin/blueprints-addon.js \
+  destroy service my-service/class \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
+  --test-app-location "../../../test-app"
+
+./dist/bin/blueprints-addon.js \
+  destroy util my-util/function \
+  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 # Update fixtures for run-generate
@@ -64,49 +74,61 @@ rm -r "tests/fixtures/run-generate/output"
 cp -r "tests/fixtures/run-generate/input" "tests/fixtures/run-generate/output"
 
 ./dist/bin/blueprints-addon.js \
-  generate component my-example/glimmer \
-  --blueprint "glimmer" \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  generate component my-component/glimmer-loose \
+  --blueprint "glimmer-loose" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate component my-example/template-tag \
-  --blueprint "template-tag" \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  generate component my-component/glimmer-strict \
+  --blueprint "glimmer-strict" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate helper my-example/class \
+  generate component my-component/template-only-loose \
+  --blueprint "template-only-loose" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
+  --test-app-location "../../../test-app"
+
+./dist/bin/blueprints-addon.js \
+  generate component my-component/template-only-strict \
+  --blueprint "template-only-strict" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
+  --test-app-location "../../../test-app"
+
+./dist/bin/blueprints-addon.js \
+  generate helper my-helper/class \
   --blueprint "class" \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate helper my-example/function \
+  generate helper my-helper/function \
   --blueprint "function" \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate modifier my-example/class \
+  generate modifier my-modifier/class \
   --blueprint "class" \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate modifier my-example/function \
+  generate modifier my-modifier/function \
   --blueprint "function" \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate service my-example/class \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  generate service my-service/class \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 ./dist/bin/blueprints-addon.js \
-  generate util my-example/function \
-  --root "tests/fixtures/run-generate/output/packages/ui/button" \
+  generate util my-util/function \
+  --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
 # Update fixtures for run-new
@@ -114,6 +136,6 @@ rm -r "tests/fixtures/run-new/output"
 cp -r "tests/fixtures/run-new/input" "tests/fixtures/run-new/output"
 
 ./dist/bin/blueprints-addon.js \
-  new @my-org-ui/button \
-  --location "ui/button" \
+  new @my-org-ui/form \
+  --location "ui/form" \
   --root "tests/fixtures/run-new/output"

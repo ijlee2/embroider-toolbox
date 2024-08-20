@@ -9,7 +9,10 @@ function addExportStatement(file: string, options: Options): string {
 
   switch (entity.type) {
     case 'component': {
-      if (entity.blueprint === 'template-tag') {
+      if (
+        entity.blueprint === 'glimmer-strict' ||
+        entity.blueprint === 'template-only-strict'
+      ) {
         line = `export { default as ${entity.classifiedName} } from './${entity.type}s/${entity.name}.gts';\n`;
       } else {
         line = `export { default as ${entity.classifiedName} } from './${entity.type}s/${entity.name}.ts';\n`;

@@ -11,73 +11,91 @@ const fixtureRoot = 'tmp/run-destroy';
 function runCommands() {
   runDestroy({
     entity: {
-      name: 'my-example/glimmer',
+      name: 'my-component/glimmer-loose',
       type: 'component',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runDestroy({
     entity: {
-      name: 'my-example/template-tag',
+      name: 'my-component/glimmer-strict',
       type: 'component',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runDestroy({
     entity: {
-      name: 'my-example/class',
+      name: 'my-component/template-only-loose',
+      type: 'component',
+    },
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
+    testAppLocation: '../../../test-app',
+  });
+
+  runDestroy({
+    entity: {
+      name: 'my-component/template-only-strict',
+      type: 'component',
+    },
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
+    testAppLocation: '../../../test-app',
+  });
+
+  runDestroy({
+    entity: {
+      name: 'my-helper/class',
       type: 'helper',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runDestroy({
     entity: {
-      name: 'my-example/function',
+      name: 'my-helper/function',
       type: 'helper',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runDestroy({
     entity: {
-      name: 'my-example/class',
+      name: 'my-modifier/class',
       type: 'modifier',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runDestroy({
     entity: {
-      name: 'my-example/function',
+      name: 'my-modifier/function',
       type: 'modifier',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runDestroy({
     entity: {
-      name: 'my-example/class',
+      name: 'my-service/class',
       type: 'service',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 
   runDestroy({
     entity: {
-      name: 'my-example/function',
+      name: 'my-util/function',
       type: 'util',
     },
-    projectRoot: `${fixtureRoot}/packages/ui/button`,
+    projectRoot: `${fixtureRoot}/packages/ui/form`,
     testAppLocation: '../../../test-app',
   });
 }
