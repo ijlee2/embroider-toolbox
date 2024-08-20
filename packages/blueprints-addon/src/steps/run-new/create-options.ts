@@ -21,7 +21,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
   const dasherizedName = dasherize(name);
   const pascalCaseName = pascalCase(name);
 
-  const addonLocation = join('packages', location ?? name);
+  const addonLocation = join('packages', location ?? dasherize(name));
   const addonLocationInverse = relative(addonLocation, '.');
 
   return {
