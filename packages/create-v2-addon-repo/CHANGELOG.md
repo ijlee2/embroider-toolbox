@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.6.3
+
+### Patch Changes
+
+- [#25](https://github.com/ijlee2/embroider-toolbox/pull/25) Introduced @embroider/broccoli-side-watch to test-app ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.6.2
 
 ### Patch Changes
