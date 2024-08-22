@@ -8,6 +8,7 @@ import type {
   ProjectData,
   ProjectDependencies,
 } from '../types/index.js';
+import { findDependenciesInClass } from '../utils/find-dependencies/in-class.js';
 import { findDependenciesInTemplate } from '../utils/find-dependencies/in-template.js';
 
 const patterns = {
@@ -60,7 +61,17 @@ export function findDependencies(
           return;
         }
 
-        // TODO: Analyze JS/TS file
+        const isTypeScript = filePath.endsWith('.ts');
+
+        const { dependencies, unknowns } = findDependenciesInClass(file, {
+          entities,
+          filePath,
+          isTypeScript,
+          packageName,
+        });
+
+        dependencies.forEach((dependency) => _dependencies.add(dependency));
+        unknowns.forEach((unknown) => _unknowns.add(unknown));
       } catch (error) {
         console.log(`ERROR: Could not analyze ${filePath} from ${packageName}`);
         console.log((error as Error).message);
