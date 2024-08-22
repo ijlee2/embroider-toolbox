@@ -8,10 +8,11 @@ import type {
   ProjectData,
   ProjectDependencies,
 } from '../types/index.js';
+import { findDependenciesInTemplate } from '../utils/find-dependencies/in-template.js';
 
 const patterns = {
   app: ['app/**/*.{hbs,js,ts}', 'tests/**/*.{js,ts}', '*.{js,ts}'],
-  node: ['**/*.{js,ts}'],
+  node: ['**/*.{js,ts}', '*.{js,ts}'],
   'v1-addon': [
     'addon/**/*.{hbs,js,ts}',
     'addon-test-support/**/*.{js,ts}',
@@ -48,7 +49,13 @@ export function findDependencies(
         const file = readFileSync(path, 'utf8');
 
         if (filePath.endsWith('.hbs')) {
-          // TODO: Analyze HBS file
+          const { dependencies, unknowns } = findDependenciesInTemplate(file, {
+            entities,
+            filePath,
+          });
+
+          dependencies.forEach((dependency) => _dependencies.add(dependency));
+          unknowns.forEach((unknown) => _unknowns.add(unknown));
 
           return;
         }
