@@ -8,6 +8,11 @@ type Options = {
 
 type PackageName = string;
 
+type PackageAnalysis = {
+  dependencies: Set<PackageName>;
+  unknowns: Set<string>;
+};
+
 type PackageData = {
   dependencies: Set<PackageName>;
   devDependencies: Set<PackageName>;
@@ -33,15 +38,19 @@ type ProjectDataEntities = Record<EntityType, EntityName[]>;
 
 type ProjectData = Map<PackageName, PackageData>;
 
+type ProjectDependencies = Map<PackageName, PackageAnalysis>;
+
 export type {
   CodemodOptions,
   Entities,
   EntityName,
   EntityType,
   Options,
+  PackageAnalysis,
   PackageData,
   PackageName,
   PackageType,
   ProjectData,
   ProjectDataEntities,
+  ProjectDependencies,
 };
