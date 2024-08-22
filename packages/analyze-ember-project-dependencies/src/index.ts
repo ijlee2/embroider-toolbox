@@ -3,6 +3,7 @@ import {
   createOptions,
   findDependencies,
   findEntities,
+  flagAnomalies,
 } from './steps/index.js';
 import type { CodemodOptions } from './types/index.js';
 
@@ -17,10 +18,11 @@ export function analyzeEmberProjectDependencies(
 
   const entities = findEntities(projectData);
 
-  console.log('✅ Analyzed entities\n');
+  console.log('✅ Found entities\n');
 
   const projectDependencies = findDependencies(projectData, entities);
 
-  console.log('✅ Analyzed dependencies\n');
-  console.log(projectDependencies);
+  console.log('✅ Found dependencies\n');
+
+  flagAnomalies(projectData, projectDependencies);
 }
