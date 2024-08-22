@@ -1,4 +1,4 @@
-import { analyzeProject, createOptions } from './steps/index.js';
+import { analyzeProject, createOptions, findEntities } from './steps/index.js';
 import type { CodemodOptions } from './types/index.js';
 
 export function analyzeEmberProjectDependencies(
@@ -10,5 +10,7 @@ export function analyzeEmberProjectDependencies(
 
   console.log(`✅ ${projectData.size} packages found\n`);
 
-  console.log(projectData);
+  const entities = findEntities(projectData);
+
+  console.log(entities);
 }

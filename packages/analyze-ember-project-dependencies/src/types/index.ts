@@ -27,12 +27,15 @@ type EntityType =
   | 'modifiers'
   | 'services';
 
+type Entities = Record<EntityType, Map<EntityName, PackageName>>;
+
 type ProjectDataEntities = Record<EntityType, EntityName[]>;
 
 type ProjectData = Map<PackageName, PackageData>;
 
 export type {
   CodemodOptions,
+  Entities,
   EntityName,
   EntityType,
   Options,
