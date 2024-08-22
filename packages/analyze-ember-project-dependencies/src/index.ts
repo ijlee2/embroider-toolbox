@@ -16,7 +16,11 @@ export function analyzeEmberProjectDependencies(
   console.log(`✅ ${projectData.size} packages found\n`);
 
   const entities = findEntities(projectData);
+
+  console.log('✅ Analyzed entities\n');
+
   const projectDependencies = findDependencies(projectData, entities);
 
+  console.log('✅ Analyzed dependencies\n');
   console.log(projectDependencies);
 }
