@@ -41,7 +41,7 @@ export function analyzeEntities(options: {
     const filePaths = findFiles(
       `${source}/${entityType}/**/*.{gjs,gts,hbs,js,ts}`,
       {
-        ignoreList: ['**/*.d.ts', '**/dist/**/*', '**/node_modules/**/*'],
+        ignoreList: ['**/*.d.ts'],
         projectRoot: packageRoot,
       },
     );
