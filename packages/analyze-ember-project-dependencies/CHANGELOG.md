@@ -1,5 +1,15 @@
 # analyze-ember-project-dependencies
 
+## 0.3.0
+
+### Minor Changes
+
+- [#28](https://github.com/ijlee2/embroider-toolbox/pull/28) Analyzed .gjs and .gts files ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#29](https://github.com/ijlee2/embroider-toolbox/pull/29) Added README ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.2.0
 
 ### Minor Changes
