@@ -36,11 +36,7 @@ export function findDependencies(
     const _unknowns = new Set<string>();
 
     const filePaths = findFiles(patterns[packageType], {
-      ignoreList: [
-        '**/declarations/**/*',
-        '**/dist/**/*',
-        '**/node_modules/**/*',
-      ],
+      ignoreList: ['**/{declarations,dist,node_modules}/**/*'],
       projectRoot: packageRoot,
     });
 
