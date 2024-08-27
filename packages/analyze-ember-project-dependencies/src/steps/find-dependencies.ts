@@ -8,20 +8,7 @@ import type {
   ProjectData,
   ProjectDependencies,
 } from '../types/index.js';
-import { findDependenciesInClass } from '../utils/find-dependencies/in-class.js';
-import { findDependenciesInTemplate } from '../utils/find-dependencies/in-template.js';
-
-const patterns = {
-  app: ['app/**/*.{hbs,js,ts}', 'tests/**/*.{js,ts}', '*.{js,ts}'],
-  node: ['**/*.{js,ts}', '*.{js,ts}'],
-  'v1-addon': [
-    'addon/**/*.{hbs,js,ts}',
-    'addon-test-support/**/*.{js,ts}',
-    'tests/**/*.{js,ts}',
-    '*.{js,ts}',
-  ],
-  'v2-addon': ['src/**/*.{hbs,js,ts}', '*.{cjs,js,mjs,ts}'],
-};
+import { analyzeFile, patterns } from '../utils/find-dependencies/index.js';
 
 export function findDependencies(
   projectData: ProjectData,
@@ -45,24 +32,9 @@ export function findDependencies(
         const path = join(packageRoot, filePath);
         const file = readFileSync(path, 'utf8');
 
-        if (filePath.endsWith('.hbs')) {
-          const { dependencies, unknowns } = findDependenciesInTemplate(file, {
-            entities,
-            filePath,
-          });
-
-          dependencies.forEach((dependency) => _dependencies.add(dependency));
-          unknowns.forEach((unknown) => _unknowns.add(unknown));
-
-          return;
-        }
-
-        const isTypeScript = filePath.endsWith('.ts');
-
-        const { dependencies, unknowns } = findDependenciesInClass(file, {
+        const { dependencies, unknowns } = analyzeFile(file, {
           entities,
           filePath,
-          isTypeScript,
           packageName,
         });
 

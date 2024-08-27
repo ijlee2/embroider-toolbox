@@ -1,17 +1,8 @@
-import type { Entities, PackageAnalysis } from '../../types/index.js';
-import { findModules, findServices } from './in-class/index.js';
+import type { PackageAnalysis } from '../../types/index.js';
+import { findModules, findServices } from './analyze-class/index.js';
+import type { Data } from './index.js';
 
-export type Data = {
-  entities: Entities;
-  filePath: string;
-  isTypeScript: boolean;
-  packageName: string;
-};
-
-export function findDependenciesInClass(
-  file: string,
-  data: Data,
-): PackageAnalysis {
+export function analyzeClass(file: string, data: Data): PackageAnalysis {
   const resultsForModules = findModules(file, data);
   const resultsForServices = findServices(file, data);
 
