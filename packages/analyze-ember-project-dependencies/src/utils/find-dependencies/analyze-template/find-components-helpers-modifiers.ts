@@ -1,7 +1,7 @@
 import { AST } from '@codemod-utils/ast-template';
 
 import type { PackageAnalysis } from '../../../types/index.js';
-import type { Data } from '../in-template.js';
+import type { Data } from '../index.js';
 
 function findBlockParams(file: string): Set<string> {
   const blockParams = new Set<string>();

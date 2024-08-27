@@ -8,7 +8,7 @@ export function getPackageRoots(options: Options): string[] {
   const { projectRoot } = options;
 
   const packageRoots = findFiles('**/package.json', {
-    ignoreList: ['**/dist/**/*', '**/node_modules/**/*'],
+    ignoreList: ['**/{dist,node_modules}/**/*'],
     projectRoot,
   }).map((filePath) => {
     return join(projectRoot, filePath.replace(/package\.json$/, ''));

@@ -1,7 +1,7 @@
 import { AST } from '@codemod-utils/ast-javascript';
 
 import type { PackageAnalysis } from '../../../types/index.js';
-import type { Data } from '../in-class.js';
+import type { Data } from '../index.js';
 
 function dasherize(value: string): string {
   return value.replace(/([a-z\d])([A-Z])/g, '$1-$2').toLowerCase();
@@ -13,7 +13,8 @@ export function findServices(file: string, data: Data): PackageAnalysis {
   const dependencies = new Set<string>();
   const unknowns = new Set<string>();
 
-  const traverse = AST.traverse(data.isTypeScript);
+  const isTypeScript = data.filePath.endsWith('.ts');
+  const traverse = AST.traverse(isTypeScript);
 
   traverse(file, {
     visitClassProperty(node) {

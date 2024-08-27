@@ -1,7 +1,7 @@
 import { AST } from '@codemod-utils/ast-javascript';
 
 import type { PackageAnalysis } from '../../../types/index.js';
-import type { Data } from '../in-class.js';
+import type { Data } from '../index.js';
 
 const MODULE_PREFIXES_TO_IGNORE: string[] = [
   '.',
@@ -39,7 +39,8 @@ export function findModules(file: string, data: Data): PackageAnalysis {
   const dependencies = new Set<string>();
   const unknowns = new Set<string>();
 
-  const traverse = AST.traverse(data.isTypeScript);
+  const isTypeScript = data.filePath.endsWith('.ts');
+  const traverse = AST.traverse(isTypeScript);
 
   traverse(file, {
     visitCallExpression(node) {
