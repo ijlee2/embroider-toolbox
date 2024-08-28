@@ -21,7 +21,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
   const { location, name, projectRoot } = codemodOptions;
 
   const dasherizedName = dasherize(name);
-  const pascalCaseName = pascalize(name);
+  const pascalizedName = pascalize(name);
 
   const addonLocation = join('packages', location ?? dasherize(name));
   const addonLocationInverse = relative(addonLocation, '.');
@@ -32,7 +32,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
       location: addonLocation,
       locationInverse: addonLocationInverse,
       name,
-      pascalCaseName,
+      pascalizedName,
     },
     docsApp: {
       location: 'docs-app',

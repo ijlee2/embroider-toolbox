@@ -14,9 +14,9 @@ function getPackageName(projectRoot: string): string {
 export function createOptions(codemodOptions: CodemodOptions): Options {
   const { entity, projectRoot, testAppLocation } = codemodOptions;
 
-  const classifiedName = pascalize(entity.name);
   const camelizedName = camelize(entity.name);
   const doubleColonizedName = doubleColonize(entity.name);
+  const pascalizedName = pascalize(entity.name);
 
   return {
     addon: {
@@ -25,8 +25,8 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
     entity: {
       ...entity,
       camelizedName,
-      classifiedName,
       doubleColonizedName,
+      pascalizedName,
     },
     projectRoot,
     testApp: {
