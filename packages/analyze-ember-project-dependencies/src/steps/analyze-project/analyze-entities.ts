@@ -1,4 +1,4 @@
-import { doubleColonize } from '@codemod-utils/ember-cli-string';
+import { doubleColonize } from '@codemod-utils/ember';
 import { findFiles } from '@codemod-utils/files';
 
 import type { PackageType, ProjectDataEntities } from '../../types/index.js';
