@@ -7,7 +7,7 @@ import type { Options } from '../../../types/run-new.js';
 
 function addImportStatement(file: string, options: Options): string {
   const { addon } = options;
-  const line = `import type ${addon.pascalCaseName}Registry from '${addon.name}/template-registry';\n`;
+  const line = `import type ${addon.pascalizedName}Registry from '${addon.name}/template-registry';\n`;
 
   return [line, file].join('');
 }
@@ -39,7 +39,7 @@ function updateRegistry(file: string, options: Options): string {
 
       exportStatement.declaration.extends = [
         ...registriesToExtend,
-        `${addon.pascalCaseName}Registry`,
+        `${addon.pascalizedName}Registry`,
       ].sort();
 
       return false;

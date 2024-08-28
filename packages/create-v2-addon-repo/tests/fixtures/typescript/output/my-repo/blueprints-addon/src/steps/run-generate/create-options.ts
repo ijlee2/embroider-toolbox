@@ -1,6 +1,6 @@
 import { join } from 'node:path';
 
-import { classify, doubleColonize } from '@codemod-utils/ember-cli-string';
+import { camelize, doubleColonize, pascalize } from '@codemod-utils/ember';
 import { readPackageJson } from '@codemod-utils/json';
 
 import type { CodemodOptions, Options } from '../../types/run-generate.js';
@@ -14,9 +14,9 @@ function getPackageName(projectRoot: string): string {
 export function createOptions(codemodOptions: CodemodOptions): Options {
   const { entity, projectRoot, testAppLocation } = codemodOptions;
 
-  const classifiedName = classify(entity.name);
-  const camelizedName = `${classifiedName.charAt(0).toLowerCase()}${classifiedName.substring(1)}`;
+  const camelizedName = camelize(entity.name);
   const doubleColonizedName = doubleColonize(entity.name);
+  const pascalizedName = pascalize(entity.name);
 
   return {
     addon: {
@@ -25,8 +25,8 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
     entity: {
       ...entity,
       camelizedName,
-      classifiedName,
       doubleColonizedName,
+      pascalizedName,
     },
     projectRoot,
     testApp: {

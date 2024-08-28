@@ -4,7 +4,7 @@ type Named = {};
 type Positional = [string];
 type Return = string;
 
-interface \\<%= options.entity.classifiedName %\\>Signature {
+interface \\<%= options.entity.pascalizedName %\\>Signature {
   Args: {
     Named: Named;
     Positional: Positional;
@@ -12,7 +12,7 @@ interface \\<%= options.entity.classifiedName %\\>Signature {
   Return: Return;
 }
 
-export default helper<\\<%= options.entity.classifiedName %\\>Signature>(
+export default helper<\\<%= options.entity.pascalizedName %\\>Signature>(
   function \\<%= options.entity.camelizedName %\\>(positional /*, named*/) {
     return positional[0];
   },

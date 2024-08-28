@@ -2,7 +2,7 @@ import Component from '@glimmer/component';
 
 import styles from './<%= data.localFileName %>.css';
 
-interface <%= options.entity.classifiedName %>Signature {
+interface <%= options.entity.pascalizedName %>Signature {
   Args: {};
   Blocks: {
     default: [];
@@ -10,6 +10,6 @@ interface <%= options.entity.classifiedName %>Signature {
   Element: null;
 }
 
-export default class <%= options.entity.classifiedName %>Component extends Component<<%= options.entity.classifiedName %>Signature> {
+export default class <%= options.entity.pascalizedName %>Component extends Component<<%= options.entity.pascalizedName %>Signature> {
   styles = styles;
 }

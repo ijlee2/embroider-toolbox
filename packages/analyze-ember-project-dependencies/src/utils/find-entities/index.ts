@@ -1,4 +1,4 @@
-import { doubleColonize } from '@codemod-utils/ember-cli-string';
+import { doubleColonize } from '@codemod-utils/ember';
 
 import type { PackageName, ProjectDataEntities } from '../../types/index.js';
 import { KNOWN_ENTITIES as _KNOWN_ENTITIES } from './known-entities.js';

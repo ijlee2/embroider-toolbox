@@ -6,12 +6,14 @@ function dasherize(packageName: string): string {
   return packageName.replace('@', '').replace(/\W|_/g, '-');
 }
 
-function pascalCase(packageName: string): string {
+function pascalize(packageName: string): string {
   const dasherizedName = dasherize(packageName);
 
   return dasherizedName
     .split('-')
-    .map((token) => `${token.charAt(0).toUpperCase()}${token.substring(1)}`)
+    .map((token) => {
+      return token.charAt(0).toUpperCase() + token.substring(1).toLowerCase();
+    })
     .join('');
 }
 
@@ -19,7 +21,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
   const { location, name, projectRoot } = codemodOptions;
 
   const dasherizedName = dasherize(name);
-  const pascalCaseName = pascalCase(name);
+  const pascalizedName = pascalize(name);
 
   const addonLocation = join('packages', location ?? dasherize(name));
   const addonLocationInverse = relative(addonLocation, '.');
@@ -30,7 +32,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
       location: addonLocation,
       locationInverse: addonLocationInverse,
       name,
-      pascalCaseName,
+      pascalizedName,
     },
     docsApp: {
       location: 'docs-app',

@@ -19,4 +19,5 @@
 /.prettierrc.cjs
 /build.sh
 /tests/
+/update-blueprints-addon.sh
 /update-test-fixtures.sh

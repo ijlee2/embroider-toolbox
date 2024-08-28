@@ -38,9 +38,9 @@ type Options = {
   };
   entity: EntityType & {
     camelizedName: string;
-    classifiedName: string;
     doubleColonizedName: string;
     name: string;
+    pascalizedName: string;
   };
   projectRoot: string;
   testApp: {

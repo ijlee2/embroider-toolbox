@@ -217,9 +217,9 @@ importers:
       '@codemod-utils/ast-template':
         specifier: ^1.1.4
         version: 1.1.4
-      '@codemod-utils/ember-cli-string':
-        specifier: ^1.1.4
-        version: 1.1.4
+      '@codemod-utils/ember':
+        specifier: ^2.0.0
+        version: 2.0.0
       '@codemod-utils/files':
         specifier: ^2.0.4
         version: 2.0.4
@@ -249,8 +249,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^18.19.39
-        version: 18.19.44
+        specifier: ^18.19.47
+        version: 18.19.47
       '@types/yargs':
         specifier: ^17.0.32
         version: 17.0.33
@@ -275,9 +275,9 @@ importers:
       '@codemod-utils/blueprints':
         specifier: ^1.1.5
         version: 1.1.5
-      '@codemod-utils/ember-cli-string':
-        specifier: ^1.1.4
-        version: 1.1.4
+      '@codemod-utils/ember':
+        specifier: ^2.0.0
+        version: 2.0.0
       '@codemod-utils/files':
         specifier: ^2.0.4
         version: 2.0.4
@@ -304,8 +304,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^18.19.44
-        version: 18.19.44
+        specifier: ^18.19.47
+        version: 18.19.47
       '@types/yargs':
         specifier: ^17.0.33
         version: 17.0.33
@@ -350,8 +350,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^18.19.44
-        version: 18.19.44
+        specifier: ^18.19.47
+        version: 18.19.47
       '@types/yargs':
         specifier: ^17.0.33
         version: 17.0.33
@@ -533,8 +533,8 @@ packages:
     resolution: {integrity: sha512-xNEGw1xp4VjyhwcLiHAnuUhIp3430m0BHl+nfCRXCkWlbCLjIKWsnkywPavK5pUYyp4TnAwVSrNrzHtELQOp7A==}
     engines: {node: 18.* || >= 20}
 
-  '@codemod-utils/ember-cli-string@1.1.4':
-    resolution: {integrity: sha512-o9xeJJbwn2Sdl/be5E05cFfk6szNL+EWMZvL9JeskSrdaTHgWJxE4/chQ6HvrWudryHXHxAKfXQLRh3Bva5ajA==}
+  '@codemod-utils/ember@2.0.0':
+    resolution: {integrity: sha512-p6AeyhxKHoDmvXkS05+8hEU9AJt7cSioVoMSYIjwX6oDRmKfWHiYLaM/AcuKBP/aw2aMi6KyL1sbaCpOJGYL3A==}
     engines: {node: 18.* || >= 20}
 
   '@codemod-utils/files@2.0.4':
@@ -758,8 +758,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@18.19.44':
-    resolution: {integrity: sha512-ZsbGerYg72WMXUIE9fYxtvfzLEuq6q8mKERdWFnqTmOvudMxnz+CBNRoOwJ2kNpFOncrKjT1hZwxjlFgQ9qvQA==}
+  '@types/node@18.19.47':
+    resolution: {integrity: sha512-1f7dB3BL/bpd9tnDJrrHb66Y+cVrhxSOTGorRNdHwYTUlTay3HuTDPKo9a/4vX9pMQkhYBcAbL4jQdNlhCFP9A==}
 
   '@types/rimraf@3.0.2':
     resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
@@ -3263,7 +3263,7 @@ snapshots:
     dependencies:
       lodash: 4.17.21
 
-  '@codemod-utils/ember-cli-string@1.1.4': {}
+  '@codemod-utils/ember@2.0.0': {}
 
   '@codemod-utils/files@2.0.4':
     dependencies:
@@ -3499,12 +3499,12 @@ snapshots:
 
   '@types/fs-extra@9.0.13':
     dependencies:
-      '@types/node': 18.19.44
+      '@types/node': 18.19.47
 
   '@types/glob@8.1.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 18.19.44
+      '@types/node': 18.19.47
 
   '@types/json-schema@7.0.15': {}
 
@@ -3514,14 +3514,14 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@18.19.44':
+  '@types/node@18.19.47':
     dependencies:
       undici-types: 5.26.5
 
   '@types/rimraf@3.0.2':
     dependencies:
       '@types/glob': 8.1.0
-      '@types/node': 18.19.44
+      '@types/node': 18.19.47
 
   '@types/semver@7.5.8': {}
 
