@@ -13,14 +13,14 @@ _Analyze dependencies of an Ember project_
 
 ## Why use it?
 
-Both Embroider and `pnpm` ask that packages declare their dependencies correctly. The codemod (really, a linter) performs a static code analysis, so that you can easily find missing and unused dependencies.
+Both Embroider and `pnpm` ask that packages declare their dependencies correctly. The codemod (really, a linter) performs a static code analysis so that you can easily find missing and unused dependencies.
 
 For more information, see [Fixing Package Dependencies](https://crunchingnumbers.live/2024/07/19/fixing-package-dependencies).
 
 
 ## Usage
 
-Step 1. Run the codemod.
+Step 1. Run the codemod (e.g. at the workspace root of a monorepo).
 
 ```sh
 cd <path/to/your/project>
@@ -63,9 +63,9 @@ pnpm build
 
 > [!IMPORTANT]
 >
-> The codemod uses a list of entities called `KNOWN_ENTITIES` to analyze implicit code. The list isn't meant to be exhaustive.
+> The codemod uses a list called `KNOWN_ENTITIES` to analyze implicit code. The list accounts for packages that live outside of your project. It isn't meant to be (and doesn't have to be) exhaustive.
 >
-> Please modify `KNOWN_ENTITIES` to account for packages specific to your project.
+> You can modify `KNOWN_ENTITIES` to get more accurate results.
 >
 > <details>
 > 
@@ -82,8 +82,6 @@ pnpm build
 > 
 >   // ...
 > ]);
-> 
-> export { KNOWN_ENTITIES };
 > ```
 > 
 > </details>
