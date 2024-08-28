@@ -1,5 +1,11 @@
 # analyze-ember-project-dependencies
 
+## 0.3.1
+
+### Patch Changes
+
+- [#30](https://github.com/ijlee2/embroider-toolbox/pull/30) Downstreamed changes from @codemod-utils/cli@2.0.1 ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.0
 
 ### Minor Changes

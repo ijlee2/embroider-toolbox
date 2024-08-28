@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.7.0
+
+### Minor Changes
+
+- [#30](https://github.com/ijlee2/embroider-toolbox/pull/30) Downstreamed changes from @codemod-utils/cli@2.0.1 ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.6.3
 
 ### Patch Changes
