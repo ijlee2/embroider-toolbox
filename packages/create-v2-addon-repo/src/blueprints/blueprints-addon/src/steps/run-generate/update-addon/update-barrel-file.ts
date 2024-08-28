@@ -13,9 +13,9 @@ function addExportStatement(file: string, options: Options): string {
         entity.blueprint === 'glimmer-strict' ||
         entity.blueprint === 'template-only-strict'
       ) {
-        line = `export { default as ${entity.classifiedName} } from './${entity.type}s/${entity.name}.gts';\n`;
+        line = `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.gts';\n`;
       } else {
-        line = `export { default as ${entity.classifiedName} } from './${entity.type}s/${entity.name}.ts';\n`;
+        line = `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.ts';\n`;
       }
 
       break;

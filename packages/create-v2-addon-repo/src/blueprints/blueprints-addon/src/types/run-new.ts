@@ -10,7 +10,7 @@ type Options = {
     location: string;
     locationInverse: string;
     name: string;
-    pascalCaseName: string;
+    pascalizedName: string;
   };
   docsApp: {
     location: string;

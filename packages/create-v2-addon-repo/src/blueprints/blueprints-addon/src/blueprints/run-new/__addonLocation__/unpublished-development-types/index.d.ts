@@ -7,11 +7,11 @@ import 'ember-source/types';
 
 import type EmbroiderCssModulesRegistry from 'embroider-css-modules/template-registry';
 
-import type \\<%= options.addon.pascalCaseName %\\>Registry from '../src/template-registry.ts';
+import type \\<%= options.addon.pascalizedName %\\>Registry from '../src/template-registry.ts';
 
 declare module '@glint/environment-ember-loose/registry' {
   export default interface Registry
-    extends \\<%= options.addon.pascalCaseName %\\>Registry,
+    extends \\<%= options.addon.pascalizedName %\\>Registry,
       EmbroiderCssModulesRegistry {
     // Add any registry entries from other addons here that your addon itself uses (in non-strict mode templates)
     // See https://typed-ember.gitbook.io/glint/using-glint/ember/using-addons

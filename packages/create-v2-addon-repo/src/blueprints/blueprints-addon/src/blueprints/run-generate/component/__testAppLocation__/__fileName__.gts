@@ -1,4 +1,4 @@
-import { \\<%= options.entity.classifiedName %\\> } from '\\<%= options.addon.name %\\>';
+import { \\<%= options.entity.pascalizedName %\\> } from '\\<%= options.addon.name %\\>';
 import { render } from '@ember/test-helpers';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { module, test } from 'qunit';
@@ -9,7 +9,7 @@ module('Integration | Component | \\<%= options.entity.name %\\>', function (hoo
 
   test('it renders', async function (assert) {
     await render(<template>
-      <\\<%= options.entity.classifiedName %\\> />
+      <\\<%= options.entity.pascalizedName %\\> />
     </template>);
 
     assert.dom().hasText('');

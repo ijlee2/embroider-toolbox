@@ -41,19 +41,19 @@ function getLocalName(options: Options): string {
 
   switch (entity.type) {
     case 'component': {
-      return `${entity.classifiedName}Component`;
+      return `${entity.pascalizedName}Component`;
     }
 
     case 'helper': {
-      return `${entity.classifiedName}Helper`;
+      return `${entity.pascalizedName}Helper`;
     }
 
     case 'modifier': {
-      return `${entity.classifiedName}Modifier`;
+      return `${entity.pascalizedName}Modifier`;
     }
 
     default: {
-      return entity.classifiedName;
+      return entity.pascalizedName;
     }
   }
 }
