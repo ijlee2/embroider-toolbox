@@ -17,6 +17,9 @@ importers:
       '@changesets/get-github-info':
         specifier: ^0.6.0
         version: 0.6.0
+      update-workspace-root-version:
+        specifier: ^0.3.0
+        version: 0.3.0
 
   configs/ember-template-lint:
     dependencies:
@@ -2843,6 +2846,11 @@ packages:
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
+
+  update-workspace-root-version@0.3.0:
+    resolution: {integrity: sha512-cfeT8Oo7bU11UCPxq8dEV+yUlPjdHmDeEc8iSsqhiiVoe1nGLaLwLtAR6cmjLJ6urZakYqdXx/beSXYZYlRiZg==}
+    engines: {node: 18.* || >= 20}
+    hasBin: true
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
@@ -5918,6 +5926,12 @@ snapshots:
       browserslist: 4.23.3
       escalade: 3.1.2
       picocolors: 1.0.1
+
+  update-workspace-root-version@0.3.0:
+    dependencies:
+      '@codemod-utils/files': 2.0.4
+      '@codemod-utils/json': 1.1.9
+      yargs: 17.7.2
 
   uri-js@4.4.1:
     dependencies:
