@@ -17,6 +17,8 @@ const ENTITY_TYPES = [
   'services',
 ] as const;
 
+const NESTED_COMPONENT_STRUCTURE = true;
+
 export function analyzeEntities(options: {
   packageRoot: string;
   packageType: PackageType;
@@ -54,6 +56,12 @@ export function analyzeEntities(options: {
 
     if (entityType === 'components') {
       entityNames = Array.from(new Set(entityNames));
+
+      if (NESTED_COMPONENT_STRUCTURE) {
+        entityNames = entityNames.map((entityName) => {
+          return entityName.replace(/\/index$/, '');
+        });
+      }
 
       entities['components'] = entityNames;
       entities['componentsDoubleColonized'] = entityNames.map(doubleColonize);
