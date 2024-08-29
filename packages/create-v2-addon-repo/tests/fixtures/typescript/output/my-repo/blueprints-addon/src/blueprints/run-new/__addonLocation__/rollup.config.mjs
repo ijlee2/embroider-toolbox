@@ -74,7 +74,7 @@ export default {
 
     // Update public-assets field in package.json
     addon.publicAssets('public/assets', {
-      exclude: ['**/.gitkeep'],
+      exclude: ['**/.*'],
       namespace: '<%= options.addon.name %>',
     }),
 
