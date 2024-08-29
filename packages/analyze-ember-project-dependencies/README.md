@@ -34,12 +34,24 @@ Step 2. Check the output for true positives.
 
 <details>
 
+<summary>Optional: Specify the component structure</summary>
+
+By default, apps and addons follow the flat component structure for components. Pass `--component-structure` to indicate otherwise.
+
+```sh
+npx analyze-ember-project-dependencies --component-structure nested
+```
+
+</details>
+
+<details>
+
 <summary>Optional: Specify the project root</summary>
 
 Pass `--root` to run the codemod somewhere else (i.e. not in the current directory).
 
 ```sh
-npx ember-codemod-remove-inject-as-service --root <path/to/your/project>
+npx analyze-ember-project-dependencies --root <path/to/your/project>
 ```
 
 </details>

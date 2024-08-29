@@ -12,6 +12,11 @@ process.title = 'analyze-ember-project-dependencies';
 
 // Set codemod options
 const argv = yargs(hideBin(process.argv))
+  .option('component-structure', {
+    choices: ['flat', 'nested'] as const,
+    describe: 'Component structure (how your components are colocated)',
+    type: 'string',
+  })
   .option('root', {
     describe: 'Where to run the codemod',
     type: 'string',
@@ -19,6 +24,7 @@ const argv = yargs(hideBin(process.argv))
   .parseSync();
 
 const codemodOptions: CodemodOptions = {
+  componentStructure: argv['component-structure'] ?? 'flat',
   projectRoot: argv['root'] ?? process.cwd(),
 };
 
