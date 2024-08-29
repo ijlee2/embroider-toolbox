@@ -1,5 +1,11 @@
 # analyze-ember-project-dependencies
 
+## 0.4.0
+
+### Minor Changes
+
+- [#32](https://github.com/ijlee2/embroider-toolbox/pull/32) Allowed specifying the component structure ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.1
 
 ### Patch Changes
