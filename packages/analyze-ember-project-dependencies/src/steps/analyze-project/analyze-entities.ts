@@ -1,7 +1,11 @@
 import { doubleColonize } from '@codemod-utils/ember';
 import { findFiles } from '@codemod-utils/files';
 
-import type { PackageType, ProjectDataEntities } from '../../types/index.js';
+import type {
+  Options,
+  PackageType,
+  ProjectDataEntities,
+} from '../../types/index.js';
 
 const SOURCE = {
   app: 'app',
@@ -17,14 +21,11 @@ const ENTITY_TYPES = [
   'services',
 ] as const;
 
-const NESTED_COMPONENT_STRUCTURE = true;
-
-export function analyzeEntities(options: {
-  packageRoot: string;
-  packageType: PackageType;
-}): ProjectDataEntities {
-  const { packageRoot, packageType } = options;
-
+export function analyzeEntities(
+  packageRoot: string,
+  packageType: PackageType,
+  options: Options,
+): ProjectDataEntities {
   const source = SOURCE[packageType];
 
   const entities: ProjectDataEntities = {
@@ -38,6 +39,8 @@ export function analyzeEntities(options: {
   if (source === undefined) {
     return entities;
   }
+
+  const { componentStructure } = options;
 
   ENTITY_TYPES.forEach((entityType) => {
     const filePaths = findFiles(
@@ -57,7 +60,7 @@ export function analyzeEntities(options: {
     if (entityType === 'components') {
       entityNames = Array.from(new Set(entityNames));
 
-      if (NESTED_COMPONENT_STRUCTURE) {
+      if (componentStructure === 'nested') {
         entityNames = entityNames.map((entityName) => {
           return entityName.replace(/\/index$/, '');
         });

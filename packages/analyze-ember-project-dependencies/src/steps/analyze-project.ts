@@ -22,10 +22,7 @@ export function analyzeProject(options: Options) {
     const { dependencies, devDependencies, packageType } =
       analyzePackageJson(packageJson);
 
-    const entities = analyzeEntities({
-      packageRoot,
-      packageType,
-    });
+    const entities = analyzeEntities(packageRoot, packageType, options);
 
     projectData.set(packageJson['name'], {
       dependencies,
