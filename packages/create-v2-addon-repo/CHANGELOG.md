@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.7.1
+
+### Patch Changes
+
+- [#33](https://github.com/ijlee2/embroider-toolbox/pull/33) Configured publicAssets() to ignore .DS_Store and .gitkeep ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.7.0
 
 ### Minor Changes
