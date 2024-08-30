@@ -20,6 +20,7 @@ function setExecutePermissions(options: Options) {
 
   const files = new Set([
     'blueprints/v2-addon/build.sh',
+    'blueprints/v2-addon/update-blueprints.js',
     'blueprints/v2-addon/update-test-fixtures.sh',
   ]);
 

@@ -34,6 +34,7 @@ cp "../blueprints-v2-addon/package.json" "src/blueprints/blueprints/v2-addon/pac
 cp "../blueprints-v2-addon/README.md" "src/blueprints/blueprints/v2-addon/README.md"
 cp "../blueprints-v2-addon/tsconfig.build.json" "src/blueprints/blueprints/v2-addon/tsconfig.build.json"
 cp "../blueprints-v2-addon/tsconfig.json" "src/blueprints/blueprints/v2-addon/tsconfig.json"
+cp "../blueprints-v2-addon/update-blueprints.js" "src/blueprints/blueprints/v2-addon/update-blueprints.js"
 cp "../blueprints-v2-addon/update-test-fixtures.sh" "src/blueprints/blueprints/v2-addon/update-test-fixtures.sh"
 
 mv "src/blueprints/blueprints/v2-addon/src/blueprints/run-new/__addonLocation__/__gitignore__" "src/blueprints/blueprints/v2-addon/src/blueprints/run-new/__addonLocation__/__.gitignore__"
