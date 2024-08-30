@@ -1,5 +1,16 @@
 # create-v2-addon-repo
 
+## 0.8.0
+
+### Minor Changes
+
+- [#35](https://github.com/ijlee2/embroider-toolbox/pull/35) Helped consumers get the latest blueprints ([@ijlee2](https://github.com/ijlee2))
+- [#34](https://github.com/ijlee2/embroider-toolbox/pull/34) Renamed blueprints package ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#36](https://github.com/ijlee2/embroider-toolbox/pull/36) Copied update-blueprints.js ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.7.1
 
 ### Patch Changes
