@@ -19,8 +19,8 @@ function setExecutePermissions(options: Options) {
   const { project, projectRoot } = options;
 
   const files = new Set([
-    'blueprints-addon/build.sh',
-    'blueprints-addon/update-test-fixtures.sh',
+    'blueprints/v2-addon/build.sh',
+    'blueprints/v2-addon/update-test-fixtures.sh',
   ]);
 
   Array.from(files).forEach((file) => {
