@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.8.1
+
+### Patch Changes
+
+- [#37](https://github.com/ijlee2/embroider-toolbox/pull/37) Updated README to test updating blueprints ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.8.0
 
 ### Minor Changes
