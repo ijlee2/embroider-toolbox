@@ -270,7 +270,7 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
 
-  packages/blueprints-addon:
+  packages/blueprints-v2-addon:
     dependencies:
       '@codemod-utils/ast-javascript':
         specifier: ^1.2.8
