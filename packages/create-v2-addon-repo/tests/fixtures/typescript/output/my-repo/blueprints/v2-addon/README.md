@@ -129,7 +129,7 @@ pnpm addon d component ui/form/textarea
 
 ### Update blueprints
 
-Get the latest blueprints from [`embroider-toolbox`](https://github.com/ijlee2/embroider-toolbox).
+Get the latest blueprints from [`create-v2-addon-repo`](https://github.com/ijlee2/embroider-toolbox).
 
 ```sh
 # From this package root
