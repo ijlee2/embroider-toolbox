@@ -6,7 +6,7 @@ module.exports = {
   extends: ['@shared-configs/eslint-config-node/typescript'],
   overrides: [
     {
-      files: ['bin/**/*.{js,ts}'],
+      files: ['bin/**/*.{js,ts}', 'update-blueprints.js'],
       rules: {
         'n/hashbang': 'off',
       },

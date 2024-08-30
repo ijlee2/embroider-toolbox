@@ -4,7 +4,13 @@ _Blueprints for v2 addons_
 
 1. [Features](#features)
 1. [Usage](#usage)
+    - [Install blueprints](#install-blueprints)
+    - [Create addon](#create-addon)
+    - [Create entity](#create-entity)
+    - [Remove entity](#remove-entity)  
+    - [Update blueprints](#update-blueprints)
 1. [Compatibility](#compatibility)
+1. [License](#license)
 
 
 ## Features
@@ -19,6 +25,8 @@ Standardize how you write v2 addons:
 
 
 ## Usage
+
+### Install blueprints
 
 Install `blueprints-v2-addon` as a development dependency in these locations:
 
@@ -44,6 +52,8 @@ Install `blueprints-v2-addon` as a development dependency in these locations:
 
 <summary>V2 addon in <code>packages</code></summary>
 
+Note, the `new` command will automatically update `package.json`.
+
 ```json5
 /* Example: packages/ui/form/package.json */
 {
@@ -60,7 +70,7 @@ Install `blueprints-v2-addon` as a development dependency in these locations:
 
 > [!NOTE]
 >
-> After you build `blueprints-v2-addon`, please run `pnpm install` at the workspace root so that the blueprints are available.
+> From the workspace root, please run `pnpm build; pnpm install` so that the blueprints are available.
 
 
 ### Create addon
@@ -114,6 +124,16 @@ pnpm addon destroy component ui/form/input
 
 # Example: Use alias
 pnpm addon d component ui/form/textarea
+```
+
+
+### Update blueprints
+
+Get the latest blueprints from [`embroider-toolbox`](https://github.com/ijlee2/embroider-toolbox).
+
+```sh
+# From this package root
+pnpm update-blueprints --to 0.5.0
 ```
 
 
