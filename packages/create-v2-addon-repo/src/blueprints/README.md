@@ -5,7 +5,7 @@
 You can get started in 3 steps:
 
 1. Run `pnpm install` to install project dependencies.
-1. Run `pnpm build` to build `blueprints-addon` and all addons in the `packages` folder.
+1. Run `pnpm build` to build `blueprints-v2-addon` and all addons in the `packages` folder.
 1. Run `pnpm start` to start `docs-app` ([http://localhost:4200](http://localhost:4200)) and `test-app` ([http://localhost:4300/tests](http://localhost:4300/tests?hidepassed)).
 
 

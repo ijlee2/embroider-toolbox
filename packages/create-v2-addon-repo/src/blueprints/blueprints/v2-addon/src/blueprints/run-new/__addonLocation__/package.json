@@ -1,5 +1,5 @@
 {
-  "name": "@my-org-ui/form",
+  "name": "\\<%= options.addon.name %\\>",
   "version": "0.0.0",
   "private": true,
   "description": "",
@@ -36,7 +36,7 @@
     "public"
   ],
   "scripts": {
-    "addon": "blueprints-addon --test-app-location '../../../test-app'",
+    "addon": "blueprints-v2-addon --test-app-location '\\<%= options.addon.locationInverse %\\>/\\<%= options.testApp.location %\\>'",
     "build": "concurrently 'pnpm:build:*' --names 'build:'",
     "build:js": "rollup --config",
     "build:types": "glint --declaration",
@@ -54,7 +54,7 @@
     "start": "concurrently 'pnpm:start:*' --names 'start:'",
     "start:js": "rollup --config --watch --no-watch.clearScreen",
     "start:types": "glint --declaration --watch",
-    "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
+    "test": "echo 'A v2 addon does not have tests, run tests in \\<%= options.testApp.location %\\>'"
   },
   "dependencies": {
     "@embroider/addon-shim": "^1.8.9",
@@ -79,7 +79,7 @@
     "@shared-configs/stylelint": "workspace:*",
     "@shared-configs/typescript": "workspace:*",
     "babel-plugin-ember-template-compilation": "^2.2.5",
-    "blueprints-addon": "workspace:*",
+    "blueprints-v2-addon": "workspace:*",
     "concurrently": "^8.2.2",
     "ember-modifier": "^4.2.0",
     "ember-source": "~5.10.2",
