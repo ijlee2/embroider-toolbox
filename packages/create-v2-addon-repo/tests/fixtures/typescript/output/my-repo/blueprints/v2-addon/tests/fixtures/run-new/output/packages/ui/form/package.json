@@ -36,7 +36,7 @@
     "public"
   ],
   "scripts": {
-    "addon": "blueprints-addon --test-app-location '../../../test-app'",
+    "addon": "blueprints-v2-addon --test-app-location '../../../test-app'",
     "build": "concurrently 'pnpm:build:*' --names 'build:'",
     "build:js": "rollup --config",
     "build:types": "glint --declaration",
@@ -79,7 +79,7 @@
     "@shared-configs/stylelint": "workspace:*",
     "@shared-configs/typescript": "workspace:*",
     "babel-plugin-ember-template-compilation": "^2.2.5",
-    "blueprints-addon": "workspace:*",
+    "blueprints-v2-addon": "workspace:*",
     "concurrently": "^8.2.2",
     "ember-modifier": "^4.2.0",
     "ember-source": "~5.10.2",

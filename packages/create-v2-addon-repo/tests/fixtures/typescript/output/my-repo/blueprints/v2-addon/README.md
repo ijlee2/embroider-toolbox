@@ -1,6 +1,6 @@
-# blueprints-addon
+# blueprints-v2-addon
 
-_CLI for v2 addons_
+_Blueprints for v2 addons_
 
 1. [Features](#features)
 1. [Usage](#usage)
@@ -20,7 +20,7 @@ Standardize how you write v2 addons:
 
 ## Usage
 
-Install `blueprints-addon` as a development dependency in these locations:
+Install `blueprints-v2-addon` as a development dependency in these locations:
 
 <details>
 
@@ -30,10 +30,10 @@ Install `blueprints-addon` as a development dependency in these locations:
 /* package.json */
 {
   "scripts": {
-    "addon": "blueprints-addon"
+    "addon": "blueprints-v2-addon"
   },
   "devDependencies": {
-    "blueprints-addon": "workspace:*"
+    "blueprints-v2-addon": "workspace:*"
   }
 }
 ```
@@ -48,10 +48,10 @@ Install `blueprints-addon` as a development dependency in these locations:
 /* Example: packages/ui/form/package.json */
 {
   "scripts": {
-    "addon": "blueprints-addon --test-app-location '../../../test-app'"
+    "addon": "blueprints-v2-addon --test-app-location '../../../test-app'"
   },
   "devDependencies": {
-    "blueprints-addon": "workspace:*"
+    "blueprints-v2-addon": "workspace:*"
   }
 }
 ```
@@ -60,7 +60,7 @@ Install `blueprints-addon` as a development dependency in these locations:
 
 > [!NOTE]
 >
-> After you build `blueprints-addon`, please run `pnpm install` at the workspace root so that the blueprints are available.
+> After you build `blueprints-v2-addon`, please run `pnpm install` at the workspace root so that the blueprints are available.
 
 
 ### Create addon

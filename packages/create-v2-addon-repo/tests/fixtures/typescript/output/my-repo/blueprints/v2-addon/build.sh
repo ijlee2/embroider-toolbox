@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-COMMAND="blueprints-addon"
+COMMAND="blueprints-v2-addon"
 ENVIRONMENT=$1
 
 if [ $ENVIRONMENT = "--production" ]
