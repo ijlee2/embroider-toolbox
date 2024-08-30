@@ -7,7 +7,7 @@ import { hideBin } from 'yargs/helpers';
 import { runDestroy, runGenerate, runNew } from '../src/index.js';
 
 // Provide a title to the process in `ps`
-process.title = 'blueprints-addon';
+process.title = 'blueprints-v2-addon';
 
 // Set codemod options
 const DEFAULT_BLUEPRINT_VALUE = {

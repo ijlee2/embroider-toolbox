@@ -1,1 +1,1 @@
-# blueprints-addon
+# blueprints-v2-addon
