@@ -1,5 +1,3 @@
-import { join } from 'node:path';
-
 import { camelize, doubleColonize, pascalize } from '@codemod-utils/ember';
 import { readPackageJson } from '@codemod-utils/json';
 
@@ -31,7 +29,7 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
     projectRoot,
     testApp: {
       location: testAppLocation,
-      name: getPackageName(join(projectRoot, testAppLocation)),
+      name: 'test-app',
       useTemplateTag: true,
     },
   };
