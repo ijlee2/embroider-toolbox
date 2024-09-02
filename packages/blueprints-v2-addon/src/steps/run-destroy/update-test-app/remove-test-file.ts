@@ -25,16 +25,12 @@ function getPattern(options: Options): string {
   }
 }
 
-export function removeTestFile(options: Options): void {
-  const { projectRoot, testApp } = options;
-
-  const testAppRoot = join(projectRoot, testApp.location);
-
+export function removeTestFile(appRoot: string, options: Options): void {
   const filePaths = findFiles(getPattern(options), {
-    projectRoot: testAppRoot,
+    projectRoot: appRoot,
   });
 
   removeFiles(filePaths, {
-    projectRoot: testAppRoot,
+    projectRoot: appRoot,
   });
 }
