@@ -1,5 +1,12 @@
 # create-v2-addon-repo
 
+## 0.8.2
+
+### Patch Changes
+
+- [#39](https://github.com/ijlee2/embroider-toolbox/pull/39) Updated workspace root. Installed ember-a11y-testing@7.0.0. ([@ijlee2](https://github.com/ijlee2))
+- [#38](https://github.com/ijlee2/embroider-toolbox/pull/38) Made commands for blueprints-v2-addon resilient to missing paths ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.8.1
 
 ### Patch Changes

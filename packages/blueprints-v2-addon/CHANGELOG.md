@@ -1,5 +1,11 @@
 # blueprints-v2-addon
 
+## 0.1.2
+
+### Patch Changes
+
+- [#38](https://github.com/ijlee2/embroider-toolbox/pull/38) Made commands resilient to missing paths ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.1
 
 ### Patch Changes
