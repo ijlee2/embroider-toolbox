@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 import { AST } from '@codemod-utils/ast-javascript';
@@ -33,6 +33,11 @@ export function updateBarrelFile(options: Options): void {
   }
 
   const oldPath = join(projectRoot, 'src/index.ts');
+
+  if (!existsSync(oldPath)) {
+    return;
+  }
+
   const oldFile = readFileSync(oldPath, 'utf8');
 
   const newFile = removeExportStatement(oldFile, options);
