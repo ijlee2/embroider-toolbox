@@ -55,8 +55,8 @@ function resolveBlueprintFilePath(
   }
 }
 
-export function createTestFile(options: Options): void {
-  const { entity, projectRoot, testApp } = options;
+export function createTestFile(appRoot: string, options: Options): void {
+  const { entity } = options;
 
   const filesToSkip = getFilesToSkip(options);
 
@@ -87,6 +87,6 @@ export function createTestFile(options: Options): void {
   );
 
   createFiles(fileMap, {
-    projectRoot: join(projectRoot, testApp.location),
+    projectRoot: appRoot,
   });
 }
