@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.8.4
+
+### Patch Changes
+
+- [#42](https://github.com/ijlee2/embroider-toolbox/pull/42) Ensured that .npmrc is created ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.8.3
 
 ### Patch Changes
