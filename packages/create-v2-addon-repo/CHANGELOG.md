@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.8.5
+
+### Patch Changes
+
+- [#43](https://github.com/ijlee2/embroider-toolbox/pull/43) Accounted for hidden files (.gitignore, .gitkeep) ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.8.4
 
 ### Patch Changes
