@@ -1,5 +1,12 @@
 # create-v2-addon-repo
 
+## 0.8.3
+
+### Patch Changes
+
+- [#41](https://github.com/ijlee2/embroider-toolbox/pull/41) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#40](https://github.com/ijlee2/embroider-toolbox/pull/40) Set auto-install-peers and resolve-peers-from-workspace-root to false ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.8.2
 
 ### Patch Changes
