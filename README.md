@@ -25,6 +25,11 @@
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
 
+## Credits
+
+The blueprint files in `blueprints-v2-addon` were derived from [`@embroider/addon-blueprint`](https://github.com/embroider-build/addon-blueprint).
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md).

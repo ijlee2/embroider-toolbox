@@ -1,5 +1,11 @@
 # blueprints-v2-addon
 
+## 0.1.4
+
+### Patch Changes
+
+- [#44](https://github.com/ijlee2/embroider-toolbox/pull/44) Replaced .js with .ts in publicEntrypoints() ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.3
 
 ### Patch Changes
