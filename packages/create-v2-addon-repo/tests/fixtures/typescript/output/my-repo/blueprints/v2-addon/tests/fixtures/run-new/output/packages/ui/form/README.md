@@ -22,9 +22,9 @@ pnpm start
 
 <details>
 
-<summary>Create entity</summary>
+<summary>Create files</summary>
 
-From the addon root, run the `generate` command to create the source code and its test file.
+Run the `generate` command (from anywhere inside the addon) to create the source code and its test file.
 
 ```sh
 pnpm addon generate <component|helper|modifier|service|util> <name> [options]
@@ -49,9 +49,9 @@ For more information, pass `--help`.
 
 <details>
 
-<summary>Remove entity</summary>
+<summary>Remove files</summary>
 
-From the addon root, run the `destroy` command to remove the source code and its test file.
+Run the `destroy` command (from anywhere inside the addon) to remove the source code and its test file.
 
 ```sh
 pnpm addon destroy <component|helper|modifier|service|util> <name> 
