@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "blueprints-v2-addon": "workspace:*",
-    "concurrently": "^9.0.0"
+    "concurrently": "^9.0.0",
+    "update-workspace-root-version": "^1.0.0"
   },
   "packageManager": "pnpm@9.9.0",
   "engines": {
