@@ -59,7 +59,7 @@
   "dependencies": {
     "@embroider/addon-shim": "^1.8.9",
     "decorator-transforms": "^2.0.0",
-    "embroider-css-modules": "^2.0.10"
+    "embroider-css-modules": "^2.0.11"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -80,12 +80,12 @@
     "@shared-configs/typescript": "workspace:*",
     "babel-plugin-ember-template-compilation": "^2.2.5",
     "blueprints-v2-addon": "workspace:*",
-    "concurrently": "^8.2.2",
+    "concurrently": "^9.0.0",
     "ember-modifier": "^4.2.0",
     "ember-source": "~5.11.0",
     "ember-template-lint": "^6.0.0",
     "eslint": "^8.57.0",
-    "postcss": "^8.4.44",
+    "postcss": "^8.4.45",
     "prettier": "^3.3.3",
     "rollup": "^4.21.2",
     "rollup-plugin-postcss": "^4.0.2",
