@@ -1,5 +1,15 @@
 # create-v2-addon-repo
 
+## 0.9.0
+
+### Minor Changes
+
+- [#48](https://github.com/ijlee2/embroider-toolbox/pull/48) Installed update-workspace-root-version ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#47](https://github.com/ijlee2/embroider-toolbox/pull/47) Fixed typos in README ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.8.7
 
 ### Patch Changes
