@@ -15,9 +15,9 @@ Create a batteries-included project fast:
 
 - Create as many v2 addons as you want
 - Run `generate` and `destroy` commands to create and remove files
-- Tailor blueprints to your needs, or stay close to the default with `update-blueprint` command
+- Tailor blueprints to your needs, or stay close to the default with `update-blueprints` command
 - Explore bleeding-edge Ember: Embroider app, `embroider-css-modules`, `glint`, `<template>` tag out of the box
-- Set up project like a pro: lint, test, CI, and documentation out of the box
+- Maintain project like a pro: lint, test, CI, and documentation out of the box
 
 
 ## Usage
