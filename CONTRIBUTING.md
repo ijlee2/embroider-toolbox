@@ -117,5 +117,33 @@ Here are some guidelines to help you and everyone else.
 
 </details>
 
+<details>
+
+<summary>Sync reference repo for <code>blueprints-v2-addon</code> (for admins)</summary>
+
+1. Run the following commands in the `blueprints-v2-addon-output` repo.
+
+    ```sh
+    # Reset project
+    git rm -r .
+
+    # Downstream files
+    git clone --no-checkout git@github.com:ijlee2/embroider-toolbox.git temp
+    cd temp
+    git sparse-checkout set packages/blueprints-v2-addon
+    git checkout
+    cd ..
+
+    # Move files
+    mv temp/packages/blueprints-v2-addon/* .
+    mv temp/packages/blueprints-v2-addon/.* .
+    rm -rf temp
+
+    # Reset CHANGELOG
+    echo "# blueprints-v2-addon" > CHANGELOG.md
+    ```
+
+</details>
+
 
 💡 Have ideas for contribution? Reach out to `@ijlee2` on [Discord](https://discord.com/invite/emberjs)!
