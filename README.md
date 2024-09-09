@@ -20,6 +20,24 @@
 - [ember-codemod-v1-to-v2](https://github.com/ijlee2/ember-codemod-v1-to-v2)
 
 
+## Tutorials
+
+> [!NOTE]
+>
+> Coming soon (Q4 2024). Please star or watch this repo to help me gauge interest.
+
+### analyze-ember-project-dependencies
+
+- Main tutorial
+
+
+### create-v2-addon-repo
+
+- Create v2 addons (main tutorial)
+- Customize blueprints
+- Customize repo
+
+
 ## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.

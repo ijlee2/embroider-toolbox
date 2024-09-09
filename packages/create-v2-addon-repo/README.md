@@ -14,10 +14,10 @@ _Codemod to create a repo with v2 addons_
 Create a batteries-included project fast:
 
 - Create as many v2 addons as you want
-- Run `generate` and `destroy` commands (à la Ember CLI)
-- Tailor addon blueprints to your needs
-- Explore bleeding-edge Ember: `embroider-css-modules`, `glint`, `<template>` tag out of the box
-- Maintain project easily: lint, test, CI, and documentation out of the box
+- Run `generate` and `destroy` commands to create and remove files
+- Tailor blueprints to your needs, or stay close to the default with `update-blueprint` command
+- Explore bleeding-edge Ember: Embroider app, `embroider-css-modules`, `glint`, `<template>` tag out of the box
+- Set up project like a pro: lint, test, CI, and documentation out of the box
 
 
 ## Usage
@@ -36,8 +36,11 @@ Step 2. Change directory to the project root, then run these scripts in sequence
 # Install dependencies
 pnpm install
 
-# Build packages
+# Build blueprints-v2-addon
 pnpm build
+
+# Install blueprints-v2-addon (one-time)
+pnpm install
 ```
 
 ```sh
@@ -57,6 +60,10 @@ git push -u origin main
 Step 3. Use the `new` command to start creating addons.
 
 ```sh
+# Specify name
+pnpm addon new ui-form
+
+# Specify location
 pnpm addon new @my-org-ui/form --location ui/form
 ```
 
