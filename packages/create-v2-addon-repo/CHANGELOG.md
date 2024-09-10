@@ -1,5 +1,17 @@
 # create-v2-addon-repo
 
+## 0.10.0
+
+### Minor Changes
+
+- [#49](https://github.com/ijlee2/embroider-toolbox/pull/49) Set up @ember/test-helpers and qunit-dom ([@ijlee2](https://github.com/ijlee2))
+- [#50](https://github.com/ijlee2/embroider-toolbox/pull/50) Reverted #48 (installing update-workspace-root-version) ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#51](https://github.com/ijlee2/embroider-toolbox/pull/51) Updated typescript and @typescript-eslint/\* ([@ijlee2](https://github.com/ijlee2))
+- [#51](https://github.com/ijlee2/embroider-toolbox/pull/51) Updated typescript and @typescript-eslint/\* in blueprints ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.9.0
 
 ### Minor Changes
@@ -14,8 +26,8 @@
 
 ### Patch Changes
 
-- [#46](https://github.com/ijlee2/embroider-toolbox/pull/46) Updated dependencies in blueprints ([@ijlee2](https://github.com/ijlee2))
 - [#46](https://github.com/ijlee2/embroider-toolbox/pull/46) Updated development dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#46](https://github.com/ijlee2/embroider-toolbox/pull/46) Updated dependencies in blueprints ([@ijlee2](https://github.com/ijlee2))
 - [#45](https://github.com/ijlee2/embroider-toolbox/pull/45) Updated README ([@ijlee2](https://github.com/ijlee2))
 
 ## 0.8.6

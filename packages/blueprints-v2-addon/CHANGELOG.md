@@ -1,5 +1,15 @@
 # blueprints-v2-addon
 
+## 0.2.0
+
+### Minor Changes
+
+- [#49](https://github.com/ijlee2/embroider-toolbox/pull/49) Set up @ember/test-helpers and qunit-dom ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#51](https://github.com/ijlee2/embroider-toolbox/pull/51) Updated typescript and @typescript-eslint/\* in blueprints ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.1.5
 
 ### Patch Changes

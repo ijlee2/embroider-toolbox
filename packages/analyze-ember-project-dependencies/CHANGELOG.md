@@ -1,5 +1,11 @@
 # analyze-ember-project-dependencies
 
+## 0.4.2
+
+### Patch Changes
+
+- [#51](https://github.com/ijlee2/embroider-toolbox/pull/51) Updated typescript and @typescript-eslint/\* ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.4.1
 
 ### Patch Changes
