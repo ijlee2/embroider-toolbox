@@ -25,10 +25,6 @@
       ]
     }
   },
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
   "files": [
     "addon-main.cjs",
     "declarations",
