@@ -5,7 +5,7 @@ import gitDiffApply from 'git-diff-apply';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-const CURRENT_VERSION = '0.1.5';
+const CURRENT_VERSION = '0.2.0';
 
 async function updateBlueprints({ from, to }) {
   const startTag = from;
@@ -37,7 +37,7 @@ yargs(hideBin(process.argv))
           type: 'string',
         })
         .option('to', {
-          describe: "The end version (e.g. '0.5.0')",
+          describe: "The end version (e.g. '0.2.0')",
           type: 'string',
         })
         .demandOption(['to']);
