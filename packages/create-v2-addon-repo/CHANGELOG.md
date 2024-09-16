@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.10.3
+
+### Patch Changes
+
+- [#55](https://github.com/ijlee2/embroider-toolbox/pull/55) Updated ember-resolver to 13.0.1 ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.10.2
 
 ### Patch Changes
