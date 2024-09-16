@@ -1,6 +1,6 @@
 {
   "name": "workspace-root",
-  "version": "0.10.3",
+  "version": "0.10.4",
   "private": true,
   "description": "Workspace root for embroider-toolbox",
   "repository": {

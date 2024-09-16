@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.10.4
+
+### Patch Changes
+
+- [#56](https://github.com/ijlee2/embroider-toolbox/pull/56) Pinned babel-loader@v9 to 9.1.3 (skip 9.2.0) ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.10.3
 
 ### Patch Changes
