@@ -1,6 +1,6 @@
 {
   "name": "analyze-ember-project-dependencies",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Analyze dependencies of an Ember project",
   "keywords": [
     "codemod",
