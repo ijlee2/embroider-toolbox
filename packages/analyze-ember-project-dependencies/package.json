@@ -37,7 +37,7 @@
     "@codemod-utils/ember": "^2.0.0",
     "@codemod-utils/files": "^2.0.4",
     "@codemod-utils/json": "^1.1.9",
-    "content-tag": "^2.0.2",
+    "content-tag": "^3.0.0",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
@@ -46,10 +46,10 @@
     "@shared-configs/prettier": "workspace:*",
     "@shared-configs/typescript": "workspace:*",
     "@sondr3/minitest": "^0.1.2",
-    "@types/node": "^18.19.55",
+    "@types/node": "^18.19.64",
     "@types/yargs": "^17.0.32",
-    "concurrently": "^9.0.1",
-    "eslint": "^8.57.0",
+    "concurrently": "^9.1.0",
+    "eslint": "^8.57.1",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
   },
