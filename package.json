@@ -20,18 +20,18 @@
     "test": "pnpm --filter '*' test"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.9",
+    "@changesets/cli": "^2.27.11",
     "@changesets/get-github-info": "^0.6.0",
     "update-workspace-root-version": "^1.0.1"
   },
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.15.1",
   "engines": {
     "node": "18.* || >= 20",
     "pnpm": ">= 9"
   },
   "pnpm": {
     "overrides": {
-      "eslint-plugin-import@2.29.1>tsconfig-paths": "^4.2.0"
+      "eslint-plugin-import@2.31.0>tsconfig-paths": "^4.2.0"
     }
   }
 }
