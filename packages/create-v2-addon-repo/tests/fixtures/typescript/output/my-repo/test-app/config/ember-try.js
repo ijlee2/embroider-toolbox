@@ -8,21 +8,28 @@ module.exports = async function () {
   return {
     usePnpm: true,
     scenarios: [
-      {
-        name: 'ember-lts-3.28',
-        npm: {
-          devDependencies: {
-            '@ember/test-helpers': '2.9.4',
-            '@types/ember__test-helpers': '2.9.1',
-            '@types/ember-qunit': '6.1.1',
-            'ember-a11y-testing': '5.2.1',
-            'ember-cli': '~4.12.3',
-            'ember-qunit': '6.0.0',
-            'ember-resolver': '11.0.1',
-            'ember-source': '~3.28.12',
-          },
-        },
-      },
+      /*
+        If your v2 addons need to support `ember-source@3.28`,
+        please update your `blueprints-v2-addon` to use
+        `@glimmer/component@1.1.2`.
+
+        Otherwise, you can delete this scenario.
+      */
+      // {
+      //   name: 'ember-lts-3.28',
+      //   npm: {
+      //     devDependencies: {
+      //       '@ember/test-helpers': '2.9.4',
+      //       '@types/ember__test-helpers': '2.9.1',
+      //       '@types/ember-qunit': '6.1.1',
+      //       'ember-a11y-testing': '5.2.1',
+      //       'ember-cli': '~3.28.0',
+      //       'ember-qunit': '6.0.0',
+      //       'ember-resolver': '11.0.1',
+      //       'ember-source': '~3.28.0',
+      //     },
+      //   },
+      // },
       {
         name: 'ember-lts-4.12',
         npm: {
