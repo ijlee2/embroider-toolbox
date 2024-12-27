@@ -1,6 +1,6 @@
 {
   "name": "blueprints-v2-addon",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "private": true,
   "description": "Blueprints for v2 addons",
   "keywords": [
@@ -35,26 +35,26 @@
     "update-test-fixtures": "./update-test-fixtures.sh"
   },
   "dependencies": {
-    "@codemod-utils/ast-javascript": "^1.2.8",
-    "@codemod-utils/blueprints": "^1.1.5",
-    "@codemod-utils/ember": "^2.0.0",
-    "@codemod-utils/files": "^2.0.4",
-    "@codemod-utils/json": "^1.1.9",
+    "@codemod-utils/ast-javascript": "^1.2.9",
+    "@codemod-utils/blueprints": "^1.1.6",
+    "@codemod-utils/ember": "^2.0.1",
+    "@codemod-utils/files": "^2.0.5",
+    "@codemod-utils/json": "^1.1.10",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "@codemod-utils/tests": "^1.1.7",
+    "@codemod-utils/tests": "^1.1.8",
     "@shared-configs/eslint-config-node": "workspace:*",
     "@shared-configs/prettier": "workspace:*",
     "@shared-configs/typescript": "workspace:*",
     "@sondr3/minitest": "^0.1.2",
-    "@types/node": "^18.19.64",
+    "@types/node": "^18.19.68",
     "@types/yargs": "^17.0.33",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.1.1",
     "eslint": "^8.57.1",
-    "git-diff-apply": "^6.0.5",
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3"
+    "git-diff-apply": "^6.0.6",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
   },
   "engines": {
     "node": "18.* || >= 20"

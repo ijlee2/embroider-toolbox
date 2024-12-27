@@ -53,16 +53,16 @@
     "test": "echo 'A v2 addon does not have tests, run tests in test-app'"
   },
   "dependencies": {
-    "@embroider/addon-shim": "^1.8.9",
+    "@embroider/addon-shim": "^1.9.0",
     "decorator-transforms": "^2.3.0",
-    "embroider-css-modules": "^2.0.11"
+    "embroider-css-modules": "^2.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
-    "@babel/plugin-transform-typescript": "^7.25.9",
+    "@babel/plugin-transform-typescript": "^7.26.3",
     "@babel/runtime": "^7.26.0",
     "@ember/test-helpers": "^4.0.4",
-    "@embroider/addon-dev": "^7.0.0",
+    "@embroider/addon-dev": "^7.1.1",
     "@glimmer/component": "^2.0.0",
     "@glimmer/tracking": "^1.1.2",
     "@glint/core": "^1.5.0",
@@ -77,23 +77,23 @@
     "@shared-configs/typescript": "workspace:*",
     "babel-plugin-ember-template-compilation": "^2.3.0",
     "blueprints-v2-addon": "workspace:*",
-    "concurrently": "^9.1.0",
+    "concurrently": "^9.1.1",
     "ember-modifier": "^4.2.0",
-    "ember-source": "~5.12.0",
+    "ember-source": "~6.1.0",
     "ember-template-lint": "^6.0.0",
     "eslint": "^8.57.1",
     "postcss": "^8.4.49",
-    "prettier": "^3.3.3",
-    "qunit-dom": "^3.3.0",
-    "rollup": "^4.25.0",
+    "prettier": "^3.4.2",
+    "qunit-dom": "^3.4.0",
+    "rollup": "^4.29.1",
     "rollup-plugin-postcss": "^4.0.2",
-    "stylelint": "^16.10.0",
-    "type-css-modules": "^1.0.13",
-    "typescript": "^5.6.3"
+    "stylelint": "^16.12.0",
+    "type-css-modules": "^1.0.14",
+    "typescript": "^5.7.2"
   },
   "peerDependencies": {
     "@ember/test-helpers": "^3.2.0 || ^4.0.0",
-    "qunit-dom": "^3.3.0"
+    "qunit-dom": "^3.4.0"
   },
   "peerDependenciesMeta": {
     "@ember/test-helpers": {
