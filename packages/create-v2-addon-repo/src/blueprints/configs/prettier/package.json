@@ -14,11 +14,11 @@
     "prettier-plugin-ember-template-tag": "^2.0.4"
   },
   "devDependencies": {
-    "concurrently": "^9.1.0",
-    "prettier": "^3.3.3"
+    "concurrently": "^9.1.1",
+    "prettier": "^3.4.2"
   },
   "peerDependencies": {
-    "prettier": "^3.3.3"
+    "prettier": "^3.4.2"
   },
   "peerDependenciesMeta": {
     "prettier": {
