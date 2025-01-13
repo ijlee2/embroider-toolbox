@@ -67,6 +67,6 @@ pnpm start
 
 Assuming that `docs-app` and `test-app` are running, these apps will rebuild after you save a change to the addon.
 
-If you don't see a live reload occur, try restarting the apps.
+Note, `@embroider/broccoli-side-watch` is not stable yet. If you don't see the live reload occur, try restarting the apps.
 
 </details>
