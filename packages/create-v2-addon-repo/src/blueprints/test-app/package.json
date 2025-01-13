@@ -23,7 +23,7 @@
     "lint:types": "glint",
     "start": "ember serve --port 4300",
     "test": "ember test --test-port 0",
-    "test:ember-compatibility": "./node_modules/.bin/ember try:one"
+    "test:ember-compatibility": "ember try:one"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -34,10 +34,10 @@
     "@embroider/test-setup": "^4.0.0",
     "@glimmer/component": "^2.0.0",
     "@glimmer/tracking": "^1.1.2",
-    "@glint/core": "^1.5.0",
-    "@glint/environment-ember-loose": "^1.5.0",
-    "@glint/environment-ember-template-imports": "^1.5.0",
-    "@glint/template": "^1.5.0",
+    "@glint/core": "^1.5.1",
+    "@glint/environment-ember-loose": "^1.5.1",
+    "@glint/environment-ember-template-imports": "^1.5.1",
+    "@glint/template": "^1.5.1",
     "@shared-configs/ember-template-lint": "workspace:*",
     "@shared-configs/eslint-config-ember": "workspace:*",
     "@shared-configs/prettier": "workspace:*",
@@ -45,7 +45,7 @@
     "@shared-configs/typescript": "workspace:*",
     "@types/qunit": "^2.19.12",
     "broccoli-asset-rev": "^3.0.0",
-    "concurrently": "^9.1.1",
+    "concurrently": "^9.1.2",
     "ember-a11y-testing": "^7.0.2",
     "ember-auto-import": "^2.10.0",
     "ember-cli": "~6.1.0",
@@ -60,7 +60,7 @@
     "ember-load-initializers": "^3.0.1",
     "ember-modifier": "^4.2.0",
     "ember-page-title": "^8.2.3",
-    "ember-qunit": "^8.1.1",
+    "ember-qunit": "^9.0.1",
     "ember-resolver": "^13.1.0",
     "ember-source": "~6.1.0",
     "ember-template-imports": "^4.2.0",
@@ -73,9 +73,9 @@
     "prettier": "^3.4.2",
     "qunit": "^2.23.1",
     "qunit-dom": "^3.4.0",
-    "stylelint": "^16.12.0",
+    "stylelint": "^16.13.0",
     "tracked-built-ins": "^3.4.0",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "webpack": "^5.97.1"
   },
   "engines": {

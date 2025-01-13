@@ -10,27 +10,7 @@ You can get started in 3 steps:
 
 > [!IMPORTANT]
 >
-> After `pnpm build` in step 2, you need to run `pnpm install` again to install `blueprints-v2-addon`. This is a one-time workaround and may be streamlined later.
-
-
-<details>
-
-<summary>Lint and test</summary>
-
-From the workspace root, you can run these commands to apply the action to _all packages_.
-
-```sh
-# Lint files
-pnpm lint
-pnpm lint:fix
-
-# Run tests
-pnpm test
-```
-
-To save time, change the current directory to a particular package and run the commands above. This will affect _only that package_.
-
-</details>
+> After `pnpm build` in step 2, you need to run `pnpm install` again to install `blueprints-v2-addon`. This extra `install` needs to be done just once, and may be streamlined later.
 
 
 <details>
@@ -56,17 +36,44 @@ Don't forget to run `pnpm install` to install the addon's dependencies.
 
 <details>
 
+<summary>Lint and test</summary>
+
+From the workspace root, you can run these commands to apply the action to _all packages_.
+
+```sh
+# Lint files
+pnpm lint
+pnpm lint:fix
+
+# Run tests
+pnpm test
+```
+
+To save time, you can instead run the commands above in some package's root. This will affect _only that package_.
+
+```sh
+# Example: Lint `@my-org-ui/form`
+cd packages/ui/form
+pnpm lint
+```
+
+</details>
+
+
+<details>
+
 <summary>Live reload</summary>
 
 Change the current directory to the addon that you want to work on. Run the `start` command to rebuild the addon automatically.
 
 ```sh
+# Example: Run `@my-org-ui/form`
 cd packages/ui/form
 pnpm start
 ```
 
 Assuming that `docs-app` and `test-app` are running, these apps will rebuild after you save a change to the addon.
 
-Note, `@embroider/broccoli-side-watch` is not stable yet. If you don't see the live reload occur, try restarting the apps.
+If you don't see a live reload occur, try restarting the apps.
 
 </details>
