@@ -5,10 +5,10 @@
   "description": "Shared configuration for ember-template-lint",
   "main": ".template-lintrc.js",
   "scripts": {
-    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
-    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
-    "lint:js": "prettier --check '**/*.js'",
-    "lint:js:fix": "prettier --write '**/*.js'"
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
+    "lint:js": "prettier --check \"**/*.js\"",
+    "lint:js:fix": "prettier --write \"**/*.js\""
   },
   "dependencies": {
     "ember-template-lint-plugin-prettier": "^5.0.0"
