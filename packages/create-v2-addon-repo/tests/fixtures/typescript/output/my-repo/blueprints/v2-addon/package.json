@@ -1,6 +1,6 @@
 {
   "name": "blueprints-v2-addon",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "private": true,
   "description": "Blueprints for v2 addons",
   "keywords": [
@@ -25,8 +25,8 @@
   ],
   "scripts": {
     "build": "./build.sh --production",
-    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
-    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "lint:types": "tsc --noEmit",
