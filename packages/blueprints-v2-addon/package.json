@@ -1,6 +1,6 @@
 {
   "name": "blueprints-v2-addon",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "description": "Blueprints for v2 addons",
   "keywords": [
@@ -31,7 +31,7 @@
     "lint:js:fix": "eslint . --fix",
     "lint:types": "tsc --noEmit",
     "test": "./build.sh --test && mt dist-for-testing --quiet",
-    "update-blueprints": "./update-blueprints.js",
+    "update-blueprints": "./update-blueprints.mjs",
     "update-test-fixtures": "./update-test-fixtures.sh"
   },
   "dependencies": {
@@ -51,7 +51,7 @@
     "@types/node": "^18.19.75",
     "@types/yargs": "^17.0.33",
     "concurrently": "^9.1.2",
-    "eslint": "^8.57.1",
+    "eslint": "^9.19.0",
     "git-diff-apply": "^6.0.6",
     "prettier": "^3.4.2",
     "typescript": "^5.7.3"

@@ -2,13 +2,19 @@
   "name": "@shared-configs/stylelint",
   "version": "0.0.0",
   "private": true,
-  "description": "Shared configuration for stylelint",
-  "main": ".stylelintrc.js",
+  "description": "Configuration for stylelint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/embroider-toolbox.git"
+  },
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "main": ".stylelintrc.cjs",
   "scripts": {
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
     "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
-    "lint:js": "prettier --check \"**/*.js\"",
-    "lint:js:fix": "prettier --write \"**/*.js\""
+    "lint:js": "prettier . --check",
+    "lint:js:fix": "prettier . --write"
   },
   "dependencies": {
     "stylelint-config-standard": "^37.0.0",
