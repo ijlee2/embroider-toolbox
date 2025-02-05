@@ -24,7 +24,7 @@
 
 > [!NOTE]
 >
-> Coming soon (Q4 2024). Please star or watch this repo to help me gauge interest.
+> Please star or watch this repo to help me gauge interest.
 
 ### analyze-ember-project-dependencies
 
