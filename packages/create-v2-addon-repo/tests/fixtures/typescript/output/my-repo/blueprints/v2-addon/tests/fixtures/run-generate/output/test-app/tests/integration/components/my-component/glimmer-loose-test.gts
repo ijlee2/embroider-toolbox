@@ -8,9 +8,7 @@ module('Integration | Component | my-component/glimmer-loose', function (hooks) 
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(<template>
-      <MyComponentGlimmerLoose />
-    </template>);
+    await render(<template><MyComponentGlimmerLoose /></template>);
 
     assert.dom().hasText('');
 

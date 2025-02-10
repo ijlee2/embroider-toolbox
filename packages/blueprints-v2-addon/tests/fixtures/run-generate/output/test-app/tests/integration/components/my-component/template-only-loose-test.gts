@@ -8,9 +8,7 @@ module('Integration | Component | my-component/template-only-loose', function (h
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(<template>
-      <MyComponentTemplateOnlyLoose />
-    </template>);
+    await render(<template><MyComponentTemplateOnlyLoose /></template>);
 
     assert.dom().hasText('');
 

@@ -8,9 +8,7 @@ module('Integration | Component | \\<%= options.entity.name %\\>', function (hoo
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(<template>
-      <\\<%= options.entity.pascalizedName %\\> />
-    </template>);
+    await render(<template><\\<%= options.entity.pascalizedName %\\> /></template>);
 
     assert.dom().hasText('');
 
