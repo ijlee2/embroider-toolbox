@@ -42,15 +42,15 @@
   },
   "devDependencies": {
     "@codemod-utils/tests": "^1.1.10",
-    "@shared-configs/eslint-config-node": "workspace:*",
-    "@shared-configs/prettier": "workspace:*",
-    "@shared-configs/typescript": "workspace:*",
+    "@ijlee2-frontend-configs/eslint-config-node": "^0.2.1",
+    "@ijlee2-frontend-configs/prettier": "^0.2.0",
+    "@ijlee2-frontend-configs/typescript": "^0.3.0",
     "@sondr3/minitest": "^0.1.2",
     "@types/node": "^18.19.75",
     "@types/yargs": "^17.0.33",
     "concurrently": "^9.1.2",
-    "eslint": "^9.19.0",
-    "prettier": "^3.4.2",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
     "typescript": "^5.7.3"
   },
   "engines": {
