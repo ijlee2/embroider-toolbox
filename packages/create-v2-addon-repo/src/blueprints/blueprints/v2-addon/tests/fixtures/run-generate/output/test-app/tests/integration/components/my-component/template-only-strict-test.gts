@@ -8,9 +8,7 @@ module('Integration | Component | my-component/template-only-strict', function (
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(<template>
-      <MyComponentTemplateOnlyStrict />
-    </template>);
+    await render(<template><MyComponentTemplateOnlyStrict /></template>);
 
     assert.dom().hasText('');
 
