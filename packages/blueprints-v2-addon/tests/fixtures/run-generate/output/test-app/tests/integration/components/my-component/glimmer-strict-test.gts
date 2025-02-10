@@ -8,9 +8,7 @@ module('Integration | Component | my-component/glimmer-strict', function (hooks)
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(<template>
-      <MyComponentGlimmerStrict />
-    </template>);
+    await render(<template><MyComponentGlimmerStrict /></template>);
 
     assert.dom().hasText('');
 
