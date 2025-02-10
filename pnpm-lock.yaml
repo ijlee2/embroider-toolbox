@@ -18,8 +18,8 @@ importers:
         specifier: ^0.6.0
         version: 0.6.0
       update-workspace-root-version:
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: ^1.0.3
+        version: 1.0.3
 
   configs/ember-template-lint:
     dependencies:
@@ -126,20 +126,20 @@ importers:
   packages/analyze-ember-project-dependencies:
     dependencies:
       '@codemod-utils/ast-javascript':
-        specifier: ^1.2.11
-        version: 1.2.11
+        specifier: ^1.2.13
+        version: 1.2.13
       '@codemod-utils/ast-template':
-        specifier: ^1.1.7
-        version: 1.1.7
+        specifier: ^1.1.8
+        version: 1.1.8
       '@codemod-utils/ember':
-        specifier: ^2.0.3
-        version: 2.0.3
+        specifier: ^2.0.4
+        version: 2.0.4
       '@codemod-utils/files':
-        specifier: ^2.0.7
-        version: 2.0.7
+        specifier: ^2.0.8
+        version: 2.0.8
       '@codemod-utils/json':
-        specifier: ^1.1.12
-        version: 1.1.12
+        specifier: ^1.1.14
+        version: 1.1.14
       content-tag:
         specifier: ^3.1.1
         version: 3.1.1
@@ -148,8 +148,8 @@ importers:
         version: 17.7.2
     devDependencies:
       '@codemod-utils/tests':
-        specifier: ^1.1.10
-        version: 1.1.10(@sondr3/minitest@0.1.2)
+        specifier: ^1.1.11
+        version: 1.1.11(@sondr3/minitest@0.1.2)
       '@shared-configs/eslint-config-node':
         specifier: workspace:*
         version: link:../../configs/eslint/node
@@ -184,27 +184,27 @@ importers:
   packages/blueprints-v2-addon:
     dependencies:
       '@codemod-utils/ast-javascript':
-        specifier: ^1.2.11
-        version: 1.2.11
+        specifier: ^1.2.13
+        version: 1.2.13
       '@codemod-utils/blueprints':
-        specifier: ^1.1.8
-        version: 1.1.8
+        specifier: ^1.1.9
+        version: 1.1.9
       '@codemod-utils/ember':
-        specifier: ^2.0.3
-        version: 2.0.3
+        specifier: ^2.0.4
+        version: 2.0.4
       '@codemod-utils/files':
-        specifier: ^2.0.7
-        version: 2.0.7
+        specifier: ^2.0.8
+        version: 2.0.8
       '@codemod-utils/json':
-        specifier: ^1.1.12
-        version: 1.1.12
+        specifier: ^1.1.14
+        version: 1.1.14
       yargs:
         specifier: ^17.7.2
         version: 17.7.2
     devDependencies:
       '@codemod-utils/tests':
-        specifier: ^1.1.10
-        version: 1.1.10(@sondr3/minitest@0.1.2)
+        specifier: ^1.1.11
+        version: 1.1.11(@sondr3/minitest@0.1.2)
       '@shared-configs/eslint-config-node':
         specifier: workspace:*
         version: link:../../configs/eslint/node
@@ -242,18 +242,18 @@ importers:
   packages/create-v2-addon-repo:
     dependencies:
       '@codemod-utils/blueprints':
-        specifier: ^1.1.8
-        version: 1.1.8
+        specifier: ^1.1.9
+        version: 1.1.9
       '@codemod-utils/files':
-        specifier: ^2.0.7
-        version: 2.0.7
+        specifier: ^2.0.8
+        version: 2.0.8
       yargs:
         specifier: ^17.7.2
         version: 17.7.2
     devDependencies:
       '@codemod-utils/tests':
-        specifier: ^1.1.10
-        version: 1.1.10(@sondr3/minitest@0.1.2)
+        specifier: ^1.1.11
+        version: 1.1.11(@sondr3/minitest@0.1.2)
       '@shared-configs/eslint-config-node':
         specifier: workspace:*
         version: link:../../configs/eslint/node
@@ -467,32 +467,32 @@ packages:
   '@changesets/write@0.3.2':
     resolution: {integrity: sha512-kDxDrPNpUgsjDbWBvUo27PzKX4gqeKOlhibaOXDJA6kuBisGqNHv/HwGJrAu8U/dSf8ZEFIeHIPtvSlZI1kULw==}
 
-  '@codemod-utils/ast-javascript@1.2.11':
-    resolution: {integrity: sha512-UlXY5ceeXq9tT6SuAWul3tBsprXcrIldMK/hC3OVWVFJB8Zg/Rd6mDYnXLWUdWigJsJvFww4yIYlQI7JK15bjg==}
+  '@codemod-utils/ast-javascript@1.2.13':
+    resolution: {integrity: sha512-WkC6ACp1uD6Ns0gBVbLS9hsRWZfc5npK/rTlBpPxhiQ2c3z/pbElOvU+4pOY6pgs3D3/rilC1S7h9EdMREmFMQ==}
     engines: {node: 18.* || >= 20}
 
-  '@codemod-utils/ast-template@1.1.7':
-    resolution: {integrity: sha512-vmlMb4tP3XOWplQuTc8EJAKw+DH+VM+NCvoczpURmOR4O3HhUUeRkNHQCLwFV3MVNEG5LhHw24AcW715HP+FqA==}
+  '@codemod-utils/ast-template@1.1.8':
+    resolution: {integrity: sha512-s4xIOrZSdJUFM08jpvNIRjhcfcdMUQzB2PKRxIDz14nVUK6mf16zoxFGm7LhHe9KSszTuR6pGc0yx3tu+W6unA==}
     engines: {node: 18.* || >= 20}
 
-  '@codemod-utils/blueprints@1.1.8':
-    resolution: {integrity: sha512-Gv+PFNioDWNR8XEDC46FiRTfqzePUsL6Fp48GVeUsximCWTYrs2GG9pSaw5Pil3WR9T1Kktwv8NZKjG+vJ/ptg==}
+  '@codemod-utils/blueprints@1.1.9':
+    resolution: {integrity: sha512-svCIoysOEQz13FdeRxTW7USMAZ0x92otysvj36YN2QlWk3/lPj25JUMdHbVBS5IYMdwVhloJ3/GSKub2BvanFQ==}
     engines: {node: 18.* || >= 20}
 
-  '@codemod-utils/ember@2.0.3':
-    resolution: {integrity: sha512-3puRElz53kIDSifDDadqbwPSdogR7sK/MLitgtD9mCbDuVJJrp2sC9xcY3OnOWO/6/jvTSI1rv8D0of+zbwo8w==}
+  '@codemod-utils/ember@2.0.4':
+    resolution: {integrity: sha512-uZ3sPj/6FF5XvrVEo6HVverXWsyuRQ880V2Ra+2Y3iBwKLunp4eu1weyciO5bI9HTsGnnSRT+5ay/boSCFX6Og==}
     engines: {node: 18.* || >= 20}
 
-  '@codemod-utils/files@2.0.7':
-    resolution: {integrity: sha512-sphHrxIUWtyphOjCOt1BXJUEd+akDfVukxIohI1oaSKnVvmKvbijwQgIZkCVHR2YrYKo8mWc6d2iRobQXsI4/Q==}
+  '@codemod-utils/files@2.0.8':
+    resolution: {integrity: sha512-BDcO1mmnJyi/RqkRD03DPRUQ59TiVGk8Q6mAt5OiNvy7OfBDJ/syNW+gj/vFnJlfN1OU0SMHbfdqqTlZsLRw9w==}
     engines: {node: 18.* || >= 20}
 
-  '@codemod-utils/json@1.1.12':
-    resolution: {integrity: sha512-ERp62/COjfIILOaOsBAE7qJcHK90GjnGTLdCBOkLgNY/cVaRc6hTBFFAJ5ZtbqxEtep/zw26shREgjHH0QSoeA==}
+  '@codemod-utils/json@1.1.14':
+    resolution: {integrity: sha512-acmgFyPHNed/z7t6Q3djw9SFZNsE4/8PcPlPM0CaVYzTlPCKWPecF49JCQiY6bcXkgHFSGgkfrgJ9OLmYiqaUw==}
     engines: {node: 18.* || >= 20}
 
-  '@codemod-utils/tests@1.1.10':
-    resolution: {integrity: sha512-IjEL/r3eb15eGFFLSpMW+a4pWspCTmhf4uqPgwBeqA4mC8Agi5kxWsJDOB2ONur3rcxR/qQp5Jb07gzTQsyciA==}
+  '@codemod-utils/tests@1.1.11':
+    resolution: {integrity: sha512-UcN0Aqt1cpP5FtkPdKhOUM7/UE7TjpK6ap4uIHpt4+P/2uImzkKm06ZyQ9bV+Vg5Q0U9a49rJ+B6bEN5OiCFZQ==}
     engines: {node: 18.* || >= 20}
     peerDependencies:
       '@sondr3/minitest': ^0.1.2
@@ -1987,8 +1987,8 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
-  type-fest@4.33.0:
-    resolution: {integrity: sha512-s6zVrxuyKbbAsSAD5ZPTB77q4YIdRctkTbJ2/Dqlinwz+8ooH2gd+YA7VA6Pa93KML9GockVvoxjZ2vHP+mu8g==}
+  type-fest@4.34.1:
+    resolution: {integrity: sha512-6kSc32kT0rbwxD6QL1CYe8IqdzN/J/ILMrNK+HMQCKH3insCDRY/3ITb0vcBss0a3t72fzh2YSzj8ko1HgwT3g==}
     engines: {node: '>=16'}
 
   typescript-eslint@8.23.0:
@@ -2020,8 +2020,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  update-workspace-root-version@1.0.2:
-    resolution: {integrity: sha512-UkFf27yQ2YwFmkuwQHxMFxpYtbaRJJKQHcXsYf7X25a0viuXQ0nBDCeJeBNSU9CLmIATVEJat4mxT20bnEG9Dg==}
+  update-workspace-root-version@1.0.3:
+    resolution: {integrity: sha512-wqIApMZ0DIIWe9naoXwkDqsAXPWIKTxXHhrNKikuJo3aAC/g/oFSbtjf/EoBMSeLMK2Vqj87AbtQH/IqxlJjpg==}
     engines: {node: 18.* || >= 20}
     hasBin: true
 
@@ -2414,32 +2414,32 @@ snapshots:
       human-id: 1.0.2
       prettier: 2.8.8
 
-  '@codemod-utils/ast-javascript@1.2.11':
+  '@codemod-utils/ast-javascript@1.2.13':
     dependencies:
       '@babel/parser': 7.26.8
       recast: 0.23.9
 
-  '@codemod-utils/ast-template@1.1.7':
+  '@codemod-utils/ast-template@1.1.8':
     dependencies:
       ember-template-recast: 6.1.5
     transitivePeerDependencies:
       - supports-color
 
-  '@codemod-utils/blueprints@1.1.8':
+  '@codemod-utils/blueprints@1.1.9':
     dependencies:
       lodash: 4.17.21
 
-  '@codemod-utils/ember@2.0.3': {}
+  '@codemod-utils/ember@2.0.4': {}
 
-  '@codemod-utils/files@2.0.7':
+  '@codemod-utils/files@2.0.8':
     dependencies:
       glob: 10.4.5
 
-  '@codemod-utils/json@1.1.12':
+  '@codemod-utils/json@1.1.14':
     dependencies:
-      type-fest: 4.33.0
+      type-fest: 4.34.1
 
-  '@codemod-utils/tests@1.1.10(@sondr3/minitest@0.1.2)':
+  '@codemod-utils/tests@1.1.11(@sondr3/minitest@0.1.2)':
     dependencies:
       '@sondr3/minitest': 0.1.2
       fixturify: 3.0.0
@@ -3997,7 +3997,7 @@ snapshots:
     dependencies:
       prelude-ls: 1.2.1
 
-  type-fest@4.33.0: {}
+  type-fest@4.34.1: {}
 
   typescript-eslint@8.23.0(eslint@9.20.0)(typescript@5.7.3):
     dependencies:
@@ -4023,10 +4023,10 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  update-workspace-root-version@1.0.2:
+  update-workspace-root-version@1.0.3:
     dependencies:
-      '@codemod-utils/files': 2.0.7
-      '@codemod-utils/json': 1.1.12
+      '@codemod-utils/files': 2.0.8
+      '@codemod-utils/json': 1.1.14
       yargs: 17.7.2
 
   uri-js@4.4.1:
