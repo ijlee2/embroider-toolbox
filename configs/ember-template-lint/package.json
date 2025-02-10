@@ -1,0 +1,38 @@
+{
+  "name": "@shared-configs/ember-template-lint",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuration for ember-template-lint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/embroider-toolbox.git"
+  },
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "main": "index.cjs",
+  "scripts": {
+    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
+    "lint:js": "prettier \"**/*.{cjs,mjs}\" --check",
+    "lint:js:fix": "prettier \"**/*.{cjs,mjs}\" --write"
+  },
+  "dependencies": {
+    "@ijlee2-frontend-configs/ember-template-lint": "^0.4.0"
+  },
+  "devDependencies": {
+    "@shared-configs/prettier": "workspace:*",
+    "concurrently": "^9.1.2",
+    "prettier": "^3.5.0"
+  },
+  "peerDependencies": {
+    "ember-template-lint": "^6.1.0"
+  },
+  "peerDependenciesMeta": {
+    "ember-template-lint": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": "18.* || >= 20"
+  }
+}

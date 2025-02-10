@@ -1,0 +1,50 @@
+{
+  "name": "@shared-configs/eslint-config-node",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Configuration for eslint (Node)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/embroider-toolbox.git"
+  },
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "exports": {
+    "./javascript": "./javascript/index.js",
+    "./typescript": "./typescript/index.js"
+  },
+  "scripts": {
+    "lint": "concurrently \"npm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"npm:lint:*:fix\" --names \"fix:\"",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "@ijlee2-frontend-configs/eslint-config-node": "^0.2.1"
+  },
+  "devDependencies": {
+    "@shared-configs/prettier": "workspace:*",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0"
+  },
+  "peerDependencies": {
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
+    "typescript": "^5.7.3"
+  },
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": false
+    },
+    "prettier": {
+      "optional": false
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": "18.* || >= 20"
+  }
+}
