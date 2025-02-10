@@ -1,4 +1,4 @@
-import baseConfiguration from '@ijlee2-frontend-configs/eslint-config-node/typescript';
+import baseConfiguration from '@shared-configs/eslint-config-node/typescript';
 
 export default [
   {
