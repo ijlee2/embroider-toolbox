@@ -1,4 +1,5 @@
 packages:
+  - configs/**
   - packages/analyze-ember-project-dependencies
   - packages/blueprints-v2-addon
   - packages/create-v2-addon-repo
