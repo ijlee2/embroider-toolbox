@@ -1,5 +1,17 @@
 # blueprints-v2-addon
 
+## 0.6.0
+
+### Minor Changes
+
+- [#70](https://github.com/ijlee2/embroider-toolbox/pull/70) Updated eslint to v9 ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#73](https://github.com/ijlee2/embroider-toolbox/pull/73) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#71](https://github.com/ijlee2/embroider-toolbox/pull/71) Simplified lint configurations ([@ijlee2](https://github.com/ijlee2))
+- [#69](https://github.com/ijlee2/embroider-toolbox/pull/69) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.5.0
 
 ### Minor Changes

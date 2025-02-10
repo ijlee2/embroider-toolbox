@@ -1,5 +1,14 @@
 # analyze-ember-project-dependencies
 
+## 0.4.6
+
+### Patch Changes
+
+- [#73](https://github.com/ijlee2/embroider-toolbox/pull/73) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#71](https://github.com/ijlee2/embroider-toolbox/pull/71) Simplified lint configurations ([@ijlee2](https://github.com/ijlee2))
+- [#70](https://github.com/ijlee2/embroider-toolbox/pull/70) Updated eslint to v9 ([@ijlee2](https://github.com/ijlee2))
+- [#69](https://github.com/ijlee2/embroider-toolbox/pull/69) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.4.5
 
 ### Patch Changes

@@ -1,5 +1,18 @@
 # create-v2-addon-repo
 
+## 0.15.0
+
+### Minor Changes
+
+- [#74](https://github.com/ijlee2/embroider-toolbox/pull/74) Introduced eslint@v9 and @ijlee2-frontend-configs ([@ijlee2](https://github.com/ijlee2))
+- [#70](https://github.com/ijlee2/embroider-toolbox/pull/70) Updated eslint to v9 ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#73](https://github.com/ijlee2/embroider-toolbox/pull/73) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#71](https://github.com/ijlee2/embroider-toolbox/pull/71) Simplified lint configurations ([@ijlee2](https://github.com/ijlee2))
+- [#69](https://github.com/ijlee2/embroider-toolbox/pull/69) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.14.0
 
 ### Minor Changes
