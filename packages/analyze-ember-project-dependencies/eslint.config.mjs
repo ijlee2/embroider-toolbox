@@ -1,4 +1,4 @@
-import eslintConfigNodeTypescript from '@shared-configs/eslint-config-node/typescript/index.js';
+import baseConfiguration from '@ijlee2-frontend-configs/eslint-config-node/typescript';
 
 export default [
   {
@@ -9,9 +9,8 @@ export default [
       'src/blueprints/',
       'tests/fixtures/',
       'tmp/',
-      '!.*',
       '.*/',
     ],
   },
-  ...eslintConfigNodeTypescript,
+  ...baseConfiguration,
 ];
