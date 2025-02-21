@@ -285,6 +285,61 @@ importers:
         specifier: ^5.7.3
         version: 5.7.3
 
+  packages/ember-codemod-template-tag:
+    dependencies:
+      '@codemod-utils/ast-javascript':
+        specifier: ^1.2.13
+        version: 1.2.13
+      '@codemod-utils/ast-template':
+        specifier: ^1.1.8
+        version: 1.1.8
+      '@codemod-utils/ember':
+        specifier: ^2.0.4
+        version: 2.0.4
+      '@codemod-utils/files':
+        specifier: ^2.0.8
+        version: 2.0.8
+      '@codemod-utils/json':
+        specifier: ^1.1.14
+        version: 1.1.14
+      yargs:
+        specifier: ^17.7.2
+        version: 17.7.2
+    devDependencies:
+      '@codemod-utils/tests':
+        specifier: ^1.1.11
+        version: 1.1.11(@sondr3/minitest@0.1.2)
+      '@shared-configs/eslint-config-node':
+        specifier: workspace:*
+        version: link:../../configs/eslint/node
+      '@shared-configs/prettier':
+        specifier: workspace:*
+        version: link:../../configs/prettier
+      '@shared-configs/typescript':
+        specifier: workspace:*
+        version: link:../../configs/typescript
+      '@sondr3/minitest':
+        specifier: ^0.1.2
+        version: 0.1.2
+      '@types/node':
+        specifier: ^18.19.75
+        version: 18.19.75
+      '@types/yargs':
+        specifier: ^17.0.33
+        version: 17.0.33
+      concurrently:
+        specifier: ^9.1.2
+        version: 9.1.2
+      eslint:
+        specifier: ^9.20.0
+        version: 9.20.0
+      prettier:
+        specifier: ^3.5.0
+        version: 3.5.0
+      typescript:
+        specifier: ^5.7.3
+        version: 5.7.3
+
 packages:
 
   '@ampproject/remapping@2.3.0':
