@@ -34,6 +34,7 @@
   "scripts": {
     "addon": "blueprints-v2-addon --test-app-location \"<%= options.addon.locationInverse %>/<%= options.testApp.location %>\"",
     "build": "rollup --config",
+    "prelint:types": "type-css-modules --src src",
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
     "lint:css": "stylelint \"**/*.css\" --allow-empty-input --cache",
     "lint:css:fix": "stylelint \"**/*.css\" --allow-empty-input --fix",
@@ -42,7 +43,6 @@
     "lint:hbs:fix": "ember-template-lint . --fix",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
-    "prelint:types": "type-css-modules --src src",
     "lint:types": "glint",
     "prepack": "rollup --config",
     "start": "rollup --config --watch",
