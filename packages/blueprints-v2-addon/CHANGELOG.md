@@ -1,5 +1,12 @@
 # blueprints-v2-addon
 
+## 0.6.1
+
+### Patch Changes
+
+- [#76](https://github.com/ijlee2/embroider-toolbox/pull/76) Updated blueprints ([@ijlee2](https://github.com/ijlee2))
+- [#75](https://github.com/ijlee2/embroider-toolbox/pull/75) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.6.0
 
 ### Minor Changes
