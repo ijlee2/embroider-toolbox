@@ -1,10 +1,10 @@
+import { getPackageRoots } from '@codemod-utils/files';
 import { readPackageJson } from '@codemod-utils/json';
 
 import type { Options, ProjectData } from '../types/index.js';
 import {
   analyzeEntities,
   analyzePackageJson,
-  getPackageRoots,
 } from './analyze-project/index.js';
 
 export function analyzeProject(options: Options) {
