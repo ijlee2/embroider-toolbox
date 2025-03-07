@@ -10,6 +10,5 @@
 /.DS_Store
 /.env*
 /.eslintcache
-/npm-debug.log*
 /pnpm-debug.log*
 /pnpm-error.log*
