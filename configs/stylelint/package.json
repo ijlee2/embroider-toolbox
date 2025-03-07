@@ -9,12 +9,7 @@
   },
   "author": "Isaac J. Lee",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./css-modules/index.mjs",
-      "require": "./css-modules/index.cjs"
-    }
-  },
+  "main": "./index.mjs",
   "scripts": {
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
     "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
@@ -27,11 +22,11 @@
   "devDependencies": {
     "@shared-configs/prettier": "workspace:*",
     "concurrently": "^9.1.2",
-    "prettier": "^3.5.2"
+    "prettier": "^3.5.3"
   },
   "peerDependencies": {
-    "prettier": "^3.5.2",
-    "stylelint": "^16.14.1"
+    "prettier": "^3.5.3",
+    "stylelint": "^16.15.0"
   },
   "peerDependenciesMeta": {
     "prettier": {
