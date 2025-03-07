@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 0.16.1
+
+### Patch Changes
+
+- [#79](https://github.com/ijlee2/embroider-toolbox/pull/79) Pinned ember-page-title to v8 (ember-lts-3.28) ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.16.0
 
 ### Minor Changes
