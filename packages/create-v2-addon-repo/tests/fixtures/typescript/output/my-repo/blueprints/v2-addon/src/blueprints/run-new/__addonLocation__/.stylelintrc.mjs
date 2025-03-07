@@ -1,1 +1,1 @@
-export { default } from '@shared-configs/stylelint/css-modules';
+export { default } from '@shared-configs/stylelint';
