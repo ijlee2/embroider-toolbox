@@ -8,7 +8,6 @@
 /.env*
 /.pnp*
 /.eslintcache
-/.pnpm-debug.log
 /.stylelintcache
 /coverage/
 /testem.log

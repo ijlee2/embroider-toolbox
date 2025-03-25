@@ -6,7 +6,7 @@ module.exports = async function () {
   const { default: latestVersion } = await import('latest-version');
 
   return {
-    usePnpm: true,
+    packageManager: 'pnpm',
     scenarios: [
       /*
         If your v2 addons need to support `ember-source@3.28`,
