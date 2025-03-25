@@ -3,17 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "docs-app/tests/*": [
-        "tests/*"
-      ],
-      "docs-app/*": [
-        "app/*"
-      ],
-      "*": [
-        "types/*"
-      ]
+      "docs-app/tests/*": ["tests/*"],
+      "docs-app/*": ["app/*"],
+      "*": ["types/*"]
     },
-    "skipLibCheck": true,
     "types": [
       "ember-source/types"
     ]

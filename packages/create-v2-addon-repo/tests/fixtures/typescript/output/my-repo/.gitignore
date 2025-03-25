@@ -10,4 +10,3 @@ node_modules/
 .env*
 .eslintcache
 pnpm-debug.log
-pnpm-error.log
