@@ -21,11 +21,5 @@
   "engines": {
     "node": "18.* || >= 20",
     "pnpm": ">= 9"
-  },
-  "pnpm": {
-    "overrides": {
-      "@ember/test-waiters": "^4.0.0",
-      "get-tsconfig": "4.7.3"
-    }
   }
 }

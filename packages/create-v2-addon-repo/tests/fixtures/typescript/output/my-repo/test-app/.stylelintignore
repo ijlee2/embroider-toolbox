@@ -3,6 +3,3 @@
 
 # compiled output
 /dist/
-
-# ember-try
-/.node_modules.ember-try/
