@@ -1,5 +1,11 @@
 # analyze-ember-project-dependencies
 
+## 1.0.0
+
+### Major Changes
+
+- [#84](https://github.com/ijlee2/embroider-toolbox/pull/84) Dropped Node 18 support ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.4.10
 
 ### Patch Changes

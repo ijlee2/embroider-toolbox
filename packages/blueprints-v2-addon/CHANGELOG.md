@@ -1,5 +1,12 @@
 # blueprints-v2-addon
 
+## 1.0.0
+
+### Major Changes
+
+- [#85](https://github.com/ijlee2/embroider-toolbox/pull/85) Updated blueprints ([@ijlee2](https://github.com/ijlee2))
+- [#84](https://github.com/ijlee2/embroider-toolbox/pull/84) Dropped Node 18 support ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.8.0
 
 ### Minor Changes
