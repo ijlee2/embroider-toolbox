@@ -1,5 +1,15 @@
 # create-v2-addon-repo
 
+## 0.18.0
+
+### Minor Changes
+
+- [#83](https://github.com/ijlee2/embroider-toolbox/pull/83) Updated blueprints ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#82](https://github.com/ijlee2/embroider-toolbox/pull/82) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.17.0
 
 ### Minor Changes
