@@ -20,7 +20,7 @@
     "lint:js:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@ijlee2-frontend-configs/eslint-config-node": "^0.4.1"
+    "@ijlee2-frontend-configs/eslint-config-node": "^1.0.0"
   },
   "devDependencies": {
     "@shared-configs/prettier": "workspace:*",
