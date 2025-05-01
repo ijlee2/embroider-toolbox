@@ -6,9 +6,7 @@
   "type": "module",
   "exports": {
     "./ember": "./ember/index.json",
-    "./node18": "./node18/index.json",
-    "./node20": "./node20/index.json",
-    "./node22": "./node22/index.json"
+    "./node18": "./node18/index.json"
   },
   "scripts": {
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
@@ -17,7 +15,9 @@
     "lint:js:fix": "prettier \"**/*.{cjs,json,mjs}\" --write"
   },
   "dependencies": {
-    "@ijlee2-frontend-configs/typescript": "^0.4.0"
+    "@tsconfig/ember": "^3.0.10",
+    "@tsconfig/node18": "^18.2.4",
+    "@tsconfig/strictest": "^2.0.5"
   },
   "devDependencies": {
     "@shared-configs/prettier": "workspace:*",
@@ -25,7 +25,7 @@
     "prettier": "^3.5.3"
   },
   "peerDependencies": {
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   },
   "peerDependenciesMeta": {
     "typescript": {
