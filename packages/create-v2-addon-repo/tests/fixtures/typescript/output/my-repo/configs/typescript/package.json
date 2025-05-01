@@ -6,7 +6,7 @@
   "type": "module",
   "exports": {
     "./ember": "./ember/index.json",
-    "./node18": "./node18/index.json"
+    "./node20": "./node20/index.json"
   },
   "scripts": {
     "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@tsconfig/ember": "^3.0.10",
-    "@tsconfig/node18": "^18.2.4",
+    "@tsconfig/node20": "^20.1.5",
     "@tsconfig/strictest": "^2.0.5"
   },
   "devDependencies": {
@@ -33,6 +33,6 @@
     }
   },
   "engines": {
-    "node": "18.* || >= 20"
+    "node": "20.* || >= 22"
   }
 }
