@@ -1,6 +1,7 @@
 import baseConfiguration from '@shared-configs/eslint-config-node/typescript';
 
 export default [
+  ...baseConfiguration,
   {
     ignores: [
       'dist/',
@@ -12,7 +13,6 @@ export default [
       '.*/',
     ],
   },
-  ...baseConfiguration,
   {
     files: ['**/*.ts'],
     rules: {
@@ -20,6 +20,12 @@ export default [
       '@typescript-eslint/no-unsafe-assignment': 'off',
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-member-access': 'off',
+    },
+  },
+  {
+    files: ['update-blueprints.mjs'],
+    rules: {
+      'n/hashbang': 'off',
     },
   },
 ];

@@ -23,6 +23,7 @@ cp -r "../blueprints-v2-addon/tests" "src/blueprints/blueprints/v2-addon/tests"
 
 cp "../blueprints-v2-addon/.gitignore" "src/blueprints/blueprints/v2-addon/__gitignore__"
 cp "../blueprints-v2-addon/.npmignore" "src/blueprints/blueprints/v2-addon/__npmignore__"
+cp "../blueprints-v2-addon/.prettierignore" "src/blueprints/blueprints/v2-addon/.prettierignore"
 cp "../blueprints-v2-addon/build.sh" "src/blueprints/blueprints/v2-addon/build.sh"
 cp "../blueprints-v2-addon/CHANGELOG.md" "src/blueprints/blueprints/v2-addon/CHANGELOG.md"
 touch "src/blueprints/blueprints/v2-addon/CHANGELOG.md"; echo "# blueprints-v2-addon" > "src/blueprints/blueprints/v2-addon/CHANGELOG.md"

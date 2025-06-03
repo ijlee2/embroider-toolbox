@@ -41,10 +41,12 @@ Don't forget to run `pnpm install` to install the addon's dependencies.
 From the workspace root, you can run these commands to apply the action to _all packages_.
 
 ```sh
-# Lint files
+# Check errors
 pnpm lint
+ 
+# Fix errors
 pnpm lint:fix
-
+ 
 # Run tests
 pnpm test
 ```
@@ -52,7 +54,7 @@ pnpm test
 To save time, you can instead run the commands above in some package's root. This will affect _only that package_.
 
 ```sh
-# Example: Lint `@my-org-ui/form`
+# Example: Check errors in `@my-org-ui/form`
 cd packages/ui/form
 pnpm lint
 ```
