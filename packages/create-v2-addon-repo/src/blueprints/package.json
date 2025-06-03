@@ -6,8 +6,11 @@
   "scripts": {
     "addon": "blueprints-v2-addon",
     "build": "pnpm --filter blueprints-v2-addon --filter \"./packages/**\" build",
+    "format": "pnpm --filter \"*\" format",
     "lint": "pnpm --filter \"*\" lint",
     "lint:fix": "pnpm --filter \"*\" lint:fix",
+    "lint:package-json": "pnpm lint:package-json:fix --check",
+    "lint:package-json:fix": "sort-package-json \"**/package.json\" --ignore \"**/{blueprints,dist,dist-for-testing,node_modules,tests,tmp}/**\"",
     "start": "concurrently \"pnpm:start:*\" --names \"start:\" --prefix-colors cyan,yellow",
     "start:docs-app": "pnpm --filter docs-app start",
     "start:test-app": "pnpm --filter test-app start",
@@ -15,7 +18,8 @@
   },
   "devDependencies": {
     "blueprints-v2-addon": "workspace:*",
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "sort-package-json": "^3.2.1"
   },
   "packageManager": "pnpm@9.15.9",
   "engines": {

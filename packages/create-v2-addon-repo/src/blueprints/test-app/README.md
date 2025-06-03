@@ -3,10 +3,12 @@
 ## Local development
 
 ```sh
-# Lint files
+# Check errors
 pnpm lint
+ 
+# Fix errors
 pnpm lint:fix
-
+ 
 # Run tests
 pnpm test
 ```
