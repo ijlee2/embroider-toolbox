@@ -15,8 +15,8 @@ importers:
         specifier: ^0.6.0
         version: 0.6.0
       update-workspace-root-version:
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^2.0.1
+        version: 2.0.1
 
   configs/ember-template-lint:
     dependencies:
@@ -111,30 +111,30 @@ importers:
   packages/analyze-ember-project-dependencies:
     dependencies:
       '@codemod-utils/ast-javascript':
+        specifier: ^2.0.2
+        version: 2.0.2
+      '@codemod-utils/ast-template':
         specifier: ^2.0.1
         version: 2.0.1
-      '@codemod-utils/ast-template':
-        specifier: ^2.0.0
-        version: 2.0.0
       '@codemod-utils/ember':
-        specifier: ^3.0.0
-        version: 3.0.0
-      '@codemod-utils/files':
         specifier: ^3.0.1
         version: 3.0.1
+      '@codemod-utils/files':
+        specifier: ^3.0.2
+        version: 3.0.2
       '@codemod-utils/json':
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: ^2.0.2
+        version: 2.0.2
       content-tag:
         specifier: ^4.0.0
         version: 4.0.0
       yargs:
-        specifier: ^17.7.2
-        version: 17.7.2
+        specifier: ^18.0.0
+        version: 18.0.0
     devDependencies:
       '@codemod-utils/tests':
-        specifier: ^2.0.0
-        version: 2.0.0(@sondr3/minitest@0.1.2)
+        specifier: ^2.0.1
+        version: 2.0.1(@sondr3/minitest@0.1.2)
       '@shared-configs/eslint-config-node':
         specifier: workspace:*
         version: link:../../configs/eslint/node
@@ -148,8 +148,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^20.17.46
-        version: 20.17.46
+        specifier: ^20.17.57
+        version: 20.17.57
       '@types/yargs':
         specifier: ^17.0.33
         version: 17.0.33
@@ -169,27 +169,27 @@ importers:
   packages/blueprints-v2-addon:
     dependencies:
       '@codemod-utils/ast-javascript':
+        specifier: ^2.0.2
+        version: 2.0.2
+      '@codemod-utils/blueprints':
         specifier: ^2.0.1
         version: 2.0.1
-      '@codemod-utils/blueprints':
-        specifier: ^2.0.0
-        version: 2.0.0
       '@codemod-utils/ember':
-        specifier: ^3.0.0
-        version: 3.0.0
-      '@codemod-utils/files':
         specifier: ^3.0.1
         version: 3.0.1
+      '@codemod-utils/files':
+        specifier: ^3.0.2
+        version: 3.0.2
       '@codemod-utils/json':
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: ^2.0.2
+        version: 2.0.2
       yargs:
-        specifier: ^17.7.2
-        version: 17.7.2
+        specifier: ^18.0.0
+        version: 18.0.0
     devDependencies:
       '@codemod-utils/tests':
-        specifier: ^2.0.0
-        version: 2.0.0(@sondr3/minitest@0.1.2)
+        specifier: ^2.0.1
+        version: 2.0.1(@sondr3/minitest@0.1.2)
       '@shared-configs/eslint-config-node':
         specifier: workspace:*
         version: link:../../configs/eslint/node
@@ -203,8 +203,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^20.17.46
-        version: 20.17.46
+        specifier: ^20.17.57
+        version: 20.17.57
       '@types/yargs':
         specifier: ^17.0.33
         version: 17.0.33
@@ -227,18 +227,18 @@ importers:
   packages/create-v2-addon-repo:
     dependencies:
       '@codemod-utils/blueprints':
-        specifier: ^2.0.0
-        version: 2.0.0
+        specifier: ^2.0.1
+        version: 2.0.1
       '@codemod-utils/files':
-        specifier: ^3.0.1
-        version: 3.0.1
+        specifier: ^3.0.2
+        version: 3.0.2
       yargs:
-        specifier: ^17.7.2
-        version: 17.7.2
+        specifier: ^18.0.0
+        version: 18.0.0
     devDependencies:
       '@codemod-utils/tests':
-        specifier: ^2.0.0
-        version: 2.0.0(@sondr3/minitest@0.1.2)
+        specifier: ^2.0.1
+        version: 2.0.1(@sondr3/minitest@0.1.2)
       '@shared-configs/eslint-config-node':
         specifier: workspace:*
         version: link:../../configs/eslint/node
@@ -252,8 +252,8 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^20.17.46
-        version: 20.17.46
+        specifier: ^20.17.57
+        version: 20.17.57
       '@types/yargs':
         specifier: ^17.0.33
         version: 17.0.33
@@ -378,8 +378,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/runtime@7.27.1':
-    resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
+  '@babel/runtime@7.27.4':
+    resolution: {integrity: sha512-t3yaEOuGu9NlIZ+hIeGbBjFtZT7j2cb2tg0fuaJKeGotchRjjLfrBA9Kwf8quhpP1EUuxModQg04q/mBwyg8uA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.27.2':
@@ -452,32 +452,32 @@ packages:
   '@changesets/write@0.4.0':
     resolution: {integrity: sha512-CdTLvIOPiCNuH71pyDu3rA+Q0n65cmAbXnwWH84rKGiFumFzkmHNT8KHTMEchcxN+Kl8I54xGUhJ7l3E7X396Q==}
 
-  '@codemod-utils/ast-javascript@2.0.1':
-    resolution: {integrity: sha512-JyQaJftW+vWbxIorsnanzbdD9x3wlOpvopRR6kre8OaZbxPaFZjqyef79xIsq4LbF6PGLcRosiGo/rHUh1knMg==}
+  '@codemod-utils/ast-javascript@2.0.2':
+    resolution: {integrity: sha512-EWVfZzbE7w+SAhrMSfW5By7A5JQGsq1FAXOiBZUwHuzmzD6eptWZXr2exm3WQ7Foo5WBiG8Ytpral9DJfdmoew==}
     engines: {node: 20.* || >= 22}
 
-  '@codemod-utils/ast-template@2.0.0':
-    resolution: {integrity: sha512-c+c4LvyHMCpdl+eJvEzuKreuS7No1dkNor/8YDgphXUwDQdKGHHdTmO5MNtjg+l3/cAQndGoyGRq6fSX2JXKrA==}
+  '@codemod-utils/ast-template@2.0.1':
+    resolution: {integrity: sha512-xGTY/E19pO7XRB+CHA07RsuQI2KVAcf18P+fwrFd2dC7ay/fLDy0W9ZAP1JcviNcywNDjKKIXH5CPWN9RY20UQ==}
     engines: {node: 20.* || >= 22}
 
-  '@codemod-utils/blueprints@2.0.0':
-    resolution: {integrity: sha512-wP+OdUQGR7CNPed65PAbs/qHgyfXJPybFsZ0wubo7XgtUW5c5Sys27hIX9C6qQSLCoBFt77HonBcA0tHTm8j5w==}
+  '@codemod-utils/blueprints@2.0.1':
+    resolution: {integrity: sha512-e4xp1TLMyhk9un0vOyl9Gjq5Y9+Wr31PW57Z+Gaiuy8zmwZlvmQWXJFT4MGbh7QBct+AoKaUktcN06x/Dwxk3A==}
     engines: {node: 20.* || >= 22}
 
-  '@codemod-utils/ember@3.0.0':
-    resolution: {integrity: sha512-+F15D5AYR+S21Tpk6R3fvwyxUcks+Xx738RQ8oyW2vi4+LIuft49LavETSIAJ9g3/M66WAs70dkenWDePEH2Pw==}
+  '@codemod-utils/ember@3.0.1':
+    resolution: {integrity: sha512-dhFYyY+3cu1wicn8n9GF/EHR9p2Or4PQmcP87C7T06zEyeQejgmb9i1Ej1EcTDY+4VLMxkgdp3U3Fvl2Lc3ovw==}
     engines: {node: 20.* || >= 22}
 
-  '@codemod-utils/files@3.0.1':
-    resolution: {integrity: sha512-gJnXot82NryKVxOIcZsMWYc+svkMQQxVthm22Tix6t+1EVn3+QmScJMEuUnWlWwWC7Ds+DERk0bn1gBo8DTPoQ==}
+  '@codemod-utils/files@3.0.2':
+    resolution: {integrity: sha512-edJ+afzVyEUDVu2uqQwZF9VXHT4ErYMn7nLhfBqjp79M5dcsBRRWBms5ifQDDiXbgxhAptXEmOsfEwVJXA5z+Q==}
     engines: {node: 20.* || >= 22}
 
-  '@codemod-utils/json@2.0.1':
-    resolution: {integrity: sha512-1XiYHjWn20yPdyI85qxbCEjZH97h6gd+6uxmO+NR9f+I4//JN5fcy/JLaGx6co5cFAKxvKrynzfT/Wqtadp65A==}
+  '@codemod-utils/json@2.0.2':
+    resolution: {integrity: sha512-cTEDwmdZcUQrG0UyoMdzsCO9kwuEY6qojQaMgJMo+G+0dGl26xMEL6Spaz8CTVzgv67IC9nhFivlT4z4X/9MvQ==}
     engines: {node: 20.* || >= 22}
 
-  '@codemod-utils/tests@2.0.0':
-    resolution: {integrity: sha512-DywfLVxfIhYtm0OM27gjkjy72OlGVlHzN3PzEsIfvN91UW1Q85AIt3uWJynOBlmVlJxcpOKxdVASvDb/oup+FA==}
+  '@codemod-utils/tests@2.0.1':
+    resolution: {integrity: sha512-i/3JI411xQBIRgWxhO0ei8MVY/+C7hMPfT6zTUAMU1KfxxR4oCw8eVccmtr+XA76Sf2td5oTITvRo0IP2c84eg==}
     engines: {node: 20.* || >= 22}
     peerDependencies:
       '@sondr3/minitest': ^0.1.2
@@ -713,8 +713,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@20.17.46':
-    resolution: {integrity: sha512-0PQHLhZPWOxGW4auogW0eOQAuNIlCYvibIpG67ja0TOJ6/sehu+1en7sfceUn+QQtx4Rk3GxbLNwPh0Cav7TWw==}
+  '@types/node@20.17.57':
+    resolution: {integrity: sha512-f3T4y6VU4fVQDKVqJV4Uppy8c1p/sVvS3peyqxyWnzkqXFJLRU7Y1Bl7rMS1Qe9z0v4M6McY0Fp9yBsgHJUsWQ==}
 
   '@types/rimraf@3.0.2':
     resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
@@ -1019,6 +1019,10 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
+  cliui@9.0.1:
+    resolution: {integrity: sha512-k7ndgKhwoQveBL+/1tqGJYNz097I7WOvwbmmU2AR5+magtbjPWQTS1C5vzGkBC8Ym8UWRzfKUzUUqFLypY4Q+w==}
+    engines: {node: '>=20'}
+
   clone@1.0.4:
     resolution: {integrity: sha512-JQHZ2QMW6l3aH/j6xCqQThY/9OH4D/9ls34cgkUBiEeocRTU04tHfKPBsUK1PqZCUQM7GiA0IIXJSuXHI64Kbg==}
     engines: {node: '>=0.8'}
@@ -1130,6 +1134,9 @@ packages:
     resolution: {integrity: sha512-VnRN8FzEHQnw/5rCv6Wnq8MVYXbGQbFY+rEufvWV+FO/IsxMahGEud4MYWtTA2q8iG+qJFrDQefNvQ//7MI7Qw==}
     engines: {node: 12.* || 14.* || >= 16.*}
     hasBin: true
+
+  emoji-regex@10.4.0:
+    resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1403,6 +1410,10 @@ packages:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
+  get-east-asian-width@1.3.0:
+    resolution: {integrity: sha512-vpeMIQKxczTD/0s2CdEWHcb0eeJe6TFjxb+J5xgX7hScxqrGuyjmv4c1D4A/gelKfyox0gJJwIHF+fLjeaM8kQ==}
+    engines: {node: '>=18'}
+
   get-tsconfig@4.10.1:
     resolution: {integrity: sha512-auHyJ4AgMz7vgS8Hp3N6HXSmlMdUyhSUrfBF16w153rxtLIEOE+HGqaBppczZvnHLqQJfiHotCYpNhl0lUROFQ==}
 
@@ -1526,8 +1537,8 @@ packages:
   isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
-  jackspeak@4.1.0:
-    resolution: {integrity: sha512-9DDdhb5j6cpeitCbvLO7n7J4IxnbM6hoF6O1g4HQ5TfhvvKN8ywDM7668ZhMHRqVmxqhps/F6syWK2KcPxYlkw==}
+  jackspeak@4.1.1:
+    resolution: {integrity: sha512-zptv57P3GpL+O0I7VdMJNBZCu+BPHVQUk55Ft8/QCJjTVxrnJHuVuX/0Bl2A6/+2oyR/ZMEuFKwmzqqZ/U5nPQ==}
     engines: {node: 20 || >=22}
 
   js-tokens@4.0.0:
@@ -1892,8 +1903,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shell-quote@1.8.2:
-    resolution: {integrity: sha512-AzqKpGKjrj7EM6rKVQEPpB288oCfnrEIuyoT9cyF4nmGa7V8Zk6f7RRqYisX8X9m+Q7bd632aZW4ky7EhbQztA==}
+  shell-quote@1.8.3:
+    resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
     engines: {node: '>= 0.4'}
 
   signal-exit@3.0.7:
@@ -1937,6 +1948,10 @@ packages:
   string-width@5.1.2:
     resolution: {integrity: sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA==}
     engines: {node: '>=12'}
+
+  string-width@7.2.0:
+    resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
+    engines: {node: '>=18'}
 
   string_decoder@1.3.0:
     resolution: {integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==}
@@ -2083,8 +2098,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  update-workspace-root-version@2.0.0:
-    resolution: {integrity: sha512-UEdktJtuRHv4JlKsSHpg7t0bglHwUWvqUq69PiUtWSB7l9zIZtXrtGG+z45Kmc4Faja2EIUn6iUWJDrDA+TbFA==}
+  update-workspace-root-version@2.0.1:
+    resolution: {integrity: sha512-o7HACP3xX9ekPKJ7nOoTnioTidTe0iBEjx7ty+vMqg71EQxaRziQYbYbimE3DVgz93ydC+qepYEFJBN63n4jNw==}
     engines: {node: 20.* || >= 22}
     hasBin: true
 
@@ -2131,6 +2146,10 @@ packages:
     resolution: {integrity: sha512-si7QWI6zUMq56bESFvagtmzMdGOtoxfR+Sez11Mobfc7tm+VkUckk9bW2UeffTGVUbOksxmSw0AA2gs8g71NCQ==}
     engines: {node: '>=12'}
 
+  wrap-ansi@9.0.0:
+    resolution: {integrity: sha512-G8ura3S+3Z2G+mkgNRq8dqaFZAuxfsxpBB8OCTGRTCtp+l/v9nbFNmCUP1BZMts3G1142MsZfn6eeUKrr4PD1Q==}
+    engines: {node: '>=18'}
+
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
@@ -2142,9 +2161,17 @@ packages:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
 
+  yargs-parser@22.0.0:
+    resolution: {integrity: sha512-rwu/ClNdSMpkSrUb+d6BRsSkLUq1fmfsY6TOpYzTwvwkg1/NRG85KBy3kq++A8LKQwX6lsu+aWad+2khvuXrqw==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=23}
+
   yargs@17.7.2:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
+
+  yargs@18.0.0:
+    resolution: {integrity: sha512-4UEqdc2RYGHZc7Doyqkrqiln3p9X2DZVxaGbwhn2pi7MrRagKaOcIKe8L3OxYcbhXLgLFUS3zAYuQjKBQgmuNg==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=23}
 
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
@@ -2300,7 +2327,7 @@ snapshots:
       '@babel/core': 7.27.4
       '@babel/helper-plugin-utils': 7.27.1
 
-  '@babel/runtime@7.27.1': {}
+  '@babel/runtime@7.27.4': {}
 
   '@babel/template@7.27.2':
     dependencies:
@@ -2474,32 +2501,32 @@ snapshots:
       human-id: 4.1.1
       prettier: 2.8.8
 
-  '@codemod-utils/ast-javascript@2.0.1':
+  '@codemod-utils/ast-javascript@2.0.2':
     dependencies:
       '@babel/parser': 7.27.4
       recast: 0.23.11
 
-  '@codemod-utils/ast-template@2.0.0':
+  '@codemod-utils/ast-template@2.0.1':
     dependencies:
       ember-template-recast: 6.1.5
     transitivePeerDependencies:
       - supports-color
 
-  '@codemod-utils/blueprints@2.0.0':
+  '@codemod-utils/blueprints@2.0.1':
     dependencies:
       lodash: 4.17.21
 
-  '@codemod-utils/ember@3.0.0': {}
+  '@codemod-utils/ember@3.0.1': {}
 
-  '@codemod-utils/files@3.0.1':
+  '@codemod-utils/files@3.0.2':
     dependencies:
       glob: 11.0.2
 
-  '@codemod-utils/json@2.0.1':
+  '@codemod-utils/json@2.0.2':
     dependencies:
       type-fest: 4.41.0
 
-  '@codemod-utils/tests@2.0.0(@sondr3/minitest@0.1.2)':
+  '@codemod-utils/tests@2.0.1(@sondr3/minitest@0.1.2)':
     dependencies:
       '@sondr3/minitest': 0.1.2
       fixturify: 3.0.0
@@ -2734,14 +2761,14 @@ snapshots:
 
   '@manypkg/find-root@1.1.0':
     dependencies:
-      '@babel/runtime': 7.27.1
+      '@babel/runtime': 7.27.4
       '@types/node': 12.20.55
       find-up: 4.1.0
       fs-extra: 8.1.0
 
   '@manypkg/get-packages@1.1.3':
     dependencies:
-      '@babel/runtime': 7.27.1
+      '@babel/runtime': 7.27.4
       '@changesets/types': 4.1.0
       '@manypkg/find-root': 1.1.0
       fs-extra: 8.1.0
@@ -2790,12 +2817,12 @@ snapshots:
 
   '@types/fs-extra@9.0.13':
     dependencies:
-      '@types/node': 20.17.46
+      '@types/node': 20.17.57
 
   '@types/glob@8.1.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.17.46
+      '@types/node': 20.17.57
 
   '@types/json-schema@7.0.15': {}
 
@@ -2805,14 +2832,14 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.17.46':
+  '@types/node@20.17.57':
     dependencies:
       undici-types: 6.19.8
 
   '@types/rimraf@3.0.2':
     dependencies:
       '@types/glob': 8.1.0
-      '@types/node': 20.17.46
+      '@types/node': 20.17.57
 
   '@types/semver@7.7.0': {}
 
@@ -3128,6 +3155,12 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
+  cliui@9.0.1:
+    dependencies:
+      string-width: 7.2.0
+      strip-ansi: 7.1.0
+      wrap-ansi: 9.0.0
+
   clone@1.0.4: {}
 
   color-convert@2.0.1:
@@ -3149,7 +3182,7 @@ snapshots:
       chalk: 4.1.2
       lodash: 4.17.21
       rxjs: 7.8.2
-      shell-quote: 1.8.2
+      shell-quote: 1.8.3
       supports-color: 8.1.1
       tree-kill: 1.2.2
       yargs: 17.7.2
@@ -3236,6 +3269,8 @@ snapshots:
       workerpool: 6.5.1
     transitivePeerDependencies:
       - supports-color
+
+  emoji-regex@10.4.0: {}
 
   emoji-regex@8.0.0: {}
 
@@ -3558,6 +3593,8 @@ snapshots:
 
   get-caller-file@2.0.5: {}
 
+  get-east-asian-width@1.3.0: {}
+
   get-tsconfig@4.10.1:
     dependencies:
       resolve-pkg-maps: 1.0.0
@@ -3584,7 +3621,7 @@ snapshots:
   glob@11.0.2:
     dependencies:
       foreground-child: 3.3.1
-      jackspeak: 4.1.0
+      jackspeak: 4.1.1
       minimatch: 10.0.1
       minipass: 7.1.2
       package-json-from-dist: 1.0.1
@@ -3662,7 +3699,7 @@ snapshots:
 
   isexe@2.0.0: {}
 
-  jackspeak@4.1.0:
+  jackspeak@4.1.1:
     dependencies:
       '@isaacs/cliui': 8.0.2
 
@@ -3977,7 +4014,7 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shell-quote@1.8.2: {}
+  shell-quote@1.8.3: {}
 
   signal-exit@3.0.7: {}
 
@@ -4015,6 +4052,12 @@ snapshots:
     dependencies:
       eastasianwidth: 0.2.0
       emoji-regex: 9.2.2
+      strip-ansi: 7.1.0
+
+  string-width@7.2.0:
+    dependencies:
+      emoji-regex: 10.4.0
+      get-east-asian-width: 1.3.0
       strip-ansi: 7.1.0
 
   string_decoder@1.3.0:
@@ -4149,11 +4192,11 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  update-workspace-root-version@2.0.0:
+  update-workspace-root-version@2.0.1:
     dependencies:
-      '@codemod-utils/files': 3.0.1
-      '@codemod-utils/json': 2.0.1
-      yargs: 17.7.2
+      '@codemod-utils/files': 3.0.2
+      '@codemod-utils/json': 2.0.2
+      yargs: 18.0.0
 
   uri-js@4.4.1:
     dependencies:
@@ -4201,11 +4244,19 @@ snapshots:
       string-width: 5.1.2
       strip-ansi: 7.1.0
 
+  wrap-ansi@9.0.0:
+    dependencies:
+      ansi-styles: 6.2.1
+      string-width: 7.2.0
+      strip-ansi: 7.1.0
+
   y18n@5.0.8: {}
 
   yallist@3.1.1: {}
 
   yargs-parser@21.1.1: {}
+
+  yargs-parser@22.0.0: {}
 
   yargs@17.7.2:
     dependencies:
@@ -4216,5 +4267,14 @@ snapshots:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+
+  yargs@18.0.0:
+    dependencies:
+      cliui: 9.0.1
+      escalade: 3.2.0
+      get-caller-file: 2.0.5
+      string-width: 7.2.0
+      y18n: 5.0.8
+      yargs-parser: 22.0.0
 
   yocto-queue@0.1.0: {}
