@@ -4,13 +4,24 @@
 
 <details>
 
-<summary>Lint and build</summary>
+<summary>Check and fix errors</summary>
 
 ```sh
-# Lint files
+# Check errors
 pnpm lint
+ 
+# Fix errors
 pnpm lint:fix
+```
 
+</details>
+
+
+<details>
+
+<summary>Build and rebuild addon</summary>
+
+```sh
 # Build addon
 pnpm build
 
@@ -19,6 +30,7 @@ pnpm start
 ```
 
 </details>
+
 
 <details>
 
@@ -46,6 +58,7 @@ pnpm addon g component ui/form/select --blueprint glimmer-strict
 For more information, pass `--help`.
 
 </details>
+
 
 <details>
 
