@@ -14,8 +14,8 @@
     "./node20": "./node20/index.json"
   },
   "scripts": {
-    "lint:js": "prettier \"**/*.{json,mjs}\" --cache --check",
-    "lint:js:fix": "prettier \"**/*.{json,mjs}\" --cache --write"
+    "lint": "prettier \"**/*.{json,mjs}\" --cache --check",
+    "lint:fix": "prettier \"**/*.{json,mjs}\" --cache --write"
   },
   "dependencies": {
     "@tsconfig/ember": "^3.0.10",
