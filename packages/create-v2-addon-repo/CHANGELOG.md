@@ -1,5 +1,16 @@
 # create-v2-addon-repo
 
+## 1.3.0
+
+### Minor Changes
+
+- [#95](https://github.com/ijlee2/embroider-toolbox/pull/95) Required pnpm@v10 ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#95](https://github.com/ijlee2/embroider-toolbox/pull/95) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#93](https://github.com/ijlee2/embroider-toolbox/pull/93) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.2.0
 
 ### Minor Changes
