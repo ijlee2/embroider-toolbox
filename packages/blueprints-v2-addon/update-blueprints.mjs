@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
+// eslint-disable-next-line import-x/default
 import gitDiffApply from 'git-diff-apply';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
