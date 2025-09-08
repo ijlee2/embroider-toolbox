@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 
+// eslint-disable-next-line import-x/default
 import gitDiffApply from 'git-diff-apply';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-const CURRENT_VERSION = '1.1.2';
+const CURRENT_VERSION = '1.1.3';
 
 async function updateBlueprints({ from, to }) {
   const startTag = from;
