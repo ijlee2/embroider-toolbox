@@ -55,11 +55,11 @@
     "embroider-css-modules": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.28.0",
+    "@babel/core": "^7.28.4",
     "@babel/plugin-transform-typescript": "^7.28.0",
-    "@babel/runtime": "^7.28.2",
+    "@babel/runtime": "^7.28.4",
     "@ember/test-helpers": "^5.2.2",
-    "@embroider/addon-dev": "^8.0.1",
+    "@embroider/addon-dev": "^8.1.0",
     "@glimmer/component": "^2.0.0",
     "@glimmer/tracking": "^1.1.2",
     "@glint/core": "^1.5.2",
@@ -74,23 +74,23 @@
     "@shared-configs/typescript": "workspace:*",
     "babel-plugin-ember-template-compilation": "^2.4.1",
     "blueprints-v2-addon": "workspace:*",
-    "concurrently": "^9.2.0",
+    "concurrently": "^9.2.1",
     "ember-modifier": "^4.2.2",
-    "ember-source": "~6.4.0",
-    "ember-template-lint": "^7.9.1",
-    "eslint": "^9.32.0",
+    "ember-source": "~6.6.0",
+    "ember-template-lint": "^7.9.3",
+    "eslint": "^9.35.0",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
-    "qunit-dom": "^3.4.0",
-    "rollup": "^4.46.2",
+    "qunit-dom": "^3.5.0",
+    "rollup": "^4.50.1",
     "rollup-plugin-postcss": "^4.0.2",
-    "stylelint": "^16.23.0",
+    "stylelint": "^16.24.0",
     "type-css-modules": "^2.0.2",
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
     "@ember/test-helpers": "^5.2.2",
-    "qunit-dom": "^3.4.0"
+    "qunit-dom": "^3.5.0"
   },
   "peerDependenciesMeta": {
     "@ember/test-helpers": {
