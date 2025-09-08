@@ -36,10 +36,10 @@
   "dependencies": {
     "@codemod-utils/ast-javascript": "^2.0.6",
     "@codemod-utils/ast-template": "^2.0.2",
+    "@codemod-utils/ast-template-tag": "^0.1.0",
     "@codemod-utils/ember": "^3.0.2",
     "@codemod-utils/files": "^3.0.4",
     "@codemod-utils/json": "^2.0.3",
-    "content-tag": "^4.0.0",
     "yargs": "^18.0.0"
   },
   "devDependencies": {
