@@ -1,5 +1,11 @@
 # analyze-ember-project-dependencies
 
+## 1.0.6
+
+### Patch Changes
+
+- [#100](https://github.com/ijlee2/embroider-toolbox/pull/100) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.0.5
 
 ### Patch Changes
