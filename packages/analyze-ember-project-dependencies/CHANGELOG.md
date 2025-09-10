@@ -1,5 +1,11 @@
 # analyze-ember-project-dependencies
 
+## 1.0.5
+
+### Patch Changes
+
+- [#99](https://github.com/ijlee2/embroider-toolbox/pull/99) Updated @codemod-utils/ast-template-tag ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.0.4
 
 ### Patch Changes
