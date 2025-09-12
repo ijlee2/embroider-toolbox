@@ -4,11 +4,6 @@ import { analyzeTemplate } from './analyze-template.js';
 import { analyzeTemplateTag } from './analyze-template-tag.js';
 
 export const patterns = {
-  app: [
-    'app/**/*.{gjs,gts,hbs,js,ts}',
-    'tests/**/*.{gjs,gts,js,ts}',
-    '*.{js,ts}',
-  ],
   node: ['**/*.{js,ts}', '*.{js,ts}'],
   'v1-addon': [
     'addon/**/*.{gjs,gts,hbs,js,ts}',
@@ -16,7 +11,17 @@ export const patterns = {
     'tests/**/*.{gjs,gts,js,ts}',
     '*.{js,ts}',
   ],
+  'v1-app': [
+    'app/**/*.{gjs,gts,hbs,js,ts}',
+    'tests/**/*.{gjs,gts,js,ts}',
+    '*.{js,ts}',
+  ],
   'v2-addon': ['src/**/*.{gjs,gts,hbs,js,ts}', '*.{cjs,js,mjs,ts}'],
+  'v2-app': [
+    'app/**/*.{gjs,gts,hbs,js,ts}',
+    'tests/**/*.{gjs,gts,js,ts}',
+    '*.{js,ts}',
+  ],
 };
 
 export type Data = {
