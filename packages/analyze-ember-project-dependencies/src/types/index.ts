@@ -1,3 +1,5 @@
+import type { PackageType } from '@codemod-utils/package-json';
+
 type CodemodOptions = {
   componentStructure: 'flat' | 'nested';
   projectRoot: string;
@@ -22,8 +24,6 @@ type PackageData = {
   packageRoot: string;
   packageType: PackageType;
 };
-
-type PackageType = 'app' | 'node' | 'v1-addon' | 'v2-addon';
 
 type EntityName = string;
 

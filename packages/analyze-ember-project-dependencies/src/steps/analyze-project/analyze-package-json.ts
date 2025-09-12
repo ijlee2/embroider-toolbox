@@ -1,29 +1,6 @@
-import type { PackageJson } from '@codemod-utils/json';
+import { getPackageType, type PackageJson } from '@codemod-utils/package-json';
 
-import type { PackageName, PackageType } from '../../types/index.js';
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type EmberAddon = Record<string, any>;
-
-function getPackageType({
-  dependencies,
-  devDependencies,
-  emberAddon,
-}: {
-  dependencies: Set<PackageName>;
-  devDependencies: Set<PackageName>;
-  emberAddon?: EmberAddon;
-}): PackageType {
-  if (emberAddon) {
-    return emberAddon['version'] === 2 ? 'v2-addon' : 'v1-addon';
-  }
-
-  if (devDependencies.has('ember-source') || dependencies.has('ember-source')) {
-    return 'app';
-  }
-
-  return 'node';
-}
+import type { PackageName } from '../../types/index.js';
 
 export function analyzePackageJson(packageJson: PackageJson) {
   const dependencies = new Set<PackageName>(
@@ -37,11 +14,7 @@ export function analyzePackageJson(packageJson: PackageJson) {
     [...Object.keys(packageJson['devDependencies'] ?? {})].sort(),
   );
 
-  const packageType = getPackageType({
-    dependencies,
-    devDependencies,
-    emberAddon: packageJson['ember-addon'] as EmberAddon,
-  });
+  const packageType = getPackageType(packageJson);
 
   return {
     dependencies,

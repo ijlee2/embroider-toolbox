@@ -1,5 +1,5 @@
 import { getPackageRoots } from '@codemod-utils/files';
-import { readPackageJson } from '@codemod-utils/json';
+import { readPackageJson } from '@codemod-utils/package-json';
 
 import type { Options, ProjectData } from '../types/index.js';
 import {
