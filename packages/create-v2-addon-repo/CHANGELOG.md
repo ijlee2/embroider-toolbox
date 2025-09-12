@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 1.3.2
+
+### Patch Changes
+
+- [#101](https://github.com/ijlee2/embroider-toolbox/pull/101) Installed @codemod-utils/package-json@v3 ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.3.1
 
 ### Patch Changes

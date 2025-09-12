@@ -1,5 +1,11 @@
 # blueprints-v2-addon
 
+## 1.1.4
+
+### Patch Changes
+
+- [#101](https://github.com/ijlee2/embroider-toolbox/pull/101) Installed @codemod-utils/package-json@v3 ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.1.3
 
 ### Patch Changes
